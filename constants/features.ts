@@ -1,0 +1,143 @@
+import { Feature, FloatingCard } from "@/types";
+
+export const heroFloatingCards: FloatingCard[] = [
+  {
+    id: "study-sessions",
+    title: "Study Sessions",
+    description: "Live sessions with peers and subject experts.",
+    meta: "Today · 7:00 PM ET",
+    icon: "Video",
+    avatarCount: 24,
+  },
+  {
+    id: "study-circles",
+    title: "Study Circles (Group Study)",
+    description: "Collaborate in small groups and make progress together.",
+    icon: "Users",
+    avatarCount: 18,
+  },
+  {
+    id: "assist",
+    title: "Assist",
+    description: "AI-powered academic support to help you understand and grow.",
+    meta: "Always available",
+    icon: "Bot",
+  },
+  {
+    id: "tutoring",
+    title: "Tutoring",
+    description: "Connect with instructors 1:1 when you need personalized support.",
+    icon: "UserCheck",
+  },
+];
+
+export const featureStrip: Feature[] = [
+  {
+    id: "virtual",
+    title: "Virtual & Accessible",
+    description: "Connect and learn from anywhere in the world.",
+    icon: "Globe",
+  },
+  {
+    id: "built-for",
+    title: "Built for Students & Instructors",
+    description: "Tools and resources designed to support teaching and learning.",
+    icon: "Users",
+  },
+  {
+    id: "support",
+    title: "Get Support",
+    description: "AI, peers, and instructors—all in one place.",
+    icon: "MessageCircle",
+  },
+  {
+    id: "goals",
+    title: "Achieve Your Goals",
+    description: "Resources, opportunities, and a community that helps you win.",
+    icon: "Trophy",
+  },
+];
+
+export const exploreFeatures: Feature[] = [
+  {
+    id: "one-channel",
+    title: "ONE Channel",
+    description: "Your academic home base. Stay connected and organized.",
+    icon: "Home",
+    href: "#",
+    iconBg: "bg-blue-100",
+    iconColor: "text-blue-600",
+  },
+  {
+    id: "threads",
+    title: "Threads",
+    description: "Real-time discussions with your network and communities.",
+    icon: "MessageSquare",
+    href: "#",
+    iconBg: "bg-green-100",
+    iconColor: "text-green-600",
+  },
+  {
+    id: "study-sessions-feature",
+    title: "Study Sessions",
+    description: "Live sessions with peers and experts on any subject.",
+    icon: "Video",
+    href: "#",
+    iconBg: "bg-red-100",
+    iconColor: "text-red-500",
+  },
+  {
+    id: "study-circle",
+    title: "Study Circle (Group Study)",
+    description: "Join small study groups to collaborate and achieve more.",
+    icon: "UsersRound",
+    href: "#",
+    iconBg: "bg-purple-100",
+    iconColor: "text-purple-600",
+  },
+  {
+    id: "assist-feature",
+    title: "Assist",
+    description: "Get academic support from AI to understand, plan, and progress.",
+    icon: "Bot",
+    href: "#",
+    iconBg: "bg-violet-100",
+    iconColor: "text-violet-600",
+  },
+  {
+    id: "tutoring-feature",
+    title: "Tutoring",
+    description: "1:1 support from instructors when you need extra help.",
+    icon: "UserCheck",
+    href: "#",
+    iconBg: "bg-teal-100",
+    iconColor: "text-teal-600",
+  },
+  {
+    id: "library",
+    title: "Library",
+    description: "Access notes, eBooks, videos, guides, and more resources.",
+    icon: "BookOpen",
+    href: "#",
+    iconBg: "bg-indigo-100",
+    iconColor: "text-indigo-600",
+  },
+  {
+    id: "community",
+    title: "Community",
+    description: "Connect with students and instructors who support you.",
+    icon: "Heart",
+    href: "#",
+    iconBg: "bg-emerald-100",
+    iconColor: "text-emerald-600",
+  },
+  {
+    id: "network",
+    title: "Network",
+    description: "Build connections, explore opportunities, and grow together.",
+    icon: "Network",
+    href: "#",
+    iconBg: "bg-orange-100",
+    iconColor: "text-orange-500",
+  },
+];
