@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import {
   ChevronDown,
@@ -16,7 +17,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { navItems } from "@/constants/navigation";
 import { cn } from "@/lib/utils";
 
-const iconMap: Record<string, React.ReactNode> = {
+const iconMap: Record<string, ReactNode> = {
   GraduationCap: <GraduationCap className="h-5 w-5 text-primary" />,
   Users: <Users className="h-5 w-5 text-primary" />,
   Building2: <Building2 className="h-5 w-5 text-primary" />,
@@ -29,11 +30,11 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur-sm">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between gap-4">
-          <div className="flex items-center gap-8">
+      <div className="mx-auto max-w-[1536px] px-5 lg:px-10">
+        <div className="flex h-14 items-center justify-between gap-5">
+          <div className="flex min-w-0 items-center gap-10">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary shadow-sm">
                 <GraduationCap className="h-5 w-5 text-white" />
               </div>
               <div className="flex flex-col leading-none">
@@ -46,7 +47,7 @@ export function Navbar() {
               </div>
             </Link>
 
-            <nav className="hidden items-center gap-1 md:flex">
+            <nav className="hidden items-center gap-7 xl:flex">
               {navItems.map((item) => (
                 <div
                   key={item.label}
@@ -59,15 +60,15 @@ export function Navbar() {
                   {item.href ? (
                     <Link
                       href={item.href}
-                      className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-navy transition-colors hover:bg-muted"
+                      className="flex items-center gap-1 rounded-md py-2 text-sm font-semibold text-navy transition-colors hover:text-primary"
                     >
                       {item.label}
                     </Link>
                   ) : (
                     <button
                       className={cn(
-                        "flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-navy transition-colors",
-                        openDropdown === item.label ? "bg-muted" : "hover:bg-muted"
+                        "flex items-center gap-1 rounded-md py-2 text-sm font-semibold text-navy transition-colors",
+                        openDropdown === item.label ? "text-primary" : "hover:text-primary"
                       )}
                       onClick={() =>
                         setOpenDropdown(
@@ -133,12 +134,12 @@ export function Navbar() {
             </nav>
           </div>
 
-          <div className="hidden items-center gap-3 md:flex">
-            <div className="relative w-64">
+          <div className="hidden shrink-0 items-center gap-3 md:flex">
+            <div className="relative w-[300px] lg:w-[340px]">
               <Search className="absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               <input
                 type="text"
-                placeholder="Search threads, communities and resources..."
+                placeholder="Search threads, communities & resources"
                 className={cn(
                   "h-9 w-full rounded-lg border border-border bg-white pl-9 pr-3 text-sm text-navy placeholder:text-xs placeholder:text-muted-foreground",
                   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
@@ -147,7 +148,7 @@ export function Navbar() {
             </div>
             <Link
               href="/login"
-              className="text-sm font-medium text-navy transition-colors hover:text-primary"
+              className="rounded-lg border border-border bg-white px-4 py-2 text-sm font-semibold text-navy transition-colors hover:text-primary"
             >
               Log In
             </Link>

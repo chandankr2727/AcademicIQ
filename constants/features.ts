@@ -33,21 +33,27 @@ export const heroFloatingCards: FloatingCard[] = [
 
 export const featureStrip: Feature[] = [
   {
-    id: "virtual",
-    title: "Virtual & Accessible",
-    description: "Connect and learn from anywhere in the world.",
+    id: "global",
+    title: "Global & Virtual",
+    description: "Join students and educators from 72+ countries.",
     icon: "Globe",
   },
   {
-    id: "built-for",
-    title: "Built for Students & Instructors",
-    description: "Tools and resources designed to support teaching and learning.",
-    icon: "Users",
+    id: "accessible",
+    title: "Accessible Anywhere",
+    description: "Learn, teach, and connect from any device, anytime.",
+    icon: "Accessible",
+  },
+  {
+    id: "safe",
+    title: "Safe & Secure",
+    description: "Your privacy and data protection are our priority.",
+    icon: "Shield",
   },
   {
     id: "support",
     title: "Get Support",
-    description: "AI, peers, and instructors—all in one place.",
+    description: "AI, peers, and educators—help when you need it.",
     icon: "MessageCircle",
   },
   {
@@ -71,7 +77,7 @@ export const exploreFeatures: Feature[] = [
   {
     id: "threads",
     title: "Threads",
-    description: "Real-time discussions with your network and communities.",
+    description: "Real-time discussions with your network.",
     icon: "MessageSquare",
     href: "#",
     iconBg: "bg-green-100",
@@ -80,7 +86,7 @@ export const exploreFeatures: Feature[] = [
   {
     id: "study-sessions-feature",
     title: "Study Sessions",
-    description: "Live sessions with peers and experts on any subject.",
+    description: "Live sessions with peers and experts.",
     icon: "Video",
     href: "#",
     iconBg: "bg-red-100",
@@ -88,8 +94,8 @@ export const exploreFeatures: Feature[] = [
   },
   {
     id: "study-circle",
-    title: "Study Circle (Group Study)",
-    description: "Join small study groups to collaborate and achieve more.",
+    title: "Study Circles (Group Study)",
+    description: "Join small groups, collaborate and achieve more.",
     icon: "UsersRound",
     href: "#",
     iconBg: "bg-purple-100",
@@ -97,8 +103,8 @@ export const exploreFeatures: Feature[] = [
   },
   {
     id: "assist-feature",
-    title: "Assist",
-    description: "Get academic support from AI to understand, plan, and progress.",
+    title: "Assist (AI)",
+    description: "AI-powered support, plans and answers.",
     icon: "Bot",
     href: "#",
     iconBg: "bg-violet-100",
@@ -107,7 +113,7 @@ export const exploreFeatures: Feature[] = [
   {
     id: "tutoring-feature",
     title: "Tutoring",
-    description: "1:1 support from instructors when you need extra help.",
+    description: "Connect with instructors when you need help.",
     icon: "UserCheck",
     href: "#",
     iconBg: "bg-teal-100",
@@ -116,7 +122,7 @@ export const exploreFeatures: Feature[] = [
   {
     id: "library",
     title: "Library",
-    description: "Access notes, eBooks, videos, guides, and more resources.",
+    description: "Notes, eBooks, videos, guides, and more.",
     icon: "BookOpen",
     href: "#",
     iconBg: "bg-indigo-100",
@@ -125,7 +131,7 @@ export const exploreFeatures: Feature[] = [
   {
     id: "community",
     title: "Community",
-    description: "Connect with students and instructors who support you.",
+    description: "Connect with students and instructors.",
     icon: "Heart",
     href: "#",
     iconBg: "bg-emerald-100",
@@ -134,7 +140,7 @@ export const exploreFeatures: Feature[] = [
   {
     id: "network",
     title: "Network",
-    description: "Build connections, explore opportunities, and grow together.",
+    description: "Build connections, discover opportunities and grow together.",
     icon: "Network",
     href: "#",
     iconBg: "bg-orange-100",
