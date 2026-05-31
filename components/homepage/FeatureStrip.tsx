@@ -6,7 +6,7 @@ import {
   Globe,
   Monitor,
   Shield,
-  MessageCircle,
+  Headphones,
   Trophy,
 } from "lucide-react";
 import { featureStrip } from "@/constants/features";
@@ -16,7 +16,7 @@ const iconMap: Record<string, ReactNode> = {
   Globe: <Globe className="h-6 w-6 text-primary" />,
   Accessible: <Monitor className="h-6 w-6 text-primary" />,
   Shield: <Shield className="h-6 w-6 text-primary" />,
-  MessageCircle: <MessageCircle className="h-6 w-6 text-primary" />,
+  Headphones: <Headphones className="h-6 w-6 text-primary" />,
   Trophy: <Trophy className="h-6 w-6 text-primary" />,
 };
 

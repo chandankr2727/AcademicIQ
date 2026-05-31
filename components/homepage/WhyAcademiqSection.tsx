@@ -81,7 +81,7 @@ export function WhyAcademiqSection() {
           >
             <div className="grid min-h-[145px] grid-cols-1 sm:grid-cols-[150px_1fr]">
               <div className="relative min-h-[145px] overflow-hidden">
-                <Image src="/hero.webp" alt="Student" fill sizes="150px" className="object-cover object-[62%_30%]" />
+                <Image src="/why-students.webp" alt="Student" fill sizes="150px" className="object-cover object-top" />
               </div>
               <div className="p-5">
                 <h3 className="text-[15px] font-black text-navy">Why Students Choose Us</h3>
@@ -109,7 +109,7 @@ export function WhyAcademiqSection() {
                 </Link>
               </div>
               <div className="relative min-h-[145px] overflow-hidden">
-                <Image src="/hero.webp" alt="Instructor" fill sizes="150px" className="object-cover object-[72%_30%]" />
+                <Image src="/why-instructor.webp" alt="Instructor" fill sizes="150px" className="object-cover object-top" />
               </div>
             </div>
           </motion.article>

@@ -56,7 +56,7 @@ export function FeatureCards() {
               >
                 <Link
                   href={feature.href || "#"}
-                  className="group flex h-[150px] flex-col items-center rounded-lg border border-border bg-white px-3 py-4 text-center shadow-[0_8px_18px_rgba(15,23,42,0.04)] transition-all hover:border-primary/30 hover:shadow-md"
+                  className="group flex h-[165px] flex-col items-center rounded-lg border border-border bg-white px-3 pt-4 pb-6 text-center shadow-[0_8px_18px_rgba(15,23,42,0.04)] transition-all hover:border-primary/30 hover:shadow-md"
                 >
                   <div
                     className={cn(
@@ -79,7 +79,7 @@ export function FeatureCards() {
                   <p className="mt-1 min-h-[38px] text-[11px] font-medium leading-tight text-muted-foreground">
                     {feature.description}
                   </p>
-                  <span className="mt-auto flex items-center gap-1 text-xs font-black text-primary">
+                  <span className="mt-auto flex items-center gap-1 pt-3 text-xs font-black text-primary">
                     Learn More
                     <ArrowRight className="h-4 w-4" />
                   </span>
