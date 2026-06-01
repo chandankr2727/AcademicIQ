@@ -43,7 +43,7 @@ export function FeatureCards() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9">
           {exploreFeatures.map((feature, i) => {
             const IconComp = iconComponents[feature.icon];
             return (

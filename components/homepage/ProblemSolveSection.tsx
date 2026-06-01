@@ -37,11 +37,11 @@ const tomorrowPoints = [
 ];
 
 const platformAvatars = [
-  { bg: "#3b82f6", hair: "#1e3a8a" },
-  { bg: "#a855f7", hair: "#581c87" },
-  { bg: "#22c55e", hair: "#14532d" },
-  { bg: "#f97316", hair: "#7c2d12" },
-  { bg: "#ec4899", hair: "#831843" },
+  { img: "https://randomuser.me/api/portraits/women/44.jpg" },
+  { img: "https://randomuser.me/api/portraits/men/32.jpg" },
+  { img: "https://randomuser.me/api/portraits/women/68.jpg" },
+  { img: "https://randomuser.me/api/portraits/men/46.jpg" },
+  { img: "https://randomuser.me/api/portraits/women/12.jpg" },
 ];
 
 function CurvedArrow() {
@@ -120,12 +120,7 @@ export function ProblemSolveSection() {
           <div className="mt-1.5 flex justify-center -space-x-1">
             {platformAvatars.map((a, i) => (
               <span key={i} className="h-4 w-4 overflow-hidden rounded-full border border-white">
-                <svg viewBox="0 0 20 20" width="16" height="16">
-                  <circle cx="10" cy="10" r="10" fill={a.bg} />
-                  <circle cx="10" cy="8" r="4" fill="#f8d7c0" />
-                  <path d="M6 18c0-2.5 2-4 4-4s4 1.5 4 4v2H6v-2z" fill="#f8d7c0" />
-                  <path d="M6 7c0-2.5 1.5-4 4-4s4 1.5 4 4c0 1-1 1.5-1.5 1.5-1.5 0-2-.5-2-2s-.5-1.5-.5-1.5-.5.5-.5 1.5-.5 2-2 2S6 8 6 7z" fill={a.hair} />
-                </svg>
+                <img src={a.img} alt="Avatar" width="16" height="16" className="object-cover" />
               </span>
             ))}
           </div>
@@ -161,10 +156,10 @@ export function ProblemSolveSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.25 }}
-          className="grid overflow-hidden rounded-lg bg-white shadow-sm sm:grid-cols-[100px_1fr] lg:col-span-3"
+          className="grid overflow-hidden rounded-lg bg-white shadow-sm grid-cols-1 sm:grid-cols-[100px_1fr] lg:col-span-3"
         >
-          <div className="relative min-h-[100px] bg-blue-50">
-            <Image src="/emma.webp" alt="Emma AI Assistant" fill sizes="100px" className="object-cover object-top" />
+          <div className="relative aspect-[4/5] w-full sm:aspect-auto sm:min-h-[100px] bg-blue-50">
+            <Image src="/emma.webp" alt="Emma AI Assistant" fill sizes="(max-width: 640px) 100vw, 100px" className="object-cover object-top sm:object-center" />
           </div>
           <div className="flex flex-col justify-center p-3">
             <h3 className="text-[13px] font-black text-navy">Hi! I&apos;m Emma 👋</h3>

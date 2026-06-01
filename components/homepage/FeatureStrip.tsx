@@ -31,7 +31,7 @@ export function FeatureStrip() {
         className="mx-auto max-w-[1536px]"
       >
         <div className="py-4">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {featureStrip.map((feature, i) => (
               <motion.div
                 key={feature.id}
@@ -40,9 +40,8 @@ export function FeatureStrip() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: i * 0.1 }}
                 className={cn(
-                  "flex items-center gap-4 px-4 first:pl-0 last:pr-0",
-                  i < featureStrip.length - 1 &&
-                    "sm:border-b sm:border-border sm:pb-4 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-6"
+                  "flex items-center gap-4 px-4 first:pl-0 last:pr-0 border-b border-border pb-4 last:border-b-0 last:pb-0 sm:border-b-0 sm:pb-0 sm:pr-6",
+                  i < featureStrip.length - 1 && "sm:border-r"
                 )}
               >
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
