@@ -76,7 +76,7 @@ export function FeatureCards() {
                   <h3 className="mt-3 min-h-[28px] text-xs font-black leading-tight text-navy">
                     {feature.title}
                   </h3>
-                  <p className="mt-1 min-h-[38px] text-[11px] font-medium leading-tight text-muted-foreground">
+                  <p className="mt-1 min-h-[38px] text-[12px] font-medium leading-tight text-muted-foreground">
                     {feature.description}
                   </p>
                   <span className="mt-auto flex items-center gap-1 pt-3 text-xs font-black text-primary">

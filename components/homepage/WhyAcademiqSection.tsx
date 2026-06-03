@@ -54,7 +54,7 @@ function PointList({
   return (
     <ul className="mt-3 space-y-[5px]">
       {points.map((point) => (
-        <li key={point} className="flex items-start gap-2 text-[11px] font-semibold leading-tight text-navy">
+        <li key={point} className="flex items-start gap-2 text-[12px] font-semibold leading-tight text-navy">
           <CheckCircle2 className={`mt-[1px] h-3.5 w-3.5 shrink-0 ${color}`} />
           <span>{point}</span>
         </li>
@@ -137,8 +137,8 @@ export function WhyAcademiqSection() {
                   <div key={link.label} className="flex items-center gap-2 px-3 py-2">
                     <link.icon className="h-6 w-6 shrink-0 text-primary" />
                     <div>
-                      <p className="text-[10px] font-black leading-tight text-navy">{link.label}</p>
-                      <p className="text-[9px] font-semibold leading-tight text-muted-foreground">{link.desc}</p>
+                      <p className="text-[11px] font-black leading-tight text-navy">{link.label}</p>
+                      <p className="text-[10px] font-semibold leading-tight text-muted-foreground">{link.desc}</p>
                     </div>
                   </div>
                 ))}
