@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="flex-1 space-y-16">
+      <main className="flex-1">
         <HeroSection />
         <FeatureStrip />
         <FeatureCards />

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 import {
   Home,
@@ -30,64 +30,114 @@ const iconComponents: Record<string, LucideIcon> = {
   Network,
 };
 
+const containerVariants: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.07, delayChildren: 0.05 } },
+};
+
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
+};
+
 export function FeatureCards() {
   return (
-    <section className="bg-white py-2">
-      <div className="mx-auto max-w-[1536px] px-5 lg:px-10">
-        <div className="mb-2 text-center">
-          <h2 className="text-xl font-black leading-tight text-navy">
+    <section className="bg-white py-14 lg:py-20">
+      <div className="mx-auto max-w-[1536px] px-4 sm:px-6 lg:px-10">
+
+        {/* Section heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="mb-10 text-center"
+        >
+          <h2 className="text-3xl font-black text-navy sm:text-4xl">
             Explore What AcademIQ Offers
           </h2>
-          <p className="text-[11px] font-medium text-muted-foreground">
-            Discover the tools, support, and communities that power the AcademIQ virtual learning network.
+          <p className="mt-3 mx-auto max-w-2xl text-[16px] leading-relaxed text-muted-foreground">
+            Discover the tools, support, and communities that power your virtual
+            learning journey — all in one place.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-9">
-          {exploreFeatures.map((feature, i) => {
+        {/* 3 × 3 grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.05 }}
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3"
+        >
+          {exploreFeatures.map((feature, index) => {
             const IconComp = iconComponents[feature.icon];
+            const num = String(index + 1).padStart(2, "0");
+
             return (
-              <motion.div
-                key={feature.id}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: i * 0.05 }}
-              >
-                <Link
-                  href={feature.href || "#"}
-                  className="group flex h-[165px] flex-col items-center rounded-lg border border-border bg-white px-3 pt-4 pb-6 text-center shadow-[0_8px_18px_rgba(15,23,42,0.04)] transition-all hover:border-primary/30 hover:shadow-md"
+              <motion.div key={feature.id} variants={cardVariants}>
+                <motion.div
+                  whileHover={{
+                    y: -5,
+                    transition: { type: "spring", stiffness: 320, damping: 26 },
+                  }}
+                  className="h-full"
                 >
-                  <div
+                  <Link
+                    href={feature.href ?? "#"}
                     className={cn(
-                      "flex h-10 w-10 items-center justify-center rounded-lg",
-                      feature.iconBg || "bg-primary/10"
+                      "group flex h-full flex-col rounded-2xl border border-border bg-white p-6 lg:p-7",
+                      "shadow-[0_1px_6px_rgba(15,23,42,0.06)]",
+                      "transition-shadow duration-250 hover:border-slate-300 hover:shadow-[0_10px_32px_rgba(15,23,42,0.1)]"
                     )}
                   >
-                    {IconComp && (
-                      <IconComp
+                    {/* Number + icon row */}
+                    <div className="flex items-start justify-between">
+                      <div
                         className={cn(
-                          "h-6 w-6",
-                          feature.iconColor || "text-primary"
+                          "flex h-12 w-12 items-center justify-center rounded-xl",
+                          feature.iconBg ?? "bg-primary/10"
                         )}
+                      >
+                        {IconComp && (
+                          <IconComp
+                            className={cn(
+                              "h-6 w-6",
+                              feature.iconColor ?? "text-primary"
+                            )}
+                            aria-hidden="true"
+                          />
+                        )}
+                      </div>
+                      <span className="text-[13px] font-bold tabular-nums text-slate-200 select-none">
+                        {num}
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="mt-4 text-[17px] font-bold leading-snug text-navy">
+                      {feature.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="mt-2 flex-1 text-[15px] leading-relaxed text-muted-foreground">
+                      {feature.description}
+                    </p>
+
+                    {/* CTA */}
+                    <div className="mt-5 flex items-center gap-1.5 text-[14px] font-semibold text-primary">
+                      Learn more
+                      <ArrowRight
+                        className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+                        aria-hidden="true"
                       />
-                    )}
-                  </div>
-                  <h3 className="mt-3 min-h-[28px] text-xs font-black leading-tight text-navy">
-                    {feature.title}
-                  </h3>
-                  <p className="mt-1 min-h-[38px] text-[12px] font-medium leading-tight text-muted-foreground">
-                    {feature.description}
-                  </p>
-                  <span className="mt-auto flex items-center gap-1 pt-3 text-xs font-black text-primary">
-                    Learn More
-                    <ArrowRight className="h-4 w-4" />
-                  </span>
-                </Link>
+                    </div>
+                  </Link>
+                </motion.div>
               </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
