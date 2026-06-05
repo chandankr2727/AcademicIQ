@@ -1,143 +1,223 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import {
-  Home,
-  MessageSquare,
-  Video,
-  UsersRound,
-  Bot,
-  UserCheck,
+  House,
+  ChatCircle,
+  VideoCamera,
+  UsersThree,
+  Robot,
+  UserCircleCheck,
   BookOpen,
   Heart,
-  Network,
+  Graph,
   ArrowRight,
-} from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+} from "@phosphor-icons/react";
 import { exploreFeatures } from "@/constants/features";
 import { cn } from "@/lib/utils";
 
-const iconComponents: Record<string, LucideIcon> = {
-  Home,
-  MessageSquare,
-  Video,
-  UsersRound,
-  Bot,
-  UserCheck,
-  BookOpen,
-  Heart,
-  Network,
+const iconComponents: Record<string, React.ElementType> = {
+  Home: House,
+  MessageSquare: ChatCircle,
+  Video: VideoCamera,
+  UsersRound: UsersThree,
+  Bot: Robot,
+  UserCheck: UserCircleCheck,
+  BookOpen: BookOpen,
+  Heart: Heart,
+  Network: Graph,
 };
 
-const containerVariants: Variants = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.07, delayChildren: 0.05 } },
+// Each card: its accent hex, soft background tint, gradient class for icon shadow
+const palette: Record<string, { hex: string; soft: string; ring: string }> = {
+  "one-channel": { hex: "#3b82f6", soft: "#eff6ff", ring: "rgba(59,130,246,0.18)" },
+  threads: { hex: "#10b981", soft: "#ecfdf5", ring: "rgba(16,185,129,0.18)" },
+  "study-sessions-feature": { hex: "#f43f5e", soft: "#fff1f2", ring: "rgba(244,63,94,0.18)" },
+  "study-circle": { hex: "#a855f7", soft: "#faf5ff", ring: "rgba(168,85,247,0.18)" },
+  "assist-feature": { hex: "#6366f1", soft: "#eef2ff", ring: "rgba(99,102,241,0.18)" },
+  "tutoring-feature": { hex: "#14b8a6", soft: "#f0fdfa", ring: "rgba(20,184,166,0.18)" },
+  library: { hex: "#6366f1", soft: "#eef2ff", ring: "rgba(99,102,241,0.18)" },
+  community: { hex: "#ec4899", soft: "#fdf2f8", ring: "rgba(236,72,153,0.18)" },
+  network: { hex: "#f97316", soft: "#fff7ed", ring: "rgba(249,115,22,0.18)" },
 };
 
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
-};
+function ProgressDots({ progress }: { progress: number }) {
+  return (
+    <div className="flex items-center gap-1.5">
+      {exploreFeatures.map((_, i) => {
+        const active = progress >= i / (exploreFeatures.length - 1) - 0.02;
+        return (
+          <div
+            key={i}
+            className={cn(
+              "rounded-full transition-all duration-300",
+              active ? "bg-primary w-4 h-1.5" : "bg-slate-300 w-1.5 h-1.5"
+            )}
+          />
+        );
+      })}
+    </div>
+  );
+}
 
 export function FeatureCards() {
-  return (
-    <section className="bg-white py-14 lg:py-20">
-      <div className="mx-auto max-w-[1536px] px-4 sm:px-6 lg:px-10">
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [scrollRange, setScrollRange] = useState(1800);
+  const [winH, setWinH] = useState(700);
+  const [progressVal, setProgressVal] = useState(0);
 
-        {/* Section heading */}
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end end"],
+  });
+
+  useEffect(() => {
+    const update = () => {
+      setWinH(window.innerHeight);
+      if (!trackRef.current) return;
+      const excess = trackRef.current.scrollWidth - window.innerWidth + 60;
+      setScrollRange(Math.max(100, excess));
+    };
+    const t = setTimeout(update, 120);
+    window.addEventListener("resize", update);
+    return () => { clearTimeout(t); window.removeEventListener("resize", update); };
+  }, []);
+
+  useEffect(() => scrollYProgress.on("change", setProgressVal), [scrollYProgress]);
+
+  const x = useTransform(scrollYProgress, [0, 1], [0, -scrollRange]);
+
+  return (
+    <section
+      ref={sectionRef}
+      className="relative"
+      style={{ height: winH + scrollRange }}
+    >
+      <div
+        className="sticky top-16 overflow-hidden flex flex-col bg-[#f8fbff]"
+        style={{ height: winH - 64 }}
+      >
+        {/* Heading */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          className="mb-10 text-center"
+          transition={{ duration: 0.4 }}
+          className="shrink-0 pt-8 pb-4 text-center px-4"
         >
-          <h2 className="text-3xl font-black text-navy sm:text-4xl">
+          <h2 className="text-2xl font-black text-navy sm:text-3xl">
             Explore What AcademIQ Offers
           </h2>
-          <p className="mt-3 mx-auto max-w-2xl text-[16px] leading-relaxed text-muted-foreground">
-            Discover the tools, support, and communities that power your virtual
-            learning journey — all in one place.
+          <p className="mt-3 text-base sm:text-lg text-muted-foreground">
+            Every tool you need — study, teach, collaborate, and grow.
           </p>
         </motion.div>
 
-        {/* 3 × 3 grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.05 }}
-          className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3"
-        >
-          {exploreFeatures.map((feature, index) => {
-            const IconComp = iconComponents[feature.icon];
-            const num = String(index + 1).padStart(2, "0");
+        {/* Cards track — vertically centred, natural card height */}
+        <div className="flex-1 flex items-center overflow-hidden">
+          <motion.div
+            ref={trackRef}
+            style={{ x }}
+            className="flex gap-6 pl-5 sm:pl-8 lg:pl-12 pr-10 will-change-transform"
+          >
+            {exploreFeatures.map((feature, index) => {
+              const IconComp = iconComponents[feature.icon];
+              const p = palette[feature.id] ?? { hex: "#64748b", soft: "#f8fafc", ring: "rgba(100,116,139,0.15)" };
+              const num = String(index + 1).padStart(2, "0");
 
-            return (
-              <motion.div key={feature.id} variants={cardVariants}>
+              return (
                 <motion.div
-                  whileHover={{
-                    y: -5,
-                    transition: { type: "spring", stiffness: 320, damping: 26 },
+                  key={feature.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.38, delay: index * 0.03 }}
+                  whileHover={{ y: -8, scale: 1.02, transition: { type: "spring", stiffness: 340, damping: 22 } }}
+                  className="group relative w-[320px] min-w-[320px] flex flex-col rounded-3xl overflow-hidden cursor-pointer select-none bg-white"
+                  style={{
+                    background: `linear-gradient(145deg, #ffffff, ${p.soft})`,
+                    border: `1px solid rgba(255,255,255,0.8)`,
+                    boxShadow: `0 10px 30px -5px ${p.ring}, 0 0 0 1px ${p.hex}15`,
                   }}
-                  className="h-full"
                 >
-                  <Link
-                    href={feature.href ?? "#"}
-                    className={cn(
-                      "group flex h-full flex-col rounded-2xl border border-border bg-white p-6 lg:p-7",
-                      "shadow-[0_1px_6px_rgba(15,23,42,0.06)]",
-                      "transition-shadow duration-250 hover:border-slate-300 hover:shadow-[0_10px_32px_rgba(15,23,42,0.1)]"
-                    )}
-                  >
-                    {/* Number + icon row */}
-                    <div className="flex items-start justify-between">
-                      <div
-                        className={cn(
-                          "flex h-12 w-12 items-center justify-center rounded-xl",
-                          feature.iconBg ?? "bg-primary/10"
-                        )}
+                  <div className="flex flex-col p-8 gap-6 h-full">
+
+                    {/* Top row: white icon chip + number */}
+                    <div className="flex items-center justify-between">
+                      <motion.div
+                        whileHover={{ scale: 1.12, rotate: -6 }}
+                        transition={{ type: "spring", stiffness: 380, damping: 18 }}
+                        className="flex h-16 w-16 items-center justify-center rounded-2xl"
+                        style={{
+                          background: `linear-gradient(135deg, #ffffff 0%, ${p.soft} 100%)`,
+                          boxShadow: `
+                            -4px -4px 8px rgba(255,255,255,0.9),
+                            4px 4px 12px ${p.ring},
+                            inset -2px -2px 4px rgba(0,0,0,0.04),
+                            inset 2px 2px 4px rgba(255,255,255,0.9)
+                          `,
+                          border: `1px solid rgba(255,255,255,0.6)`
+                        }}
                       >
                         {IconComp && (
                           <IconComp
-                            className={cn(
-                              "h-6 w-6",
-                              feature.iconColor ?? "text-primary"
-                            )}
+                            weight="duotone"
+                            size={32}
+                            color={p.hex}
                             aria-hidden="true"
+                            style={{ filter: `drop-shadow(2px 4px 4px ${p.ring})` }}
                           />
                         )}
-                      </div>
-                      <span className="text-[13px] font-bold tabular-nums text-slate-200 select-none">
+                      </motion.div>
+                      <span
+                        className="text-[42px] font-black select-none leading-none"
+                        style={{ color: `${p.hex}30` }}
+                      >
                         {num}
                       </span>
                     </div>
 
-                    {/* Title */}
-                    <h3 className="mt-4 text-[17px] font-bold leading-snug text-navy">
-                      {feature.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="mt-2 flex-1 text-[15px] leading-relaxed text-muted-foreground">
-                      {feature.description}
-                    </p>
+                    {/* Text block */}
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold leading-snug text-navy">
+                        {feature.title}
+                      </h3>
+                      <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
+                        {feature.description}
+                      </p>
+                    </div>
 
                     {/* CTA */}
-                    <div className="mt-5 flex items-center gap-1.5 text-[14px] font-semibold text-primary">
+                    <Link
+                      href={feature.href ?? "#"}
+                      className="inline-flex items-center gap-1.5 text-[15px] font-bold transition-[gap] duration-200 group-hover:gap-2.5 mt-2"
+                      style={{ color: p.hex }}
+                      onClick={(e) => e.stopPropagation()}
+                    >
                       Learn more
-                      <ArrowRight
-                        className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
-                        aria-hidden="true"
-                      />
-                    </div>
-                  </Link>
+                      <ArrowRight weight="bold" size={14} aria-hidden="true" />
+                    </Link>
+                  </div>
+
+                  {/* Bottom glow bar on hover */}
+                  <div
+                    className="absolute bottom-0 left-0 right-0 h-[4px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ background: `linear-gradient(90deg, ${p.hex}, ${p.hex}66)` }}
+                  />
                 </motion.div>
-              </motion.div>
-            );
-          })}
-        </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+
+        {/* Progress dots */}
+        <div className="shrink-0 pb-6 flex flex-col items-center gap-2">
+          <ProgressDots progress={progressVal} />
+          <p className="text-sm font-medium text-slate-400">Scroll to explore all features</p>
+        </div>
       </div>
     </section>
   );

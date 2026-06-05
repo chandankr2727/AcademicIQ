@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, GraduationCap } from "lucide-react";
+import { ArrowRight, CheckCircle, GraduationCap } from "@phosphor-icons/react";
 
 const problemIcons = [
   {
@@ -107,25 +107,40 @@ const platformAvatars = [
   { img: "https://randomuser.me/api/portraits/women/12.jpg" },
 ];
 
-const panelVariants: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+const panelLeft: Variants = {
+  hidden: { opacity: 0, x: -50, filter: "blur(8px)" },
+  show: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const panelCenter: Variants = {
+  hidden: { opacity: 0, scale: 0.8, filter: "blur(8px)" },
+  show: { opacity: 1, scale: 1, filter: "blur(0px)", transition: { duration: 0.55, ease: "easeOut", delay: 0.1 } },
+};
+
+const panelRight: Variants = {
+  hidden: { opacity: 0, x: 50, filter: "blur(8px)" },
+  show: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 0.6, ease: "easeOut", delay: 0.15 } },
+};
+
+const panelFar: Variants = {
+  hidden: { opacity: 0, x: 60, filter: "blur(8px)" },
+  show: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 0.6, ease: "easeOut", delay: 0.22 } },
 };
 
 export function ProblemSolveSection() {
   return (
     <section
-      className="bg-white py-14 lg:py-20"
+      className="bg-[#f8fbff] py-8 lg:py-10"
       aria-labelledby="problem-solve-heading"
     >
       {/* Section heading */}
       <div className="mx-auto max-w-[1536px] px-4 sm:px-6 lg:px-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 28, filter: "blur(8px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mb-10 text-center"
+          transition={{ duration: 0.55 }}
+          className="mb-6 text-center"
         >
           <h2
             id="problem-solve-heading"
@@ -133,7 +148,7 @@ export function ProblemSolveSection() {
           >
             One Platform. Everything Connected.
           </h2>
-          <p className="mt-3 mx-auto max-w-lg text-[16px] leading-relaxed text-muted-foreground">
+          <p className="mt-4 mx-auto max-w-lg text-lg font-medium leading-relaxed text-slate-700">
             Education is fragmented. AcademIQ brings it all together in one place.
           </p>
         </motion.div>
@@ -141,35 +156,35 @@ export function ProblemSolveSection() {
 
       <div className="mx-auto flex flex-col gap-4 px-4 sm:px-6 lg:flex-row lg:items-stretch lg:justify-between lg:px-6 xl:px-10">
 
-        {/* Problem */}
+        {/* Problem — slide from left */}
         <motion.article
-          variants={panelVariants}
+          variants={panelLeft}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
           className="rounded-2xl border border-border bg-white p-5 text-center shadow-sm lg:flex-[1.6]"
         >
-          <h3 className="text-[18px] font-bold text-navy">The Problem We Solve</h3>
-          <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
+          <h3 className="text-xl font-bold text-navy">The Problem We Solve</h3>
+          <p className="mt-2 text-base font-medium leading-relaxed text-slate-700">
             Students currently juggle many disconnected tools to learn.
           </p>
-          <p className="mt-3 text-[14px] font-semibold text-navy">Today: Students juggle many tools</p>
+          <p className="mt-3 text-base font-semibold text-navy">Today: Students juggle many tools</p>
 
-          {/* Icons — 4-per-row on mobile, single row on desktop */}
           <div className="mt-4 grid grid-cols-4 gap-3 sm:flex sm:justify-between sm:gap-2">
             {problemIcons.map((item, i) => (
               <motion.div
                 key={item.label}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 16, scale: 0.85 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: i * 0.05 }}
+                transition={{ duration: 0.35, delay: i * 0.06 }}
+                whileHover={{ y: -4, scale: 1.08, transition: { type: "spring", stiffness: 340, damping: 20 } }}
                 className="flex flex-col items-center gap-1.5"
               >
                 <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl bg-slate-50 p-2 shadow-sm border border-border">
                   {item.svg}
                 </div>
-                <span className="text-[13px] font-semibold leading-tight text-navy">
+                <span className="text-sm font-semibold leading-tight text-navy">
                   {item.label}
                 </span>
               </motion.div>
@@ -179,10 +194,10 @@ export function ProblemSolveSection() {
 
         {/* Arrow — desktop only */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.6, x: -10 }}
+          whileInView={{ opacity: 1, scale: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4, delay: 0.15 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="hidden shrink-0 items-center justify-center lg:flex lg:-mx-3"
           aria-hidden="true"
         >
@@ -199,21 +214,24 @@ export function ProblemSolveSection() {
           </svg>
         </motion.div>
 
-        {/* AcademIQ hub */}
+        {/* AcademIQ hub — scale in */}
         <motion.article
-          variants={panelVariants}
+          variants={panelCenter}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
           className="flex flex-col items-center justify-center rounded-2xl border border-border bg-white p-5 text-center shadow-sm lg:flex-[0.7]"
         >
-          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-white">
-            <GraduationCap className="h-7 w-7" fill="currentColor" aria-hidden="true" />
-          </div>
+          <motion.div
+            whileHover={{ scale: 1.1, rotate: 6 }}
+            transition={{ type: "spring", stiffness: 340, damping: 18 }}
+            className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 shadow-lg shadow-blue-200 text-white"
+          >
+            <GraduationCap weight="duotone" size={28} color="#fff" aria-hidden="true" />
+          </motion.div>
           <h3 className="mt-3 text-xl font-black text-navy">AcademIQ</h3>
-          <p className="text-[15px] font-bold text-navy">One Platform.</p>
-          <p className="text-[15px] font-bold text-navy">Everything Connected.</p>
+          <p className="text-base font-bold text-navy">One Platform.</p>
+          <p className="text-base font-bold text-navy">Everything Connected.</p>
           <div className="mt-3 flex justify-center -space-x-1.5" aria-hidden="true">
             {platformAvatars.map((a, i) => (
               <span key={i} className="h-7 w-7 overflow-hidden rounded-full border-2 border-white">
@@ -221,47 +239,50 @@ export function ProblemSolveSection() {
               </span>
             ))}
           </div>
-          <p className="mt-2 text-[14px] text-muted-foreground">
+          <p className="mt-3 text-base font-medium text-slate-700">
             Everything you need in one place.
           </p>
         </motion.article>
 
-        {/* Tomorrow */}
+        {/* Tomorrow — slide from right */}
         <motion.article
-          variants={panelVariants}
+          variants={panelRight}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          transition={{ delay: 0.15 }}
           className="rounded-2xl border border-border bg-white p-5 shadow-sm lg:flex-[1.1]"
         >
-          <h3 className="text-center text-[17px] font-bold text-navy">
+          <h3 className="text-center text-lg font-bold text-navy">
             Tomorrow: Learn Smarter. Together.
           </h3>
           <div className="mt-4 grid grid-cols-1 gap-y-3 sm:grid-cols-2 sm:gap-x-4 lg:grid-cols-1 xl:grid-cols-2">
             {tomorrowPoints.map((point, i) => (
               <motion.div
                 key={point}
-                initial={{ opacity: 0, x: -10 }}
+                initial={{ opacity: 0, x: -12 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: i * 0.06 }}
-                className="flex items-center gap-2 text-[15px] font-medium text-navy"
+                transition={{ duration: 0.35, delay: i * 0.07 }}
+                className="flex items-center gap-2 text-base font-medium text-navy"
               >
-                <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-500" strokeWidth={2.5} aria-hidden="true" />
+                <CheckCircle
+                  weight="duotone"
+                  size={20}
+                  className="shrink-0 text-emerald-500"
+                  aria-hidden="true"
+                />
                 <span>{point}</span>
               </motion.div>
             ))}
           </div>
         </motion.article>
 
-        {/* Emma */}
+        {/* Emma — slide from far right */}
         <motion.article
-          variants={panelVariants}
+          variants={panelFar}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
           className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm grid grid-cols-1 sm:grid-cols-[130px_1fr] lg:grid-cols-[100px_1fr] xl:grid-cols-[120px_1fr] lg:flex-[1.2]"
           aria-labelledby="emma-heading"
         >
@@ -276,18 +297,18 @@ export function ProblemSolveSection() {
             />
           </div>
           <div className="flex flex-col justify-center p-5">
-            <h3 id="emma-heading" className="text-[17px] font-bold text-navy">
+            <h3 id="emma-heading" className="text-lg font-bold text-navy">
               Hi! I&apos;m Emma 👋
             </h3>
-            <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
+            <p className="mt-2 text-base font-medium leading-relaxed text-slate-700">
               I help you navigate AcademIQ, find resources, stay on track, and achieve your goals.
             </p>
             <Link
               href="#"
-              className="mt-3 inline-flex items-center gap-1.5 text-[14px] font-semibold text-primary hover:underline"
+              className="mt-4 inline-flex items-center gap-1.5 text-base font-semibold text-primary hover:underline"
             >
               Chat with Emma{" "}
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              <ArrowRight weight="bold" size={15} aria-hidden="true" />
             </Link>
           </div>
         </motion.article>

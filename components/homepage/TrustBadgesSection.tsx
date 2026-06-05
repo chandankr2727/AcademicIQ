@@ -1,67 +1,74 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import { Globe, Lock, Users, GraduationCap } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import {
+  Globe,
+  Lock,
+  UsersThree,
+  GraduationCap,
+} from "@phosphor-icons/react";
+import type { Icon } from "@phosphor-icons/react";
 
 const badges: {
-  icon: LucideIcon;
+  icon: Icon;
   title: string;
   desc: string;
-  iconBg: string;
-  iconColor: string;
+  gradient: string;
+  shadow: string;
 }[] = [
   {
     icon: Globe,
     title: "Anytime, Anywhere",
     desc: "Learn on any device, at your own pace.",
-    iconBg: "bg-blue-50",
-    iconColor: "text-blue-600",
+    gradient: "bg-gradient-to-br from-blue-400 to-blue-600",
+    shadow: "shadow-blue-200",
   },
   {
     icon: Lock,
     title: "Secure & Private",
     desc: "Your data is protected and encrypted.",
-    iconBg: "bg-emerald-50",
-    iconColor: "text-emerald-600",
+    gradient: "bg-gradient-to-br from-emerald-400 to-emerald-600",
+    shadow: "shadow-emerald-200",
   },
   {
-    icon: Users,
+    icon: UsersThree,
     title: "Inclusive Community",
     desc: "A welcoming space for all learners.",
-    iconBg: "bg-violet-50",
-    iconColor: "text-violet-600",
+    gradient: "bg-gradient-to-br from-violet-400 to-violet-600",
+    shadow: "shadow-violet-200",
   },
   {
     icon: GraduationCap,
     title: "Built for Education",
     desc: "Designed by educators, for educators.",
-    iconBg: "bg-orange-50",
-    iconColor: "text-orange-600",
+    gradient: "bg-gradient-to-br from-orange-400 to-orange-500",
+    shadow: "shadow-orange-200",
   },
 ];
 
 const containerVariants: Variants = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.1 } },
+  show: { transition: { staggerChildren: 0.12 } },
 };
 
 const badgeVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, rotateX: 70, scale: 0.85, y: 20 },
   show: {
     opacity: 1,
+    rotateX: 0,
+    scale: 1,
     y: 0,
-    transition: { duration: 0.45, ease: "easeOut" },
+    transition: { duration: 0.55, ease: "easeOut" },
   },
 };
 
 export function TrustBadgesSection() {
   return (
-    <section className="border-t border-border bg-white py-14">
+    <section className="bg-[#f8fbff] py-8">
       <div className="mx-auto max-w-[1536px] px-4 sm:px-6 lg:px-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="text-center"
@@ -69,7 +76,7 @@ export function TrustBadgesSection() {
           <h2 className="text-xl font-black text-navy sm:text-2xl">
             Trusted by learners, educators, and institutions worldwide.
           </h2>
-          <p className="mt-2 text-[15px] text-muted-foreground">
+          <p className="mt-4 text-lg font-medium text-slate-700">
             Built on trust, privacy, and a love for education.
           </p>
         </motion.div>
@@ -79,6 +86,7 @@ export function TrustBadgesSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
+          style={{ perspective: 1000 }}
           className="mx-auto mt-10 grid max-w-[960px] grid-cols-2 gap-5 sm:grid-cols-4"
         >
           {badges.map((badge) => (
@@ -86,20 +94,28 @@ export function TrustBadgesSection() {
               key={badge.title}
               variants={badgeVariants}
               whileHover={{
-                y: -4,
+                y: -6,
                 transition: { type: "spring", stiffness: 300, damping: 22 },
               }}
+              style={{ transformOrigin: "top center" }}
               className="flex flex-col items-center gap-3 rounded-2xl border border-border bg-white p-5 text-center shadow-sm transition-shadow duration-250 hover:shadow-[0_8px_24px_rgba(15,23,42,0.09)]"
             >
-              <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${badge.iconBg}`}>
+              <motion.div
+                whileHover={{ scale: 1.12, rotate: 8 }}
+                transition={{ type: "spring", stiffness: 340, damping: 18 }}
+                className={`flex h-13 w-13 items-center justify-center rounded-xl shadow-lg ${badge.gradient} ${badge.shadow}`}
+                style={{ width: 52, height: 52 }}
+              >
                 <badge.icon
-                  className={`h-6 w-6 ${badge.iconColor}`}
+                  weight="duotone"
+                  size={26}
+                  color="#fff"
                   aria-hidden="true"
                 />
-              </div>
+              </motion.div>
               <div>
-                <h3 className="text-[15px] font-bold text-navy">{badge.title}</h3>
-                <p className="mt-1 text-[14px] leading-snug text-muted-foreground">
+                <h3 className="text-lg font-bold text-navy">{badge.title}</h3>
+                <p className="mt-2 text-base font-medium leading-snug text-slate-700">
                   {badge.desc}
                 </p>
               </div>

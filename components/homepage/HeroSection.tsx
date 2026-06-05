@@ -4,18 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
-  Bot,
-  CheckCircle2,
-  CircleArrowRight,
-  Globe2,
+  SquaresFour,
   GraduationCap,
-  Headphones,
-  LayoutGrid,
+  VideoCamera,
+  Robot,
   Users,
-  Video,
-} from "lucide-react";
-import type { LucideIcon } from "lucide-react";
-import { motion, type Variants } from "framer-motion";
+  Headset,
+  Globe,
+  CheckCircle,
+  ArrowCircleRight,
+} from "@phosphor-icons/react";
+import type { Icon } from "@phosphor-icons/react";
+import { motion, type Variants, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const avatarData = [
@@ -55,56 +55,69 @@ function AvatarStack({ small = false }: { small?: boolean }) {
   );
 }
 
-// Entrance animation only — no continuous float
 function FloatingCard({
   icon: Icon,
+  iconGradient,
   title,
   description,
-  iconClass,
   className,
   delay = 0,
+  floatDelay = 0,
   children,
 }: {
-  icon: LucideIcon;
+  icon: Icon;
+  iconGradient: string;
   title: string;
   description: string;
-  iconClass: string;
   className: string;
   delay?: number;
+  floatDelay?: number;
   children?: ReactNode;
 }) {
   return (
+    // Entrance: opacity + scale
     <motion.div
-      initial={{ opacity: 0, y: 14, scale: 0.94 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.5, delay, ease: "easeOut" }}
+      initial={{ opacity: 0, scale: 0.88 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.55, delay, ease: "easeOut" }}
       className={cn("absolute z-20", className)}
       aria-hidden="true"
     >
-      <div
-        className={cn(
-          "w-[11rem] rounded-xl border border-slate-100/80 bg-white/96 p-2.5",
-          "shadow-[0_6px_24px_rgba(15,23,42,0.11)] backdrop-blur-sm"
-        )}
+      {/* Continuous float */}
+      <motion.div
+        animate={{ y: [0, -8, 0] }}
+        transition={{
+          duration: 3.6,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: floatDelay,
+        }}
       >
-        <div className="flex items-start gap-2">
-          <div
-            className={cn(
-              "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg",
-              iconClass
-            )}
-          >
-            <Icon className="h-4 w-4" />
-          </div>
-          <div className="min-w-0">
-            <p className="text-[14px] font-bold leading-tight text-navy">{title}</p>
-            <p className="mt-0.5 text-[13px] font-medium leading-snug text-slate-500">
-              {description}
-            </p>
-            {children}
+        <div
+          className={cn(
+            "w-[11rem] rounded-xl border border-slate-100/80 bg-white/96 p-2.5",
+            "shadow-[0_8px_28px_rgba(15,23,42,0.13)] backdrop-blur-sm"
+          )}
+        >
+          <div className="flex items-start gap-2">
+            <div
+              className={cn(
+                "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg shadow-md",
+                iconGradient
+              )}
+            >
+              <Icon weight="duotone" size={16} color="#fff" />
+            </div>
+            <div className="min-w-0">
+              <p className="text-base font-bold leading-tight text-navy">{title}</p>
+              <p className="mt-1 text-sm font-medium leading-snug text-slate-700">
+                {description}
+              </p>
+              {children}
+            </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
@@ -115,11 +128,19 @@ const heroContent: Variants = {
 };
 
 const heroItem: Variants = {
-  hidden: { opacity: 0, y: 18 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
+  show: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: { duration: 0.55, ease: "easeOut" },
+  },
 };
 
 export function HeroSection() {
+  const { scrollY } = useScroll();
+  const imageY = useTransform(scrollY, [0, 500], [0, 60]);
+
   return (
     <section
       className="relative flex min-h-[560px] flex-col overflow-hidden border-b border-border bg-[#f8fbff] md:block"
@@ -168,7 +189,7 @@ export function HeroSection() {
           {/* Sub-copy */}
           <motion.p
             variants={heroItem}
-            className="mt-4 max-w-[440px] text-[16px] font-normal leading-relaxed text-slate-600"
+            className="mt-4 max-w-[480px] text-lg font-medium leading-relaxed text-slate-700"
           >
             AcademIQ is the{" "}
             <strong className="font-semibold text-navy">
@@ -187,14 +208,14 @@ export function HeroSection() {
               href="/signup"
               className="inline-flex h-11 items-center gap-2 rounded-lg bg-primary px-6 text-[15px] font-bold text-white transition-colors hover:bg-primary-dark"
             >
-              <GraduationCap className="h-4 w-4" aria-hidden="true" />
+              <GraduationCap weight="duotone" size={18} color="#fff" aria-hidden="true" />
               Join AcademIQ
             </Link>
             <Link
               href="/about"
               className="inline-flex h-11 items-center gap-2 rounded-lg border border-border bg-white px-6 text-[15px] font-bold text-primary transition-colors hover:bg-muted"
             >
-              <CircleArrowRight className="h-4 w-4" aria-hidden="true" />
+              <ArrowCircleRight weight="duotone" size={18} aria-hidden="true" />
               Discover Your Network
             </Link>
           </motion.div>
@@ -207,7 +228,7 @@ export function HeroSection() {
             <Link
               href="#"
               aria-label="Download on the App Store"
-              className="inline-flex h-11 items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-5 text-[14px] font-semibold text-navy shadow-sm transition-colors hover:border-slate-300 hover:bg-slate-50"
+              className="inline-flex h-11 items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-5 text-base font-semibold text-navy shadow-sm transition-colors hover:border-slate-300 hover:bg-slate-50"
             >
               <svg viewBox="0 0 384 512" className="h-5 w-5" fill="#0a1628" aria-hidden="true">
                 <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
@@ -217,7 +238,7 @@ export function HeroSection() {
             <Link
               href="#"
               aria-label="Get it on Google Play"
-              className="inline-flex h-11 items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-5 text-[14px] font-semibold text-navy shadow-sm transition-colors hover:border-slate-300 hover:bg-slate-50"
+              className="inline-flex h-11 items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-5 text-base font-semibold text-navy shadow-sm transition-colors hover:border-slate-300 hover:bg-slate-50"
             >
               <svg viewBox="0 0 512 512" className="h-5 w-5" aria-hidden="true">
                 <path fill="#2196f3" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z" />
@@ -232,24 +253,27 @@ export function HeroSection() {
           {/* Globe stat */}
           <motion.div
             variants={heroItem}
-            className="mt-5 flex items-center gap-2 text-[15px] font-semibold text-primary"
+            className="mt-6 flex items-center gap-2 text-base font-semibold text-primary"
           >
-            <Globe2 className="h-5 w-5 shrink-0" aria-hidden="true" />
+            <Globe weight="duotone" size={22} aria-hidden="true" />
             Connect with learners and educators from 72+ countries
           </motion.div>
 
           {/* Avatar row */}
-          <motion.div variants={heroItem} className="mt-3 flex items-center gap-3">
+          <motion.div variants={heroItem} className="mt-4 flex items-center gap-3">
             <AvatarStack />
-            <p className="text-[14px] font-medium text-slate-600">
+            <p className="text-base font-medium text-slate-700">
               Built for students, educators &amp; institutions worldwide
             </p>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Hero image + floating info cards */}
-      <div className="relative z-0 h-[340px] w-full shrink-0 overflow-hidden md:absolute md:inset-y-0 md:left-[30%] md:right-0 md:h-auto md:w-auto md:overflow-visible">
+      {/* Hero image + floating info cards (with parallax) */}
+      <motion.div
+        style={{ y: imageY }}
+        className="relative z-0 h-[460px] sm:h-[520px] w-full shrink-0 overflow-visible md:absolute md:inset-y-0 md:left-[30%] md:right-0 md:h-auto md:w-auto"
+      >
         <Image
           src="/hero.webp"
           alt="Student studying with laptop and headphones in a modern learning environment"
@@ -267,14 +291,15 @@ export function HeroSection() {
         />
 
         <FloatingCard
-          icon={LayoutGrid}
+          icon={SquaresFour}
+          iconGradient="bg-gradient-to-br from-blue-400 to-blue-600"
           title="For Students"
           description="Study, collaborate & get support"
-          iconClass="bg-blue-50 text-blue-600"
-          className="left-[5%] top-[10%] origin-top-left scale-75 md:left-[20%] md:top-[6%] md:scale-100"
+          className="left-[2%] top-[5%] origin-top-left scale-[0.65] sm:scale-75 md:left-[20%] md:top-[6%] md:scale-100"
           delay={0.4}
+          floatDelay={0}
         >
-          <div className="mt-1 space-y-0.5 text-[13px] font-semibold text-primary">
+          <div className="mt-1 space-y-0.5 text-sm font-semibold text-primary">
             <p>Study Tools</p>
             <p>Support &amp; Tutoring</p>
           </div>
@@ -282,69 +307,74 @@ export function HeroSection() {
 
         <FloatingCard
           icon={GraduationCap}
+          iconGradient="bg-gradient-to-br from-violet-400 to-violet-600"
           title="For Instructors"
           description="Teach, engage & empower"
-          iconClass="bg-violet-50 text-violet-600"
-          className="right-[5%] top-[10%] origin-top-right scale-75 md:right-[7%] md:top-[6%] md:scale-100"
+          className="right-[2%] top-[15%] origin-top-right scale-[0.65] sm:scale-75 md:right-[7%] md:top-[6%] md:scale-100"
           delay={0.5}
+          floatDelay={0.6}
         >
-          <div className="mt-1 space-y-0.5 text-[13px] font-semibold text-primary">
+          <div className="mt-1 space-y-0.5 text-sm font-semibold text-primary">
             <p>Instructor Tools</p>
             <p>Resources &amp; Training</p>
           </div>
         </FloatingCard>
 
         <FloatingCard
-          icon={Video}
+          icon={VideoCamera}
+          iconGradient="bg-gradient-to-br from-red-400 to-rose-500"
           title="Study Sessions"
           description="Live sessions with peers & experts"
-          iconClass="bg-rose-50 text-rose-500"
-          className="left-[2%] top-[40%] origin-top-left scale-75 md:left-[17%] md:top-[34%] md:scale-100"
+          className="left-[2%] top-[38%] origin-top-left scale-[0.65] sm:scale-75 md:left-[17%] md:top-[34%] md:scale-100"
           delay={0.55}
+          floatDelay={1.1}
         >
           <div className="mt-1 flex items-center gap-1.5">
             <AvatarStack small />
-            <span className="text-[13px] font-semibold text-slate-600">+24</span>
+            <span className="text-sm font-semibold text-slate-700">+24</span>
           </div>
         </FloatingCard>
 
         <FloatingCard
-          icon={Bot}
+          icon={Robot}
+          iconGradient="bg-gradient-to-br from-emerald-400 to-emerald-600"
           title="Assist (AI)"
           description="AI-powered support to understand and grow"
-          iconClass="bg-emerald-50 text-emerald-600"
-          className="right-[2%] top-[45%] origin-top-right scale-75 md:right-[7%] md:top-[36%] md:scale-100"
+          className="right-[2%] top-[48%] origin-top-right scale-[0.65] sm:scale-75 md:right-[7%] md:top-[36%] md:scale-100"
           delay={0.6}
+          floatDelay={1.7}
         >
-          <div className="mt-1.5 flex items-center gap-1 text-[13px] font-semibold text-emerald-700">
-            <CheckCircle2 className="h-3 w-3" aria-hidden="true" />
+          <div className="mt-1.5 flex items-center gap-1 text-sm font-semibold text-emerald-700">
+            <CheckCircle weight="duotone" size={14} aria-hidden="true" />
             Always available
           </div>
         </FloatingCard>
 
         <FloatingCard
           icon={Users}
+          iconGradient="bg-gradient-to-br from-orange-400 to-orange-500"
           title="Study Circles"
           description="Collaborate in small groups"
-          iconClass="bg-orange-50 text-orange-500"
-          className="left-[5%] top-[70%] origin-top-left scale-75 md:left-[20%] md:top-[64%] md:scale-100"
+          className="left-[2%] top-[70%] origin-top-left scale-[0.65] sm:scale-75 md:left-[20%] md:top-[64%] md:scale-100"
           delay={0.65}
+          floatDelay={0.9}
         >
           <div className="mt-1 flex items-center gap-1.5">
             <AvatarStack small />
-            <span className="text-[13px] font-semibold text-slate-600">+18</span>
+            <span className="text-sm font-semibold text-slate-700">+18</span>
           </div>
         </FloatingCard>
 
         <FloatingCard
-          icon={Headphones}
+          icon={Headset}
+          iconGradient="bg-gradient-to-br from-purple-400 to-purple-600"
           title="Tutoring"
           description="Connect with tutors for personalized help"
-          iconClass="bg-purple-50 text-purple-600"
-          className="right-[4%] top-[75%] origin-top-right scale-75 md:right-[8%] md:top-[66%] md:scale-100"
+          className="right-[2%] top-[80%] origin-top-right scale-[0.65] sm:scale-75 md:right-[8%] md:top-[66%] md:scale-100"
           delay={0.7}
+          floatDelay={1.4}
         />
-      </div>
+      </motion.div>
     </section>
   );
 }

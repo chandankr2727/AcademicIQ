@@ -4,20 +4,40 @@ import type { ReactNode } from "react";
 import { motion, type Variants } from "framer-motion";
 import {
   Globe,
-  Monitor,
-  Shield,
-  Headphones,
+  Laptop,
+  ShieldCheck,
+  Headset,
   Trophy,
-} from "lucide-react";
+} from "@phosphor-icons/react";
 import { featureStrip } from "@/constants/features";
 import { cn } from "@/lib/utils";
 
-const iconMap: Record<string, ReactNode> = {
-  Globe:      <Globe      className="h-6 w-6 text-primary" aria-hidden="true" />,
-  Accessible: <Monitor    className="h-6 w-6 text-primary" aria-hidden="true" />,
-  Shield:     <Shield     className="h-6 w-6 text-primary" aria-hidden="true" />,
-  Headphones: <Headphones className="h-6 w-6 text-primary" aria-hidden="true" />,
-  Trophy:     <Trophy     className="h-6 w-6 text-primary" aria-hidden="true" />,
+const iconMap: Record<string, { icon: ReactNode; gradient: string; shadow: string }> = {
+  Globe: {
+    icon: <Globe weight="duotone" size={26} color="#fff" />,
+    gradient: "bg-gradient-to-br from-blue-400 to-blue-600",
+    shadow: "shadow-blue-200",
+  },
+  Accessible: {
+    icon: <Laptop weight="duotone" size={26} color="#fff" />,
+    gradient: "bg-gradient-to-br from-violet-400 to-violet-600",
+    shadow: "shadow-violet-200",
+  },
+  Shield: {
+    icon: <ShieldCheck weight="duotone" size={26} color="#fff" />,
+    gradient: "bg-gradient-to-br from-emerald-400 to-emerald-600",
+    shadow: "shadow-emerald-200",
+  },
+  Headphones: {
+    icon: <Headset weight="duotone" size={26} color="#fff" />,
+    gradient: "bg-gradient-to-br from-orange-400 to-orange-500",
+    shadow: "shadow-orange-200",
+  },
+  Trophy: {
+    icon: <Trophy weight="duotone" size={26} color="#fff" />,
+    gradient: "bg-gradient-to-br from-amber-400 to-amber-500",
+    shadow: "shadow-amber-200",
+  },
 };
 
 const containerVariants: Variants = {
@@ -26,8 +46,13 @@ const containerVariants: Variants = {
 };
 
 const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 16 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
+  show: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
 };
 
 export function FeatureStrip() {
@@ -39,37 +64,45 @@ export function FeatureStrip() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="py-7"
+          className="py-5"
         >
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
-            {featureStrip.map((feature, i) => (
-              <motion.div
-                key={feature.id}
-                variants={itemVariants}
-                className={cn(
-                  "flex items-center gap-4 px-4 first:pl-0 last:pr-0",
-                  "border-b border-border pb-5 last:border-b-0 last:pb-0",
-                  "sm:border-b-0 sm:pb-0 sm:pr-6",
-                  i < featureStrip.length - 1 && "sm:border-r"
-                )}
-              >
+            {featureStrip.map((feature, i) => {
+              const entry = iconMap[feature.icon];
+              return (
                 <motion.div
-                  whileHover={{ scale: 1.15, rotate: 6 }}
-                  transition={{ type: "spring", stiffness: 360, damping: 18 }}
-                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10"
+                  key={feature.id}
+                  variants={itemVariants}
+                  className={cn(
+                    "flex items-center gap-4 px-4 first:pl-0 last:pr-0",
+                    "border-b border-border pb-5 last:border-b-0 last:pb-0",
+                    "sm:border-b-0 sm:pb-0 sm:pr-6",
+                    i < featureStrip.length - 1 && "sm:border-r"
+                  )}
                 >
-                  {iconMap[feature.icon]}
+                  <motion.div
+                    whileHover={{ scale: 1.12, rotate: 6, y: -2 }}
+                    transition={{ type: "spring", stiffness: 360, damping: 18 }}
+                    className={cn(
+                      "flex h-13 w-13 shrink-0 items-center justify-center rounded-xl shadow-lg",
+                      entry?.gradient ?? "bg-primary",
+                      entry?.shadow ?? ""
+                    )}
+                    style={{ width: 52, height: 52 }}
+                  >
+                    {entry?.icon}
+                  </motion.div>
+                  <div>
+                    <h3 className="text-lg font-bold leading-tight text-navy">
+                      {feature.title}
+                    </h3>
+                    <p className="mt-1.5 text-base font-medium leading-snug text-slate-700">
+                      {feature.description}
+                    </p>
+                  </div>
                 </motion.div>
-                <div>
-                  <h3 className="text-[15px] font-bold leading-tight text-navy">
-                    {feature.title}
-                  </h3>
-                  <p className="mt-1 text-[14px] leading-snug text-muted-foreground">
-                    {feature.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+              );
+            })}
           </div>
         </motion.div>
       </div>
