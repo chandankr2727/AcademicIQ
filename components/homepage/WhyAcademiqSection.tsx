@@ -83,9 +83,9 @@ function ParallaxCard({
       className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm hover:shadow-[0_12px_40px_rgba(15,23,42,0.1)] transition-shadow duration-300"
     >
       <div className={`flex flex-col ${imageRight ? "sm:flex-row-reverse" : "sm:flex-row"}`}>
-        <div className="relative h-[280px] sm:h-auto sm:w-[220px] lg:w-[240px] shrink-0 overflow-hidden">
-          <motion.div style={{ y: imageY }} className="absolute inset-[-5%] will-change-transform">
-            <Image src={imageSrc} alt={imageAlt} fill className="object-cover object-center" sizes="(max-width: 640px) 100vw, 240px" />
+        <div className="relative h-[380px] sm:h-auto sm:w-[220px] lg:w-[240px] shrink-0 overflow-hidden">
+          <motion.div style={{ y: imageY }} className="absolute inset-[-4%] will-change-transform">
+            <Image src={imageSrc} alt={imageAlt} fill className="object-cover object-top" sizes="(max-width: 640px) 100vw, 240px" />
           </motion.div>
         </div>
         <div className="flex flex-col justify-center p-5 lg:p-6 flex-1">

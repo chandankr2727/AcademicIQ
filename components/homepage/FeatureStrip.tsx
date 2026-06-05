@@ -74,7 +74,7 @@ export function FeatureStrip() {
                   key={feature.id}
                   variants={itemVariants}
                   className={cn(
-                    "flex items-center gap-4 px-4 first:pl-0 last:pr-0",
+                    "flex items-center gap-4 px-4 lg:first:pl-0 lg:last:pr-0",
                     "border-b border-border pb-5 last:border-b-0 last:pb-0",
                     "sm:border-b-0 sm:pb-0 sm:pr-6",
                     i < featureStrip.length - 1 && "sm:border-r"

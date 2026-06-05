@@ -148,7 +148,7 @@ export function ProblemSolveSection() {
           >
             One Platform. Everything Connected.
           </h2>
-          <p className="mt-4 mx-auto max-w-lg text-lg font-medium leading-relaxed text-slate-700">
+          <p className="mt-4 mx-auto max-w-3xl text-lg font-medium leading-relaxed text-slate-700">
             Education is fragmented. AcademIQ brings it all together in one place.
           </p>
         </motion.div>

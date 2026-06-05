@@ -52,8 +52,8 @@ export const featureStrip: Feature[] = [
   },
   {
     id: "support",
-    title: "Get Support",
-    description: "AI, peers, and educators—help when you need it.",
+    title: "24/7 Support",
+    description: "AI, peers, and educators help when you need it.",
     icon: "Headphones",
   },
   {

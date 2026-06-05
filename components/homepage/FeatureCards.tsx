@@ -112,7 +112,7 @@ export function FeatureCards() {
             Explore What AcademIQ Offers
           </h2>
           <p className="mt-3 text-base sm:text-lg text-muted-foreground">
-            Every tool you need — study, teach, collaborate, and grow.
+            Every tool you need to study, teach, collaborate, and grow.
           </p>
         </motion.div>
 

@@ -196,7 +196,7 @@ export function HeroSection() {
               global virtual learning network
             </strong>{" "}
             where students, educators, tutors, and institutions connect,
-            collaborate, and grow — anytime, anywhere.
+            collaborate, and grow anytime, anywhere.
           </motion.p>
 
           {/* CTAs */}
@@ -228,25 +228,31 @@ export function HeroSection() {
             <Link
               href="#"
               aria-label="Download on the App Store"
-              className="inline-flex h-11 items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-5 text-base font-semibold text-navy shadow-sm transition-colors hover:border-slate-300 hover:bg-slate-50"
+              className="inline-flex h-[46px] sm:h-12 items-center gap-2.5 rounded-xl bg-black px-4 sm:px-5 text-white shadow-sm transition-all hover:scale-105 hover:bg-gray-900"
             >
-              <svg viewBox="0 0 384 512" className="h-5 w-5" fill="#0a1628" aria-hidden="true">
+              <svg viewBox="0 0 384 512" className="h-6 w-6 sm:h-7 sm:w-7" fill="currentColor" aria-hidden="true">
                 <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
               </svg>
-              App Store
+              <div className="flex flex-col items-start leading-none gap-0.5">
+                <span className="text-[10px] sm:text-[11px] font-medium text-gray-300">Download on the</span>
+                <span className="text-sm sm:text-base font-semibold tracking-wide">App Store</span>
+              </div>
             </Link>
             <Link
               href="#"
               aria-label="Get it on Google Play"
-              className="inline-flex h-11 items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-5 text-base font-semibold text-navy shadow-sm transition-colors hover:border-slate-300 hover:bg-slate-50"
+              className="inline-flex h-[46px] sm:h-12 items-center gap-2.5 rounded-xl bg-black px-4 sm:px-5 text-white shadow-sm transition-all hover:scale-105 hover:bg-gray-900"
             >
-              <svg viewBox="0 0 512 512" className="h-5 w-5" aria-hidden="true">
+              <svg viewBox="0 0 512 512" className="h-6 w-6 sm:h-7 sm:w-7" aria-hidden="true">
                 <path fill="#2196f3" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z" />
                 <path fill="#4caf50" d="M47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0z" />
                 <path fill="#ffc107" d="M425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8z" />
                 <path fill="#f44336" d="M104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
               </svg>
-              Google Play
+              <div className="flex flex-col items-start leading-none gap-0.5">
+                <span className="text-[10px] sm:text-[11px] font-medium text-gray-300 uppercase tracking-wide">GET IT ON</span>
+                <span className="text-sm sm:text-base font-semibold tracking-wide">Google Play</span>
+              </div>
             </Link>
           </motion.div>
 
@@ -272,13 +278,13 @@ export function HeroSection() {
       {/* Hero image + floating info cards (with parallax) */}
       <motion.div
         style={{ y: imageY }}
-        className="relative z-0 h-[460px] sm:h-[520px] w-full shrink-0 overflow-visible md:absolute md:inset-y-0 md:left-[30%] md:right-0 md:h-auto md:w-auto"
+        className="relative z-0 h-[520px] sm:h-[560px] w-full shrink-0 overflow-visible md:absolute md:inset-y-0 md:left-[30%] md:right-0 md:h-auto md:w-auto"
       >
         <Image
           src="/hero.webp"
           alt="Student studying with laptop and headphones in a modern learning environment"
           fill
-          className="object-cover object-[80%_center]"
+          className="object-cover object-[65%_center] sm:object-[40%_center] md:object-[80%_center]"
           priority
         />
         <div
@@ -295,7 +301,7 @@ export function HeroSection() {
           iconGradient="bg-gradient-to-br from-blue-400 to-blue-600"
           title="For Students"
           description="Study, collaborate & get support"
-          className="left-[2%] top-[5%] origin-top-left scale-[0.65] sm:scale-75 md:left-[20%] md:top-[6%] md:scale-100"
+          className="left-[2%] top-[3%] origin-top-left scale-[0.65] sm:scale-75 md:left-[20%] md:top-[6%] md:scale-100"
           delay={0.4}
           floatDelay={0}
         >
@@ -310,7 +316,7 @@ export function HeroSection() {
           iconGradient="bg-gradient-to-br from-violet-400 to-violet-600"
           title="For Instructors"
           description="Teach, engage & empower"
-          className="right-[2%] top-[15%] origin-top-right scale-[0.65] sm:scale-75 md:right-[7%] md:top-[6%] md:scale-100"
+          className="right-[2%] top-[14%] origin-top-right scale-[0.65] sm:scale-75 md:right-[7%] md:top-[6%] md:scale-100"
           delay={0.5}
           floatDelay={0.6}
         >
@@ -325,7 +331,7 @@ export function HeroSection() {
           iconGradient="bg-gradient-to-br from-red-400 to-rose-500"
           title="Study Sessions"
           description="Live sessions with peers & experts"
-          className="left-[2%] top-[38%] origin-top-left scale-[0.65] sm:scale-75 md:left-[17%] md:top-[34%] md:scale-100"
+          className="left-[2%] top-[30%] origin-top-left scale-[0.65] sm:scale-75 md:left-[17%] md:top-[34%] md:scale-100"
           delay={0.55}
           floatDelay={1.1}
         >
@@ -340,7 +346,7 @@ export function HeroSection() {
           iconGradient="bg-gradient-to-br from-emerald-400 to-emerald-600"
           title="Assist (AI)"
           description="AI-powered support to understand and grow"
-          className="right-[2%] top-[48%] origin-top-right scale-[0.65] sm:scale-75 md:right-[7%] md:top-[36%] md:scale-100"
+          className="right-[2%] top-[42%] origin-top-right scale-[0.65] sm:scale-75 md:right-[7%] md:top-[36%] md:scale-100"
           delay={0.6}
           floatDelay={1.7}
         >
@@ -355,7 +361,7 @@ export function HeroSection() {
           iconGradient="bg-gradient-to-br from-orange-400 to-orange-500"
           title="Study Circles"
           description="Collaborate in small groups"
-          className="left-[2%] top-[70%] origin-top-left scale-[0.65] sm:scale-75 md:left-[20%] md:top-[64%] md:scale-100"
+          className="left-[2%] top-[58%] origin-top-left scale-[0.65] sm:scale-75 md:left-[20%] md:top-[64%] md:scale-100"
           delay={0.65}
           floatDelay={0.9}
         >
@@ -370,7 +376,7 @@ export function HeroSection() {
           iconGradient="bg-gradient-to-br from-purple-400 to-purple-600"
           title="Tutoring"
           description="Connect with tutors for personalized help"
-          className="right-[2%] top-[80%] origin-top-right scale-[0.65] sm:scale-75 md:right-[8%] md:top-[66%] md:scale-100"
+          className="right-[2%] top-[70%] origin-top-right scale-[0.65] sm:scale-75 md:right-[8%] md:top-[66%] md:scale-100"
           delay={0.7}
           floatDelay={1.4}
         />
