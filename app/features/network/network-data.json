@@ -1,0 +1,468 @@
+{
+  "hero": {
+    "title": "Network",
+    "subtitle": "Your Academic Relationships, Organized.",
+    "paragraphs": [
+      "Manage the people who help you learn, grow, and succeed—academically, professionally, and personally.",
+      "Your network is your support system. Connect, collaborate, and achieve more together."
+    ],
+    "imageSrc": "/Network Hero.png",
+    "imageAlt": "Network hero illustration"
+  },
+  "featureCards": [
+    {
+      "title": "Study Partners",
+      "desc": "Collaborate with peers and learn together.",
+      "bg": "bg-teal-50/50 hover:bg-teal-50",
+      "icon": "Users",
+      "iconClass": "text-teal-600"
+    },
+    {
+      "title": "Instructors",
+      "desc": "Learn from educators and subject experts.",
+      "bg": "bg-blue-50/50 hover:bg-blue-50",
+      "icon": "GraduationCap",
+      "iconClass": "text-blue-600"
+    },
+    {
+      "title": "Tutors",
+      "desc": "Get academic support when you need it.",
+      "bg": "bg-amber-50/50 hover:bg-amber-50",
+      "icon": "Users",
+      "iconClass": "text-amber-600"
+    },
+    {
+      "title": "Advisors",
+      "desc": "Receive academic and career guidance.",
+      "bg": "bg-indigo-50/50 hover:bg-indigo-50",
+      "icon": "Compass",
+      "iconClass": "text-indigo-600"
+    },
+    {
+      "title": "Mentors",
+      "desc": "Build relationships with experienced professionals.",
+      "bg": "bg-purple-50/50 hover:bg-purple-50",
+      "icon": "Briefcase",
+      "iconClass": "text-purple-600"
+    },
+    {
+      "title": "Wellness & Support",
+      "desc": "Access resources for well-being and success.",
+      "bg": "bg-rose-50/50 hover:bg-rose-50",
+      "icon": "Heart",
+      "iconClass": "text-rose-600"
+    }
+  ],
+  "subNavCards": [
+    {
+      "title": "My Network",
+      "desc": "View and manage your academic relationships",
+      "icon": "Users",
+      "iconClass": "text-[#6366f1]"
+    },
+    {
+      "title": "Connection Requests",
+      "desc": "Build your academic network",
+      "icon": "UserPlus",
+      "iconClass": "text-emerald-500"
+    },
+    {
+      "title": "Messages",
+      "desc": "Stay connected with your academic network",
+      "icon": "MessageSquare",
+      "iconClass": "text-blue-500"
+    },
+    {
+      "title": "Shared Courses",
+      "desc": "Connect through common learning experiences",
+      "icon": "BookOpen",
+      "iconClass": "text-amber-500"
+    },
+    {
+      "title": "Study Circles",
+      "desc": "Collaborate and learn with peers in study circles",
+      "icon": "Users",
+      "iconClass": "text-indigo-500"
+    },
+    {
+      "title": "Academic Support",
+      "desc": "Access tutors, advisors and wellness professionals",
+      "icon": "Heart",
+      "iconClass": "text-rose-500"
+    },
+    {
+      "title": "Institution Connections",
+      "desc": "Connect with people from your institution",
+      "icon": "Building",
+      "iconClass": "text-slate-600"
+    }
+  ],
+  "tabs": [
+    "All",
+    "Students",
+    "Instructors",
+    "Tutors",
+    "Advisors",
+    "Mentors",
+    "Researchers",
+    "Wellness & Support",
+    "Institution",
+    "Global"
+  ],
+  "connections": [
+    {
+      "id": "1",
+      "name": "James Wilson",
+      "role": "Instructor",
+      "roleLabel": "Instructor",
+      "badgeBg": "bg-blue-50 text-blue-600 border border-blue-100",
+      "badgeText": "Instructor",
+      "description": "Calculus Instructor",
+      "subtitle": "Son Diego State University",
+      "avatar": "/studycircleInstructor.png",
+      "detailLabel": "Shared Course",
+      "detailValue": "Calculus I",
+      "avatarsStack": ["/studycircleStudent.png", "/StudycircleAdvisor.png", "/studycircletutar.png"],
+      "stackCount": 8,
+      "lastInteraction": "3 hours ago"
+    },
+    {
+      "id": "2",
+      "name": "Maria Gonzalez",
+      "role": "Study Partner",
+      "roleLabel": "Study Partner",
+      "badgeBg": "bg-emerald-50 text-emerald-600 border border-emerald-100",
+      "badgeText": "Study Partner",
+      "description": "Biology Student",
+      "subtitle": "SDSU",
+      "avatar": "/studycircleStudent.png",
+      "detailLabel": "Shared Course",
+      "detailValue": "Biology 101",
+      "avatarsStack": ["/studycircleInstructor.png", "/StudycircleAdvisor.png", "/emma.webp"],
+      "stackCount": 6,
+      "lastInteraction": "Yesterday"
+    },
+    {
+      "id": "3",
+      "name": "David Chen",
+      "role": "Tutor",
+      "roleLabel": "Tutor",
+      "badgeBg": "bg-amber-50 text-amber-600 border border-amber-100",
+      "badgeText": "Tutor",
+      "description": "Math Tutor",
+      "subtitle": "University of Toronto",
+      "avatar": "/studycircletutar.png",
+      "detailLabel": "Subjects",
+      "detailValue": "Algebra • Calculus",
+      "avatarsStack": ["/studycircleStudent.png", "/studycircleInstructor.png", "/StudycircleAdvisor.png"],
+      "stackCount": 4,
+      "lastInteraction": "2 days ago"
+    },
+    {
+      "id": "4",
+      "name": "Amina Hassan",
+      "role": "Advisor",
+      "roleLabel": "Advisor",
+      "badgeBg": "bg-purple-50 text-purple-600 border border-purple-100",
+      "badgeText": "Advisor",
+      "description": "Academic Advisor",
+      "subtitle": "University of Nairobi",
+      "avatar": "/StudycircleAdvisor.png",
+      "detailLabel": "Area of Support",
+      "detailValue": "Data Science",
+      "avatarsStack": ["/studycircleStudent.png", "/studycircleInstructor.png", "/emma.webp"],
+      "stackCount": 3,
+      "lastInteraction": "1 week ago"
+    },
+    {
+      "id": "5",
+      "name": "Dr. Sarah Martinez",
+      "role": "Wellness & Support",
+      "roleLabel": "Wellness & Support",
+      "badgeBg": "bg-rose-50 text-rose-600 border border-rose-100",
+      "badgeText": "Wellness & Support",
+      "description": "Mental Health Counselor",
+      "subtitle": "Licensed Therapist",
+      "avatar": "/emma.webp",
+      "detailLabel": "Support Focus",
+      "detailValue": "Stress • Anxiety",
+      "avatarsStack": ["/studycircleStudent.png", "/studycircleInstructor.png", "/StudycircleAdvisor.png"],
+      "stackCount": 2,
+      "lastInteraction": "5 days ago"
+    }
+  ],
+  "recentActivity": [
+    {
+      "name": "James Wilson",
+      "act": "shared notes in",
+      "link": "Calculus I",
+      "time": "3 hours ago",
+      "av": "/studycircleInstructor.png",
+      "icon": "BookOpen",
+      "iconClass": "text-emerald-500"
+    },
+    {
+      "name": "Amina Hassan",
+      "act": "invited you to join",
+      "link": "Data Science Study Circle",
+      "time": "Yesterday",
+      "av": "/StudycircleAdvisor.png",
+      "icon": "Users",
+      "iconClass": "text-indigo-500"
+    },
+    {
+      "name": "Dr. Sarah Martinez",
+      "act": "accepted your connection request",
+      "link": "",
+      "time": "2 days ago",
+      "av": "/emma.webp",
+      "icon": "Heart",
+      "iconClass": "text-rose-500"
+    },
+    {
+      "name": "David Chen",
+      "act": "started a tutoring thread",
+      "link": "",
+      "time": "2 days ago",
+      "av": "/studycircletutar.png",
+      "icon": "Book",
+      "iconClass": "text-amber-500"
+    },
+    {
+      "name": "Priya Patel",
+      "act": "sent you a message",
+      "link": "",
+      "time": "3 days ago",
+      "av": "/studycircleStudent.png",
+      "icon": "MessageSquare",
+      "iconClass": "text-blue-500"
+    },
+    {
+      "name": "You and Michael Brown",
+      "act": "are now connected",
+      "link": "",
+      "time": "1 week ago",
+      "av": "/emma.webp",
+      "icon": "Check",
+      "iconClass": "text-teal-600"
+    }
+  ],
+  "academicWellness": [
+    {
+      "name": "Licensed Therapists",
+      "desc": "Mental health & emotional well-being",
+      "bg": "bg-emerald-50 text-emerald-600 border border-emerald-100",
+      "icon": "Heart",
+      "iconClass": "text-emerald-600"
+    },
+    {
+      "name": "Counselors",
+      "desc": "Guidance for life challenges and transitions",
+      "bg": "bg-teal-50 text-teal-600 border border-teal-100",
+      "icon": "Users",
+      "iconClass": "text-teal-600"
+    },
+    {
+      "name": "Academic Coaches",
+      "desc": "Study skills, focus, and performance",
+      "bg": "bg-blue-50 text-blue-600 border border-blue-100",
+      "icon": "GraduationCap",
+      "iconClass": "text-blue-600"
+    },
+    {
+      "name": "Student Success Coaches",
+      "desc": "Goal setting, motivation, and accountability",
+      "bg": "bg-amber-50 text-amber-600 border border-amber-100",
+      "icon": "Compass",
+      "iconClass": "text-amber-600"
+    },
+    {
+      "name": "Career Advisors",
+      "desc": "Career planning, internships, and job readiness",
+      "bg": "bg-purple-50 text-purple-600 border border-purple-100",
+      "icon": "Briefcase",
+      "iconClass": "text-purple-600"
+    },
+    {
+      "name": "Financial Aid Advisors",
+      "desc": "Financial planning and aid guidance",
+      "bg": "bg-indigo-50 text-indigo-600 border border-indigo-100",
+      "icon": "Building",
+      "iconClass": "text-indigo-600"
+    }
+  ],
+  "strengthenCards": [
+    {
+      "id": "suggested",
+      "title": "Suggested Connections",
+      "desc": "People you may know based on your courses and interests.",
+      "icon": "Users",
+      "iconClass": "text-purple-600",
+      "iconBg": "bg-purple-50",
+      "iconBorder": "border border-purple-100",
+      "avatars": ["/studycircleStudent.png", "/studycircletutar.png", "/StudycircleAdvisor.png", "/emma.webp"],
+      "buttonLabel": "Connect",
+      "activeLabel": "Requested"
+    },
+    {
+      "id": "past",
+      "title": "Reconnect with Past Partners",
+      "desc": "People you studied with before.",
+      "icon": "Users",
+      "iconClass": "text-emerald-600",
+      "iconBg": "bg-emerald-50",
+      "iconBorder": "border border-emerald-100",
+      "avatars": ["/emma.webp", "/studycircleStudent.png", "/studycircleInstructor.png", "/studycircletutar.png"],
+      "buttonLabel": "Reconnect",
+      "activeLabel": "Requested"
+    },
+    {
+      "id": "sessions",
+      "title": "Upcoming Study Sessions",
+      "desc": "Join upcoming sessions with your network.",
+      "icon": "Calendar",
+      "iconClass": "text-blue-600",
+      "iconBg": "bg-blue-50",
+      "iconBorder": "border border-blue-100",
+      "badgeLabel": "3 sessions this week",
+      "buttonLabel": "Join",
+      "activeLabel": "Joined"
+    },
+    {
+      "id": "office-hours",
+      "title": "Instructor Office Hours",
+      "desc": "Office hours from your connected instructors.",
+      "icon": "GraduationCap",
+      "iconClass": "text-emerald-600",
+      "iconBg": "bg-emerald-50",
+      "iconBorder": "border border-emerald-100",
+      "badgeLabel": "5 upcoming",
+      "buttonLabel": "View"
+    },
+    {
+      "id": "mentors",
+      "title": "Recommended Mentors",
+      "desc": "Mentors who match your goals and interests.",
+      "icon": "Users",
+      "iconClass": "text-rose-600",
+      "iconBg": "bg-rose-50",
+      "iconBorder": "border border-rose-100",
+      "badgeLabel": "4 new matches",
+      "buttonLabel": "Explore"
+    }
+  ],
+  "relationshipStats": [
+    {
+      "title": "Study Partners",
+      "num": "12",
+      "lbl": "Active partners",
+      "plus": 7,
+      "icon": "Users",
+      "iconClass": "text-teal-600",
+      "bg": "bg-teal-50 text-teal-600 border border-teal-100",
+      "avs": ["/studycircleStudent.png", "/emma.webp", "/studycircletutar.png"]
+    },
+    {
+      "title": "Instructors",
+      "num": "8",
+      "lbl": "Connected",
+      "plus": 3,
+      "icon": "GraduationCap",
+      "iconClass": "text-blue-600",
+      "bg": "bg-blue-50 text-blue-600 border border-blue-100",
+      "avs": ["/studycircleInstructor.png", "/StudycircleAdvisor.png", "/studycircletutar.png"]
+    },
+    {
+      "title": "Tutors",
+      "num": "5",
+      "lbl": "Connected",
+      "plus": 2,
+      "icon": "Users",
+      "iconClass": "text-amber-600",
+      "bg": "bg-amber-50 text-amber-600 border border-amber-100",
+      "avs": ["/studycircletutar.png", "/studycircleStudent.png", "/emma.webp"]
+    },
+    {
+      "title": "Advisors",
+      "num": "3",
+      "lbl": "Connected",
+      "plus": 1,
+      "icon": "Compass",
+      "iconClass": "text-indigo-600",
+      "bg": "bg-indigo-50 text-indigo-600 border border-indigo-100",
+      "avs": ["/StudycircleAdvisor.png", "/studycircleInstructor.png", "/studycircleStudent.png"]
+    },
+    {
+      "title": "Mentors",
+      "num": "4",
+      "lbl": "Connected",
+      "plus": 2,
+      "icon": "Briefcase",
+      "iconClass": "text-purple-600",
+      "bg": "bg-purple-50 text-purple-600 border border-purple-100",
+      "avs": ["/studycircleInstructor.png", "/emma.webp", "/StudycircleAdvisor.png"]
+    },
+    {
+      "title": "Researchers",
+      "num": "2",
+      "lbl": "Connected",
+      "plus": 1,
+      "icon": "Activity",
+      "iconClass": "text-slate-600",
+      "bg": "bg-slate-50 text-slate-600 border border-slate-200",
+      "avs": ["/studycircletutar.png", "/studycircleStudent.png", "/emma.webp"]
+    },
+    {
+      "title": "Wellness, Support & Success",
+      "num": "2",
+      "lbl": "Connected",
+      "plus": 1,
+      "icon": "Heart",
+      "iconClass": "text-rose-600",
+      "bg": "bg-rose-50 text-rose-600 border border-rose-100",
+      "avs": ["/emma.webp", "/studycircleStudent.png", "/StudycircleAdvisor.png"]
+    },
+    {
+      "title": "Institution Connections",
+      "num": "18",
+      "lbl": "Connections",
+      "plus": 12,
+      "icon": "Building",
+      "iconClass": "text-slate-700",
+      "bg": "bg-slate-100 text-slate-700 border border-slate-200",
+      "avs": ["/studycircleStudent.png", "/studycircleInstructor.png", "/StudycircleAdvisor.png"]
+    }
+  ],
+  "networkInsights": [
+    {
+      "label": "Strongest Relationship",
+      "val": "James Wilson (Instructor)",
+      "icon": "Users",
+      "iconClass": "text-[#818cf8]"
+    },
+    {
+      "label": "Most Active Conversation",
+      "val": "Maria Gonzalez",
+      "icon": "MessageSquare",
+      "iconClass": "text-[#34d399]"
+    },
+    {
+      "label": "Most Shared Course",
+      "val": "Calculus I",
+      "icon": "BookOpen",
+      "iconClass": "text-[#f59e0b]"
+    },
+    {
+      "label": "Newest Connection",
+      "val": "Amina Hassan",
+      "icon": "UserPlus",
+      "iconClass": "text-[#a78bfa]"
+    },
+    {
+      "label": "Messages Exchanged (30 days)",
+      "val": "24 conversations",
+      "icon": "Activity",
+      "iconClass": "text-[#f43f5e]"
+    }
+  ]
+}

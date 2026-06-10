@@ -19,6 +19,8 @@ export interface Feature {
   href?: string;
   iconBg?: string;
   iconColor?: string;
+  tag?: string;
+  bullets?: string[];
 }
 
 export interface FloatingCard {

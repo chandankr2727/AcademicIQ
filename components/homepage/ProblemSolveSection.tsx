@@ -1,9 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import { motion, type Variants } from "framer-motion";
-import Link from "next/link";
-import { ArrowRight, CheckCircle, GraduationCap } from "@phosphor-icons/react";
+import { motion } from "framer-motion";
 
 const problemIcons = [
   {
@@ -90,12 +87,15 @@ const problemIcons = [
   },
 ];
 
-const tomorrowPoints = [
+const tomorrowCol1 = [
   "Connected Community",
-  "Tutoring & Study Groups",
   "Real-time Collaboration",
-  "Resources & Tools",
   "AI-Powered Support",
+];
+
+const tomorrowCol2 = [
+  "Tutoring & Study Groups",
+  "Resources & Tools",
   "Opportunities & Growth",
 ];
 
@@ -107,211 +107,175 @@ const platformAvatars = [
   { img: "https://randomuser.me/api/portraits/women/12.jpg" },
 ];
 
-const panelLeft: Variants = {
-  hidden: { opacity: 0, x: -50, filter: "blur(8px)" },
-  show: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 0.6, ease: "easeOut" } },
-};
-
-const panelCenter: Variants = {
-  hidden: { opacity: 0, scale: 0.8, filter: "blur(8px)" },
-  show: { opacity: 1, scale: 1, filter: "blur(0px)", transition: { duration: 0.55, ease: "easeOut", delay: 0.1 } },
-};
-
-const panelRight: Variants = {
-  hidden: { opacity: 0, x: 50, filter: "blur(8px)" },
-  show: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 0.6, ease: "easeOut", delay: 0.15 } },
-};
-
-const panelFar: Variants = {
-  hidden: { opacity: 0, x: 60, filter: "blur(8px)" },
-  show: { opacity: 1, x: 0, filter: "blur(0px)", transition: { duration: 0.6, ease: "easeOut", delay: 0.22 } },
-};
+function CurvedArrow() {
+  return (
+    <div className="hidden lg:flex items-center justify-center shrink-0 w-8 self-center" aria-hidden="true">
+      <svg viewBox="0 0 32 32" className="w-8 h-8 text-blue-500 animate-pulse">
+        <path
+          d="M 2,16 C 10,12 18,12 26,15"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
+        <path
+          d="M 20,9 L 27,15 L 21,21"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </div>
+  );
+}
 
 export function ProblemSolveSection() {
   return (
     <section
-      className="bg-[#f8fbff] py-8 lg:py-10"
+      className="bg-[#f8fbff] py-12 lg:py-16"
       aria-labelledby="problem-solve-heading"
     >
       {/* Section heading */}
-      <div className="mx-auto max-w-[1536px] px-4 sm:px-6 lg:px-10">
+      <div className="mx-auto max-w-[1536px] px-5 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 28, filter: "blur(8px)" }}
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true }}
           transition={{ duration: 0.55 }}
-          className="mb-6 text-center"
+          className="mb-12 text-center"
         >
           <h2
             id="problem-solve-heading"
-            className="text-3xl font-black text-navy sm:text-4xl"
+            className="text-4xl font-black text-navy sm:text-5xl"
           >
             One Platform. Everything Connected.
           </h2>
-          <p className="mt-4 mx-auto max-w-3xl text-lg font-medium leading-relaxed text-slate-700">
+          <p className="mt-4 mx-auto max-w-3xl text-lg font-medium leading-relaxed text-slate-600">
             Education is fragmented. AcademIQ brings it all together in one place.
           </p>
         </motion.div>
-      </div>
 
-      <div className="mx-auto flex flex-col gap-4 px-4 sm:px-6 lg:flex-row lg:items-stretch lg:justify-between lg:px-6 xl:px-10">
-
-        {/* Problem — slide from left */}
-        <motion.article
-          variants={panelLeft}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="rounded-2xl border border-border bg-white p-5 text-center shadow-sm lg:flex-[1.6]"
-        >
-          <h3 className="text-xl font-bold text-navy">The Problem We Solve</h3>
-          <p className="mt-2 text-base font-medium leading-relaxed text-slate-700">
-            Students currently juggle many disconnected tools to learn.
-          </p>
-          <p className="mt-3 text-base font-semibold text-navy">Today: Students juggle many tools</p>
-
-          <div className="mt-4 grid grid-cols-4 gap-3 sm:flex sm:justify-between sm:gap-2">
-            {problemIcons.map((item, i) => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, y: 16, scale: 0.85 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: i * 0.06 }}
-                whileHover={{ y: -4, scale: 1.08, transition: { type: "spring", stiffness: 340, damping: 20 } }}
-                className="flex flex-col items-center gap-1.5"
-              >
-                <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl bg-slate-50 p-2 shadow-sm border border-border">
-                  {item.svg}
-                </div>
-                <span className="text-sm font-semibold leading-tight text-navy">
-                  {item.label}
-                </span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.article>
-
-        {/* Arrow — desktop only */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.6, x: -10 }}
-          whileInView={{ opacity: 1, scale: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="hidden shrink-0 items-center justify-center lg:flex lg:-mx-3"
-          aria-hidden="true"
-        >
-          <svg width="80" height="64" viewBox="0 0 120 90" fill="none" className="mt-4">
-            <defs>
-              <linearGradient id="arrowGrad" x1="9" y1="75" x2="102" y2="22" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stopColor="#dbeafe" />
-                <stop offset="0.5" stopColor="#60a5fa" />
-                <stop offset="1" stopColor="#1d4ed8" />
-              </linearGradient>
-            </defs>
-            <path d="M8 75C28 35 58 20 92 24" stroke="url(#arrowGrad)" strokeWidth="10" strokeLinecap="round" fill="none" />
-            <path d="M88 7L115 28L87 50L89 34C58 33 33 47 13 77C34 35 60 15 90 18L88 7Z" fill="#1d4ed8" />
-          </svg>
-        </motion.div>
-
-        {/* AcademIQ hub — scale in */}
-        <motion.article
-          variants={panelCenter}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="flex flex-col items-center justify-center rounded-2xl border border-border bg-white p-5 text-center shadow-sm lg:flex-[0.7]"
-        >
-          <motion.div
-            whileHover={{ scale: 1.1, rotate: 6 }}
-            transition={{ type: "spring", stiffness: 340, damping: 18 }}
-            className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 shadow-lg shadow-blue-200 text-white"
+        {/* 3 Horizontal Cards Stack */}
+        <div className="flex flex-col lg:flex-row lg:items-stretch lg:justify-between items-center gap-4">
+          
+          {/* Card 1: The Problem We Solve */}
+          <motion.article
+            initial={{ opacity: 0, x: -50, filter: "blur(8px)" }}
+            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="flex-1 rounded-3xl border border-border bg-white p-6 shadow-sm flex flex-col justify-between w-full h-[280px]"
           >
-            <GraduationCap weight="duotone" size={28} color="#fff" aria-hidden="true" />
-          </motion.div>
-          <h3 className="mt-3 text-xl font-black text-navy">AcademIQ</h3>
-          <p className="text-base font-bold text-navy">One Platform.</p>
-          <p className="text-base font-bold text-navy">Everything Connected.</p>
-          <div className="mt-3 flex justify-center -space-x-1.5" aria-hidden="true">
-            {platformAvatars.map((a, i) => (
-              <span key={i} className="h-7 w-7 overflow-hidden rounded-full border-2 border-white">
-                <img src={a.img} alt="" width="28" height="28" className="object-cover" />
-              </span>
-            ))}
-          </div>
-          <p className="mt-3 text-base font-medium text-slate-700">
-            Everything you need in one place.
-          </p>
-        </motion.article>
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-navy">The Problem We Solve</h3>
+              <p className="mt-2 text-xs font-semibold leading-relaxed text-slate-500">
+                Students currently juggle many disconnected tools to learn.
+              </p>
+            </div>
+            
+            <div className="mt-auto">
+              <p className="text-xs font-bold text-navy text-center mb-3">Today: Students juggle many tools</p>
+              
+              <div className="border border-slate-100 bg-white shadow-xs rounded-2xl p-3 flex justify-between items-center gap-2 overflow-x-auto">
+                {problemIcons.map((item) => (
+                  <div key={item.label} className="flex flex-col items-center gap-1.5 shrink-0 flex-1">
+                    <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-slate-50 p-2 shadow-xs border border-slate-100">
+                      {item.svg}
+                    </div>
+                    <span className="text-[9px] font-bold text-slate-600 leading-none">
+                      {item.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.article>
 
-        {/* Tomorrow — slide from right */}
-        <motion.article
-          variants={panelRight}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="rounded-2xl border border-border bg-white p-5 shadow-sm lg:flex-[1.1]"
-        >
-          <h3 className="text-center text-lg font-bold text-navy">
-            Tomorrow: Learn Smarter. Together.
-          </h3>
-          <div className="mt-4 grid grid-cols-1 gap-y-3 sm:grid-cols-2 sm:gap-x-4 lg:grid-cols-1 xl:grid-cols-2">
-            {tomorrowPoints.map((point, i) => (
-              <motion.div
-                key={point}
-                initial={{ opacity: 0, x: -12 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.35, delay: i * 0.07 }}
-                className="flex items-center gap-2 text-base font-medium text-navy"
-              >
-                <CheckCircle
-                  weight="duotone"
-                  size={20}
-                  className="shrink-0 text-emerald-500"
-                  aria-hidden="true"
-                />
-                <span>{point}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.article>
+          {/* Curved Arrow 1 */}
+          <CurvedArrow />
 
-        {/* Emma — slide from far right */}
-        <motion.article
-          variants={panelFar}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm grid grid-cols-1 sm:grid-cols-[130px_1fr] lg:grid-cols-[100px_1fr] xl:grid-cols-[120px_1fr] lg:flex-[1.2]"
-          aria-labelledby="emma-heading"
-        >
-          <div className="overflow-hidden bg-blue-50">
-            <Image
-              src="/emma.webp"
-              alt="Emma, AcademIQ's AI assistant"
-              width={0}
-              height={0}
-              sizes="(max-width: 640px) 100vw, 130px"
-              className="h-auto w-full"
-            />
-          </div>
-          <div className="flex flex-col justify-center p-5">
-            <h3 id="emma-heading" className="text-lg font-bold text-navy">
-              Hi! I&apos;m Emma 👋
-            </h3>
-            <p className="mt-2 text-base font-medium leading-relaxed text-slate-700">
-              I help you navigate AcademIQ, find resources, stay on track, and achieve your goals.
+          {/* Card 2: AcademIQ Center Hub */}
+          <motion.article
+            initial={{ opacity: 0, scale: 0.8, filter: "blur(8px)" }}
+            whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55, ease: "easeOut", delay: 0.1 }}
+            className="rounded-3xl border border-border bg-white p-6 shadow-sm hover:shadow-[0_12px_40px_rgba(15,23,42,0.08)] transition-all duration-300 flex flex-col items-center justify-center w-full lg:max-w-xs xl:max-w-sm shrink-0 h-[280px]"
+          >
+            <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0066fe] shadow-lg shadow-blue-100 text-white shrink-0">
+              <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+              </svg>
+            </div>
+            <h3 className="mt-3 text-lg font-black text-navy leading-none">AcademIQ</h3>
+            <p className="mt-2 text-xs font-black text-navy leading-none">One Platform.</p>
+            <p className="text-xs font-black text-navy mt-1 leading-none">Everything Connected.</p>
+            
+            <div className="mt-4 flex justify-center -space-x-1.5 shrink-0">
+              {platformAvatars.map((a, i) => (
+                <span key={i} className="h-7 w-7 overflow-hidden rounded-full border-2 border-white shadow-xs">
+                  <img src={a.img} alt="" width="28" height="28" className="object-cover" />
+                </span>
+              ))}
+            </div>
+            
+            <p className="mt-4 text-[10px] font-bold text-slate-500">
+              Everything you need in one place.
             </p>
-            <Link
-              href="#"
-              className="mt-4 inline-flex items-center gap-1.5 text-base font-semibold text-primary hover:underline"
-            >
-              Chat with Emma{" "}
-              <ArrowRight weight="bold" size={15} aria-hidden="true" />
-            </Link>
-          </div>
-        </motion.article>
+          </motion.article>
+
+          {/* Curved Arrow 2 */}
+          <CurvedArrow />
+
+          {/* Card 3: Tomorrow: Learn Smarter. Together. */}
+          <motion.article
+            initial={{ opacity: 0, x: 50, filter: "blur(8px)" }}
+            whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+            className="flex-1 rounded-3xl border border-border bg-white p-6 shadow-sm flex flex-col justify-between w-full h-[280px]"
+          >
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-navy">
+                Tomorrow: Learn Smarter.
+              </h3>
+              <p className="text-xl font-bold text-navy">Together.</p>
+            </div>
+            
+            <div className="mt-auto">
+              <div className="grid grid-cols-2 gap-x-4 gap-y-3 p-1">
+                {/* Col 1 */}
+                <div className="space-y-3.5">
+                  {tomorrowCol1.map((item) => (
+                    <div key={item} className="flex items-center gap-2 text-xs font-bold text-slate-700">
+                      <svg className="h-4.5 w-4.5 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
+                      </svg>
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+                {/* Col 2 */}
+                <div className="space-y-3.5">
+                  {tomorrowCol2.map((item) => (
+                    <div key={item} className="flex items-center gap-2 text-xs font-bold text-slate-700">
+                      <svg className="h-4.5 w-4.5 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
+                      </svg>
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.article>
+
+        </div>
       </div>
     </section>
   );
