@@ -219,8 +219,8 @@ export default function NetworkPage() {
                     key={tab}
                     onClick={() => setSelectedTab(tab)}
                     className={`text-[12px] font-extrabold shrink-0 transition-all cursor-pointer relative py-1 ${selectedTab === tab
-                        ? "text-[#6366f1] after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-[#6366f1]"
-                        : "text-[#4b5a72] hover:text-[#0a1628]"
+                      ? "text-[#6366f1] after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-[#6366f1]"
+                      : "text-[#4b5a72] hover:text-[#0a1628]"
                       }`}
                   >
                     {tab}
@@ -493,10 +493,10 @@ export default function NetworkPage() {
                       }
                     }}
                     className={`w-full text-[10.5px] font-extrabold py-1.5 px-3 rounded-lg border text-center transition-all cursor-pointer ${(card.id === "suggested" || card.id === "past") && connectedIds.includes(card.id)
+                      ? "bg-emerald-50 text-emerald-600 border-emerald-100 flex items-center justify-center gap-1.5"
+                      : card.id === "sessions" && joinedSessions.includes(card.id)
                         ? "bg-emerald-50 text-emerald-600 border-emerald-100 flex items-center justify-center gap-1.5"
-                        : card.id === "sessions" && joinedSessions.includes(card.id)
-                          ? "bg-emerald-50 text-emerald-600 border-emerald-100 flex items-center justify-center gap-1.5"
-                          : "bg-white text-[#6366f1] border-[#6366f1] hover:bg-[#6366f1]/5"
+                        : "bg-white text-[#6366f1] border-[#6366f1] hover:bg-[#6366f1]/5"
                       }`}
                   >
                     {(card.id === "suggested" || card.id === "past") && connectedIds.includes(card.id) ? (
