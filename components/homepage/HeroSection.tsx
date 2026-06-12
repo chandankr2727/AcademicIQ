@@ -109,8 +109,8 @@ function FloatingCard({
               <Icon weight="duotone" size={16} color="#fff" />
             </div>
             <div className="min-w-0">
-              <p className="text-base font-bold leading-tight text-navy">{title}</p>
-              <p className="mt-1 text-sm font-medium leading-snug text-slate-700">
+              <p className="text-lg font-bold leading-tight text-navy">{title}</p>
+              <p className="mt-1 text-base font-medium leading-snug text-slate-700">
                 {description}
               </p>
               {children}
@@ -189,7 +189,7 @@ export function HeroSection() {
           {/* Sub-copy */}
           <motion.p
             variants={heroItem}
-            className="mt-4 max-w-[480px] text-lg font-medium leading-relaxed text-slate-700"
+            className="mt-4 max-w-[480px] text-xl font-medium leading-relaxed text-slate-700"
           >
             AcademIQ is the{" "}
             <strong className="font-semibold text-navy">
@@ -206,14 +206,14 @@ export function HeroSection() {
           >
             <Link
               href="/signup"
-              className="inline-flex h-11 items-center gap-2 rounded-lg bg-primary px-6 text-[15px] font-bold text-white transition-colors hover:bg-primary-dark"
+              className="inline-flex h-11 items-center gap-2 rounded-lg bg-primary px-6 text-base font-bold text-white transition-colors hover:bg-primary-dark"
             >
               <GraduationCap weight="duotone" size={18} color="#fff" aria-hidden="true" />
               Join AcademIQ
             </Link>
             <Link
               href="/about"
-              className="inline-flex h-11 items-center gap-2 rounded-lg border border-border bg-white px-6 text-[15px] font-bold text-primary transition-colors hover:bg-muted"
+              className="inline-flex h-11 items-center gap-2 rounded-lg border border-border bg-white px-6 text-base font-bold text-primary transition-colors hover:bg-muted"
             >
               <ArrowCircleRight weight="duotone" size={18} aria-hidden="true" />
               Discover Your Network
@@ -234,7 +234,7 @@ export function HeroSection() {
                 <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
               </svg>
               <div className="flex flex-col items-start leading-none gap-0.5">
-                <span className="text-[10px] sm:text-[11px] font-medium text-gray-300">Download on the</span>
+                <span className="text-[10px] sm:text-[11px] font-medium text-gray-400">Download on the</span>
                 <span className="text-sm sm:text-base font-semibold tracking-wide">App Store</span>
               </div>
             </Link>
@@ -250,7 +250,7 @@ export function HeroSection() {
                 <path fill="#f44336" d="M104.6 499l280.8-161.2-60.1-60.1L104.6 499z" />
               </svg>
               <div className="flex flex-col items-start leading-none gap-0.5">
-                <span className="text-[10px] sm:text-[11px] font-medium text-gray-300 uppercase tracking-wide">GET IT ON</span>
+                <span className="text-[10px] sm:text-[11px] font-medium text-gray-400 uppercase tracking-wide">GET IT ON</span>
                 <span className="text-sm sm:text-base font-semibold tracking-wide">Google Play</span>
               </div>
             </Link>
@@ -259,7 +259,7 @@ export function HeroSection() {
           {/* Globe stat */}
           <motion.div
             variants={heroItem}
-            className="mt-6 flex items-center gap-2 text-base font-semibold text-primary"
+            className="mt-6 flex items-center gap-2 text-lg font-semibold text-primary"
           >
             <Globe weight="duotone" size={22} aria-hidden="true" />
             Connect with learners and educators from 72+ countries
@@ -268,7 +268,7 @@ export function HeroSection() {
           {/* Avatar row */}
           <motion.div variants={heroItem} className="mt-4 flex items-center gap-3">
             <AvatarStack />
-            <p className="text-base font-medium text-slate-700">
+            <p className="text-lg font-medium text-slate-700">
               Built for students, educators &amp; institutions worldwide
             </p>
           </motion.div>

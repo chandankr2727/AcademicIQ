@@ -31,17 +31,16 @@ const iconComponents: Record<string, React.ElementType> = {
   Network: Graph,
 };
 
-// Per-card colour system: accent hex, soft bg tint, glow ring
 const palette: Record<string, { hex: string; soft: string; ring: string; tagBg: string; tagText: string }> = {
-  "one-channel":          { hex: "#3b82f6", soft: "#eff6ff", ring: "rgba(59,130,246,0.15)",   tagBg: "#dbeafe", tagText: "#1d4ed8" },
-  threads:                { hex: "#10b981", soft: "#ecfdf5", ring: "rgba(16,185,129,0.15)",   tagBg: "#d1fae5", tagText: "#065f46" },
-  "study-sessions-feature":{ hex: "#f43f5e", soft: "#fff1f2", ring: "rgba(244,63,94,0.15)",  tagBg: "#ffe4e6", tagText: "#be123c" },
-  "study-circle":         { hex: "#a855f7", soft: "#faf5ff", ring: "rgba(168,85,247,0.15)",  tagBg: "#ede9fe", tagText: "#6d28d9" },
-  "assist-feature":       { hex: "#6366f1", soft: "#eef2ff", ring: "rgba(99,102,241,0.15)",  tagBg: "#e0e7ff", tagText: "#4338ca" },
-  "tutoring-feature":     { hex: "#14b8a6", soft: "#f0fdfa", ring: "rgba(20,184,166,0.15)",  tagBg: "#ccfbf1", tagText: "#0f766e" },
-  library:                { hex: "#4f46e5", soft: "#eef2ff", ring: "rgba(79,70,229,0.15)",   tagBg: "#e0e7ff", tagText: "#3730a3" },
-  community:              { hex: "#ec4899", soft: "#fdf2f8", ring: "rgba(236,72,153,0.15)",  tagBg: "#fce7f3", tagText: "#9d174d" },
-  network:                { hex: "#f97316", soft: "#fff7ed", ring: "rgba(249,115,22,0.15)",  tagBg: "#ffedd5", tagText: "#c2410c" },
+  "one-channel": { hex: "#3b82f6", soft: "#eff6ff", ring: "rgba(59,130,246,0.15)", tagBg: "#dbeafe", tagText: "#1d4ed8" },
+  threads: { hex: "#10b981", soft: "#ecfdf5", ring: "rgba(16,185,129,0.15)", tagBg: "#d1fae5", tagText: "#065f46" },
+  "study-sessions-feature": { hex: "#f43f5e", soft: "#fff1f2", ring: "rgba(244,63,94,0.15)", tagBg: "#ffe4e6", tagText: "#be123c" },
+  "study-circle": { hex: "#a855f7", soft: "#faf5ff", ring: "rgba(168,85,247,0.15)", tagBg: "#ede9fe", tagText: "#6d28d9" },
+  "assist-feature": { hex: "#6366f1", soft: "#eef2ff", ring: "rgba(99,102,241,0.15)", tagBg: "#e0e7ff", tagText: "#4338ca" },
+  "tutoring-feature": { hex: "#14b8a6", soft: "#f0fdfa", ring: "rgba(20,184,166,0.15)", tagBg: "#ccfbf1", tagText: "#0f766e" },
+  library: { hex: "#4f46e5", soft: "#eef2ff", ring: "rgba(79,70,229,0.15)", tagBg: "#e0e7ff", tagText: "#3730a3" },
+  community: { hex: "#ec4899", soft: "#fdf2f8", ring: "rgba(236,72,153,0.15)", tagBg: "#fce7f3", tagText: "#9d174d" },
+  network: { hex: "#f97316", soft: "#fff7ed", ring: "rgba(249,115,22,0.15)", tagBg: "#ffedd5", tagText: "#c2410c" },
 };
 
 const fallback = { hex: "#64748b", soft: "#f8fafc", ring: "rgba(100,116,139,0.12)", tagBg: "#f1f5f9", tagText: "#475569" };
@@ -67,9 +66,9 @@ function ProgressDots({ progress }: { progress: number }) {
 
 export function FeatureCards() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const trackRef   = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
   const [scrollRange, setScrollRange] = useState(2200);
-  const [winH,        setWinH]        = useState(700);
+  const [winH, setWinH] = useState(700);
   const [progressVal, setProgressVal] = useState(0);
 
   const { scrollYProgress } = useScroll({
@@ -104,7 +103,7 @@ export function FeatureCards() {
         className="sticky top-16 overflow-hidden flex flex-col bg-[#f8fbff]"
         style={{ height: winH - 64 }}
       >
-        {/* ── Heading ── */}
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -112,24 +111,24 @@ export function FeatureCards() {
           transition={{ duration: 0.45 }}
           className="shrink-0 pt-8 pb-4 text-center px-4"
         >
-          <h2 id="explore-features-heading" className="text-2xl font-black text-navy sm:text-3xl">
+          <h2 id="explore-features-heading" className="text-3xl font-black text-navy sm:text-4xl">
             Explore What AcademIQ Offers
           </h2>
-          <p className="mt-2 text-base sm:text-lg text-slate-500 font-medium">
+          <p className="mt-2 text-lg sm:text-xl text-slate-700 font-medium">
             Every tool you need to study, teach, collaborate, and grow.
           </p>
         </motion.div>
 
-        {/* ── Scrolling card track ── */}
+        {/* Scrolling card track */}
         <div className="flex-1 flex items-center overflow-hidden">
           <motion.div
             ref={trackRef}
             style={{ x }}
-            className="flex gap-5 pl-5 sm:pl-8 lg:pl-12 pr-12 will-change-transform items-stretch"
+            className="flex gap-5 pl-5 sm:pl-8 lg:pl-12 pr-12 will-change-transform items-center"
           >
             {exploreFeatures.map((feature, index) => {
               const IconComp = iconComponents[feature.icon];
-              const p        = palette[feature.id] ?? fallback;
+              const p = palette[feature.id] ?? fallback;
 
               return (
                 <motion.article
@@ -143,23 +142,27 @@ export function FeatureCards() {
                     scale: 1.015,
                     transition: { type: "spring", stiffness: 320, damping: 22 },
                   }}
-                  className="group relative flex flex-col w-[340px] min-w-[340px] rounded-3xl overflow-hidden cursor-pointer select-none"
+                  // Mobile: ~1 card visible | sm/tablet: ~2 cards | lg/desktop: 3 cards
+                  className="group relative flex flex-col
+                    w-[80vw] min-w-[80vw]
+                    sm:w-[42vw] sm:min-w-[42vw]
+                    lg:w-[30vw] lg:min-w-[30vw]
+                    rounded-3xl overflow-hidden cursor-pointer select-none"
                   style={{
-                    background:  `linear-gradient(150deg, #ffffff 0%, ${p.soft} 100%)`,
-                    border:      `1px solid ${p.hex}22`,
-                    boxShadow:   `0 8px 28px -4px ${p.ring}, 0 0 0 1px ${p.hex}12`,
+                    background: `linear-gradient(150deg, #ffffff 0%, ${p.soft} 100%)`,
+                    border: `1px solid ${p.hex}22`,
+                    boxShadow: `0 8px 28px -4px ${p.ring}, 0 0 0 1px ${p.hex}12`,
                   }}
                 >
-                  {/* ── Card body ── */}
-                  <div className="flex flex-col p-6 gap-4 h-full">
+                  {/* Card body */}
+                  <div className="flex flex-col p-4 gap-2">
 
-                    {/* Row 1: icon chip + tag badge */}
-                    <div className="flex items-start justify-between gap-3">
-                      {/* Neumorphic icon chip */}
+                    {/* Header Row: Icon + Title + Tag */}
+                    <div className="flex items-center justify-center gap-3">
                       <motion.div
                         whileHover={{ scale: 1.1, rotate: -5 }}
                         transition={{ type: "spring", stiffness: 380, damping: 18 }}
-                        className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl"
+                        className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl"
                         style={{
                           background: `linear-gradient(135deg, #ffffff 0%, ${p.soft} 100%)`,
                           boxShadow: `
@@ -175,45 +178,43 @@ export function FeatureCards() {
                         {IconComp && (
                           <IconComp
                             weight="duotone"
-                            size={28}
+                            size={24}
                             color={p.hex}
                             style={{ filter: `drop-shadow(1px 2px 3px ${p.ring})` }}
                           />
                         )}
                       </motion.div>
 
-                      {/* Module tag badge */}
-                      {feature.tag && (
-                        <span
-                          className="inline-flex items-center rounded-full px-2.5 py-1 text-[10px] font-black uppercase tracking-wider leading-none mt-1 shrink-0"
-                          style={{ background: p.tagBg, color: p.tagText }}
-                        >
-                          {feature.tag}
-                        </span>
-                      )}
+                      <div className="flex items-center gap-2">
+                        <h3 className="text-lg sm:text-xl font-black text-navy leading-snug text-center">
+                          {feature.title}
+                        </h3>
+                        {feature.tag && (
+                          <span
+                            className="inline-flex items-center rounded-full px-2.5 py-1 text-[10px] font-black uppercase tracking-wider leading-none shrink-0"
+                            style={{ background: p.tagBg, color: p.tagText }}
+                          >
+                            {feature.tag}
+                          </span>
+                        )}
+                      </div>
                     </div>
 
-                    {/* Row 2: title + description */}
-                    <div>
-                      <h3 className="text-[17px] font-black text-navy leading-snug">
-                        {feature.title}
-                      </h3>
-                      <p className="mt-1.5 text-[13px] leading-relaxed text-slate-500 font-medium">
-                        {feature.description}
-                      </p>
-                    </div>
+                    <p className="mt-0.5 text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
+                      {feature.description}
+                    </p>
 
                     {/* Row 3: bullet feature list */}
                     {feature.bullets && feature.bullets.length > 0 && (
-                      <ul className="flex flex-col gap-1.5 flex-1">
+                      <ul className="flex flex-col gap-1">
                         {feature.bullets.map((bullet) => (
                           <li
                             key={bullet}
-                            className="flex items-start gap-2 text-[12.5px] font-semibold text-slate-700 leading-snug"
+                            className="flex items-start gap-2 text-sm sm:text-base font-semibold text-slate-800 leading-snug"
                           >
                             <CheckCircle
                               weight="duotone"
-                              size={15}
+                              size={18}
                               className="shrink-0 mt-[1px]"
                               color={p.hex}
                               aria-hidden="true"
@@ -225,16 +226,16 @@ export function FeatureCards() {
                     )}
 
                     {/* Row 4: CTA link */}
-                    <div className="mt-auto pt-3 border-t" style={{ borderColor: `${p.hex}18` }}>
+                    <div className="mt-2 pt-1.5 border-t" style={{ borderColor: `${p.hex}18` }}>
                       <Link
                         href={feature.href ?? "#"}
-                        className="inline-flex items-center gap-1.5 text-[13px] font-bold transition-all duration-200 group-hover:gap-3"
+                        className="inline-flex items-center gap-1.5 text-sm sm:text-base font-bold transition-all duration-200 group-hover:gap-3"
                         style={{ color: p.hex }}
                         onClick={(e) => e.stopPropagation()}
                         aria-label={`Learn more about ${feature.title}`}
                       >
                         Learn more
-                        <ArrowRight weight="bold" size={13} aria-hidden="true" />
+                        <ArrowRight weight="bold" size={15} aria-hidden="true" />
                       </Link>
                     </div>
                   </div>
@@ -251,10 +252,10 @@ export function FeatureCards() {
           </motion.div>
         </div>
 
-        {/* ── Progress dots ── */}
+        {/* Progress dots */}
         <div className="shrink-0 pb-5 flex flex-col items-center gap-2">
           <ProgressDots progress={progressVal} />
-          <p className="text-xs font-semibold text-slate-400">
+          <p className="text-sm font-semibold text-slate-800">
             Scroll to explore all {exploreFeatures.length} features
           </p>
         </div>

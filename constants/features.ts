@@ -68,7 +68,7 @@ export const exploreFeatures: Feature[] = [
   {
     id: "one-channel",
     title: "ONE Channel",
-    description: "Your academic home base — a personalized feed of activity, updates, and announcements from your courses, circles, and network.",
+    description: "Your academic home base. A personalized feed of activity, updates, and announcements from your courses, circles, and network.",
     icon: "Home",
     href: "/features/one-channel",
     tag: "Dashboard",
@@ -82,7 +82,7 @@ export const exploreFeatures: Feature[] = [
   {
     id: "threads",
     title: "Threads",
-    description: "Real-time academic discussions — ask questions, share insights, and engage with your peers and instructors in organized topic threads.",
+    description: "Real-time academic discussions. Ask questions, share insights, and engage with your peers and instructors in organized topic threads.",
     icon: "MessageSquare",
     href: "/features/threads",
     tag: "Discussion",
@@ -96,7 +96,7 @@ export const exploreFeatures: Feature[] = [
   {
     id: "study-sessions-feature",
     title: "Study Sessions",
-    description: "Schedule and join live virtual sessions for collaborative study, exam prep, and peer learning — with video, screen sharing, and whiteboards.",
+    description: "Schedule and join live virtual sessions for collaborative study, exam prep, and peer learning with video, screen sharing, and whiteboards.",
     icon: "Video",
     href: "/features/study-sessions",
     tag: "Live Learning",
@@ -124,7 +124,7 @@ export const exploreFeatures: Feature[] = [
   {
     id: "assist-feature",
     title: "Assist (AI)",
-    description: "Your intelligent academic companion — get instant explanations, study plans, essay feedback, and answers powered by AI, available 24/7.",
+    description: "Your intelligent academic companion. Get instant explanations, study plans, essay feedback, and answers powered by AI, available 24/7.",
     icon: "Bot",
     href: "/features/assist",
     tag: "AI-Powered",
@@ -138,7 +138,7 @@ export const exploreFeatures: Feature[] = [
   {
     id: "tutoring-feature",
     title: "Tutoring",
-    description: "Connect 1-on-1 with qualified instructors and tutors for personalized academic support — book sessions, share materials, and track progress.",
+    description: "Connect 1-on-1 with qualified instructors and tutors for personalized academic support. Book sessions, share materials, and track progress.",
     icon: "UserCheck",
     href: "/features/tutoring",
     tag: "1-on-1 Support",
@@ -152,7 +152,7 @@ export const exploreFeatures: Feature[] = [
   {
     id: "library",
     title: "Library",
-    description: "A rich, searchable academic resource hub — browse notes, eBooks, lecture recordings, past papers, and curated study guides.",
+    description: "A rich, searchable academic resource hub. Browse notes, eBooks, lecture recordings, past papers, and curated study guides.",
     icon: "BookOpen",
     href: "/features/library",
     tag: "Resources",
@@ -166,7 +166,7 @@ export const exploreFeatures: Feature[] = [
   {
     id: "community",
     title: "Community",
-    description: "Build your academic identity and network — follow peers, join interest-based communities, celebrate wins, and support each other.",
+    description: "Build your academic identity and network. Follow peers, join interest-based communities, celebrate wins, and support each other.",
     icon: "Heart",
     href: "/features/community",
     tag: "Social",
@@ -180,7 +180,7 @@ export const exploreFeatures: Feature[] = [
   {
     id: "network",
     title: "Network",
-    description: "Discover career opportunities, internships, mentors, and academic partnerships — grow your professional network while still in school.",
+    description: "Discover career opportunities, internships, mentors, and academic partnerships. Grow your professional network while still in school.",
     icon: "Network",
     href: "/features/network",
     tag: "Opportunities",

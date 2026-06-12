@@ -134,7 +134,7 @@ export default function NetworkPage() {
               {networkData.hero.subtitle}
             </h2>
             {networkData.hero.paragraphs.map((paragraph, idx) => (
-              <p key={idx} className="mt-5 text-[15.5px] font-medium leading-relaxed text-[#4b5a72]">
+              <p key={idx} className="mt-5 text-[17.5px] font-medium leading-relaxed text-slate-600">
                 {paragraph}
               </p>
             ))}
@@ -163,8 +163,8 @@ export default function NetworkPage() {
                   {getIcon(card.icon, `${card.iconClass} h-5 w-5`)}
                 </div>
                 <div>
-                  <h3 className="text-[13.5px] font-bold text-[#0a1628] mt-3">{card.title}</h3>
-                  <p className="text-[11px] text-[#4b5a72] leading-snug mt-1 font-medium">{card.desc}</p>
+                  <h3 className="text-[15.5px] font-bold text-[#0a1628] mt-3">{card.title}</h3>
+                  <p className="text-[13px] text-slate-600 leading-snug mt-1 font-medium">{card.desc}</p>
                 </div>
               </div>
             ))}
@@ -178,9 +178,9 @@ export default function NetworkPage() {
                   <div className="p-1.5 bg-slate-50 rounded-lg group-hover:scale-105 transition-transform duration-200">
                     {getIcon(sub.icon, `${sub.iconClass} h-4.5 w-4.5`)}
                   </div>
-                  <h4 className="text-[11.5px] font-extrabold text-[#0a1628] leading-tight">{sub.title}</h4>
+                  <h4 className="text-[13.5px] font-extrabold text-[#0a1628] leading-tight">{sub.title}</h4>
                 </div>
-                <p className="text-[10px] text-[#4b5a72] leading-snug mt-2 font-medium">{sub.desc}</p>
+                <p className="text-[12px] text-slate-600 leading-snug mt-2 font-medium">{sub.desc}</p>
               </div>
             ))}
           </div>
@@ -206,9 +206,9 @@ export default function NetworkPage() {
                     placeholder="Search connections..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full bg-[#f8fafc] border border-slate-200 rounded-xl py-1.5 pl-9 pr-3 text-[12.5px] text-[#0a1628] placeholder-slate-400 outline-none focus:border-primary transition-colors font-medium"
+                    className="w-full bg-[#f8fafc] border border-slate-200 rounded-xl py-1.5 pl-9 pr-3 text-[14.5px] text-[#0a1628] placeholder-slate-400 outline-none focus:border-primary transition-colors font-medium"
                   />
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 h-4 w-4" />
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-700 h-4 w-4" />
                 </div>
               </div>
 
@@ -218,9 +218,9 @@ export default function NetworkPage() {
                   <button
                     key={tab}
                     onClick={() => setSelectedTab(tab)}
-                    className={`text-[12px] font-extrabold shrink-0 transition-all cursor-pointer relative py-1 ${selectedTab === tab
+                    className={`text-[14px] font-extrabold shrink-0 transition-all cursor-pointer relative py-1 ${selectedTab === tab
                       ? "text-[#6366f1] after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-[#6366f1]"
-                      : "text-[#4b5a72] hover:text-[#0a1628]"
+                      : "text-slate-600 hover:text-[#0a1628]"
                       }`}
                   >
                     {tab}
@@ -244,17 +244,17 @@ export default function NetworkPage() {
                         {/* Name & Subtitle */}
                         <div className="min-w-0 text-left">
                           <div className="flex items-center flex-wrap gap-2">
-                            <span className="text-[14.5px] font-extrabold text-[#0a1628] leading-tight hover:text-primary transition-colors cursor-pointer">
+                            <span className="text-[16.5px] font-extrabold text-[#0a1628] leading-tight hover:text-primary transition-colors cursor-pointer">
                               {conn.name}
                             </span>
-                            <span className={`px-2 py-0.5 text-[9.5px] font-extrabold rounded-md border ${conn.badgeBg}`}>
+                            <span className={`px-2 py-0.5 text-[11.5px] font-extrabold rounded-md border ${conn.badgeBg}`}>
                               {conn.badgeText}
                             </span>
                           </div>
-                          <p className="text-[11.5px] font-bold text-[#4b5a72] mt-1.5 leading-none">
+                          <p className="text-[13.5px] font-bold text-slate-600 mt-1.5 leading-none">
                             {conn.description}
                           </p>
-                          <p className="text-[10px] font-medium text-slate-400 mt-1">
+                          <p className="text-[12px] font-medium text-slate-700 mt-1">
                             {conn.subtitle}
                           </p>
                         </div>
@@ -264,8 +264,8 @@ export default function NetworkPage() {
                       <div className="flex items-center justify-between sm:justify-start gap-8 shrink-0">
                         {/* Shared Item */}
                         <div className="text-left">
-                          <span className="text-[10px] text-slate-400 font-semibold block leading-none">{conn.detailLabel}</span>
-                          <span className="text-[12px] font-bold text-[#0a1628] block mt-1.5">{conn.detailValue}</span>
+                          <span className="text-[12px] text-slate-700 font-semibold block leading-none">{conn.detailLabel}</span>
+                          <span className="text-[14px] font-bold text-[#0a1628] block mt-1.5">{conn.detailValue}</span>
 
                           {/* Mini avatar stack */}
                           <div className="flex items-center -space-x-1.5 mt-2.5">
@@ -274,7 +274,7 @@ export default function NetworkPage() {
                                 <Image src={stackImg} alt="Stack avatar" fill className="object-cover" />
                               </div>
                             ))}
-                            <span className="text-[9.5px] font-extrabold text-[#4b5a72] bg-slate-50 border border-slate-100 rounded-md px-1.5 py-0.5 leading-none shrink-0">
+                            <span className="text-[11.5px] font-extrabold text-slate-600 bg-slate-50 border border-slate-100 rounded-md px-1.5 py-0.5 leading-none shrink-0">
                               +{conn.stackCount}
                             </span>
                           </div>
@@ -282,8 +282,8 @@ export default function NetworkPage() {
 
                         {/* Last Interaction */}
                         <div className="text-left sm:text-right shrink-0">
-                          <span className="text-[10px] text-slate-400 font-semibold block leading-none">Last interaction</span>
-                          <span className="text-[11.5px] font-bold text-[#0a1628] block mt-1.5">{conn.lastInteraction}</span>
+                          <span className="text-[12px] text-slate-700 font-semibold block leading-none">Last interaction</span>
+                          <span className="text-[13.5px] font-bold text-[#0a1628] block mt-1.5">{conn.lastInteraction}</span>
                         </div>
                       </div>
 
@@ -300,7 +300,7 @@ export default function NetworkPage() {
                     </div>
                   ))
                 ) : (
-                  <div className="py-12 text-center text-slate-400 text-sm font-semibold flex flex-col items-center justify-center gap-2">
+                  <div className="py-12 text-center text-slate-700 text-sm font-semibold flex flex-col items-center justify-center gap-2">
                     <Info className="h-8 w-8 text-slate-300" />
                     <span>No connections found matching &quot;{searchQuery}&quot; under {selectedTab}</span>
                   </div>
@@ -314,7 +314,7 @@ export default function NetworkPage() {
 
               {/* Card A */}
               <div className="bg-white border border-slate-200 rounded-3xl p-5 md:p-6 shadow-xs text-left">
-                <h3 className="text-[17px] font-extrabold text-[#0a1628] border-b border-slate-100 pb-3">
+                <h3 className="text-[19px] font-extrabold text-[#0a1628] border-b border-slate-100 pb-3">
                   Recent Network Activity
                 </h3>
 
@@ -326,7 +326,7 @@ export default function NetworkPage() {
                       </div>
 
                       <div className="flex-1 min-w-0">
-                        <p className="text-[12px] text-[#4b5a72] leading-snug font-medium">
+                        <p className="text-[14px] text-slate-600 leading-snug font-medium">
                           <span className="font-extrabold text-[#0a1628]">{act.name} </span>
                           {act.act}
                           {act.link && (
@@ -336,7 +336,7 @@ export default function NetworkPage() {
                             </span>
                           )}
                         </p>
-                        <span className="text-[10px] font-bold text-slate-400 mt-1 block">
+                        <span className="text-[12px] font-bold text-slate-700 mt-1 block">
                           {act.time}
                         </span>
                       </div>
@@ -351,11 +351,11 @@ export default function NetworkPage() {
 
               {/* Card B */}
               <div className="bg-white border border-slate-200 rounded-3xl p-5 md:p-6 shadow-xs text-left">
-                <h3 className="text-[17px] font-extrabold text-[#0a1628]">
+                <h3 className="text-[19px] font-extrabold text-[#0a1628]">
                   Academic Success & Wellness
                 </h3>
 
-                <p className="text-[11.5px] text-[#4b5a72] mt-1.5 font-medium leading-relaxed">
+                <p className="text-[13.5px] text-slate-600 mt-1.5 font-medium leading-relaxed">
                   Connect with professionals who support your academic success,
                   well-being, and personal growth.
                 </p>
@@ -370,10 +370,10 @@ export default function NetworkPage() {
                       </div>
 
                       <div className="min-w-0 text-left">
-                        <span className="text-[12.5px] font-bold text-[#0a1628] block">
+                        <span className="text-[14.5px] font-bold text-[#0a1628] block">
                           {serv.name}
                         </span>
-                        <span className="text-[10px] text-[#4b5a72] font-semibold block mt-0.5">
+                        <span className="text-[12px] text-slate-600 font-semibold block mt-0.5">
                           {serv.desc}
                         </span>
                       </div>
@@ -382,17 +382,17 @@ export default function NetworkPage() {
                 </div>
 
                 <div className="space-y-2.5 mt-6 border-t border-slate-100 pt-5">
-                  <button className="w-full bg-[#6366f1] text-white text-[12.5px] font-black py-2.5 px-4 rounded-xl flex items-center justify-center gap-2">
+                  <button className="w-full bg-[#6366f1] text-white text-[14.5px] font-black py-2.5 px-4 rounded-xl flex items-center justify-center gap-2">
                     <Search className="h-4 w-4" />
                     Find Support
                   </button>
 
-                  <button className="w-full bg-white border border-[#6366f1] text-[#6366f1] text-[12.5px] font-black py-2.5 px-4 rounded-xl flex items-center justify-center gap-2">
+                  <button className="w-full bg-white border border-[#6366f1] text-[#6366f1] text-[14.5px] font-black py-2.5 px-4 rounded-xl flex items-center justify-center gap-2">
                     <Users className="h-4 w-4" />
                     Browse Professionals
                   </button>
 
-                  <button className="w-full bg-white border border-[#6366f1] text-[#6366f1] text-[12.5px] font-black py-2.5 px-4 rounded-xl flex items-center justify-center gap-2">
+                  <button className="w-full bg-white border border-[#6366f1] text-[#6366f1] text-[14.5px] font-black py-2.5 px-4 rounded-xl flex items-center justify-center gap-2">
                     <Calendar className="h-4 w-4" />
                     Request Consultation
                   </button>
@@ -419,7 +419,7 @@ export default function NetworkPage() {
               { title: "Tutors", num: "5", lbl: "Connected", plus: 2, icon: <Users className="text-amber-600 h-4.5 w-4.5" />, bg: "bg-amber-50 text-amber-600 border-amber-100", avs: ["/studycircletutar.png", "/studycircleStudent.png", "/emma.webp"] },
               { title: "Advisors", num: "3", lbl: "Connected", plus: 1, icon: <Compass className="text-indigo-600 h-4.5 w-4.5" />, bg: "bg-indigo-50 text-indigo-600 border-indigo-100", avs: ["/StudycircleAdvisor.png", "/studycircleInstructor.png", "/studycircleStudent.png"] },
               { title: "Mentors", num: "4", lbl: "Connected", plus: 2, icon: <Briefcase className="text-purple-600 h-4.5 w-4.5" />, bg: "bg-purple-50 text-purple-600 border-purple-100", avs: ["/studycircleInstructor.png", "/emma.webp", "/StudycircleAdvisor.png"] },
-              { title: "Researchers", num: "2", lbl: "Connected", plus: 1, icon: <Activity className="text-slate-600 h-4.5 w-4.5" />, bg: "bg-slate-50 text-slate-600 border-slate-200", avs: ["/studycircletutar.png", "/studycircleStudent.png", "/emma.webp"] },
+              { title: "Researchers", num: "2", lbl: "Connected", plus: 1, icon: <Activity className="text-slate-700 h-4.5 w-4.5" />, bg: "bg-slate-50 text-slate-700 border-slate-200", avs: ["/studycircletutar.png", "/studycircleStudent.png", "/emma.webp"] },
               { title: "Wellness, Support & Success", num: "2", lbl: "Connected", plus: 1, icon: <Heart className="text-rose-600 h-4.5 w-4.5" />, bg: "bg-rose-50 text-rose-600 border-rose-100", avs: ["/emma.webp", "/studycircleStudent.png", "/StudycircleAdvisor.png"] },
               { title: "Institution Connections", num: "18", lbl: "Connections", plus: 12, icon: <Building className="text-slate-700 h-4.5 w-4.5" />, bg: "bg-slate-100 text-slate-700 border-slate-200", avs: ["/studycircleStudent.png", "/studycircleInstructor.png", "/StudycircleAdvisor.png"] }
             ].map((stat, idx) => (
@@ -427,9 +427,9 @@ export default function NetworkPage() {
                 <div className={`p-1.5 rounded-lg border ${stat.bg}`}>{stat.icon}</div>
 
                 <div className="mt-2.5">
-                  <h4 className="text-[10px] text-[#4b5a72] font-black uppercase tracking-wider block leading-tight">{stat.title}</h4>
+                  <h4 className="text-[12px] text-slate-600 font-black uppercase tracking-wider block leading-tight">{stat.title}</h4>
                   <span className="text-[26px] font-black text-[#0a1628] leading-none mt-1 block">{stat.num}</span>
-                  <span className="text-[9.5px] font-bold text-slate-400 leading-none mt-1 block">{stat.lbl}</span>
+                  <span className="text-[11.5px] font-bold text-slate-700 leading-none mt-1 block">{stat.lbl}</span>
                 </div>
 
                 {/* Overlap avatars */}
@@ -439,7 +439,7 @@ export default function NetworkPage() {
                       <Image src={imgUrl} alt="stat avatar" fill className="object-cover" />
                     </div>
                   ))}
-                  <span className="text-[8px] font-black text-[#4b5a72] bg-slate-50 border border-slate-100 rounded-md px-1 py-0.5 shrink-0 leading-none">
+                  <span className="text-[10px] font-black text-slate-600 bg-slate-50 border border-slate-100 rounded-md px-1 py-0.5 shrink-0 leading-none">
                     +{stat.plus}
                   </span>
                 </div>
@@ -453,7 +453,7 @@ export default function NetworkPage() {
 
           {/* Left: Strengthen Your Academic Network (8 cols) */}
           <div className="lg:col-span-9 space-y-5">
-            <h3 className="text-[18px] font-extrabold text-[#0a1628]">
+            <h3 className="text-[20px] font-extrabold text-[#0a1628]">
               Strengthen Your Academic Network
             </h3>
 
@@ -465,9 +465,9 @@ export default function NetworkPage() {
                       <div className={`p-1 ${card.iconBg} rounded-lg ${card.iconClass} ${card.iconBorder}`}>
                         {getIcon(card.icon, "h-4 w-4")}
                       </div>
-                      <span className="text-[11.5px] font-extrabold text-[#0a1628] leading-tight">{card.title}</span>
+                      <span className="text-[13.5px] font-extrabold text-[#0a1628] leading-tight">{card.title}</span>
                     </div>
-                    <p className="text-[9.5px] text-[#4b5a72] font-semibold mt-2.5 leading-snug">
+                    <p className="text-[11.5px] text-slate-600 font-semibold mt-2.5 leading-snug">
                       {card.desc}
                     </p>
                     {card.avatars ? (
@@ -480,7 +480,7 @@ export default function NetworkPage() {
                       </div>
                     ) : card.badgeLabel ? (
                       <div className="mt-3.5 bg-slate-50/80 rounded-lg border border-slate-100/70 p-2 text-center">
-                        <span className="text-[11px] font-black text-[#0f172a]">{card.badgeLabel}</span>
+                        <span className="text-[13px] font-black text-[#0f172a]">{card.badgeLabel}</span>
                       </div>
                     ) : null}
                   </div>
@@ -492,7 +492,7 @@ export default function NetworkPage() {
                         toggleConnect(card.id);
                       }
                     }}
-                    className={`w-full text-[10.5px] font-extrabold py-1.5 px-3 rounded-lg border text-center transition-all cursor-pointer ${(card.id === "suggested" || card.id === "past") && connectedIds.includes(card.id)
+                    className={`w-full text-[12.5px] font-extrabold py-1.5 px-3 rounded-lg border text-center transition-all cursor-pointer ${(card.id === "suggested" || card.id === "past") && connectedIds.includes(card.id)
                       ? "bg-emerald-50 text-emerald-600 border-emerald-100 flex items-center justify-center gap-1.5"
                       : card.id === "sessions" && joinedSessions.includes(card.id)
                         ? "bg-emerald-50 text-emerald-600 border-emerald-100 flex items-center justify-center gap-1.5"
@@ -520,7 +520,7 @@ export default function NetworkPage() {
 
           {/* Right: Network Insights Sidebar (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h3 className="text-[18px] font-extrabold text-[#0a1628] leading-none">
+            <h3 className="text-[20px] font-extrabold text-[#0a1628] leading-none">
               Network Insights
             </h3>
 
@@ -531,8 +531,8 @@ export default function NetworkPage() {
                     {getIcon(insight.icon, `h-4 w-4 ${insight.iconClass}`)}
                   </div>
                   <div className="min-w-0 text-left">
-                    <span className="text-[9.5px] text-[#4b5a72] font-extrabold uppercase tracking-wider block leading-none">{insight.label}</span>
-                    <span className="text-[12.5px] font-bold text-[#0a1628] block mt-1.5 leading-snug">{insight.val}</span>
+                    <span className="text-[11.5px] text-slate-600 font-extrabold uppercase tracking-wider block leading-none">{insight.label}</span>
+                    <span className="text-[14.5px] font-bold text-[#0a1628] block mt-1.5 leading-snug">{insight.val}</span>
                   </div>
                 </div>
               ))}

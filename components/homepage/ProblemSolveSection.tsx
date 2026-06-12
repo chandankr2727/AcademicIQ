@@ -152,43 +152,45 @@ export function ProblemSolveSection() {
           >
             One Platform. Everything Connected.
           </h2>
-          <p className="mt-4 mx-auto max-w-3xl text-lg font-medium leading-relaxed text-slate-600">
+          <p className="mt-4 mx-auto max-w-3xl text-lg font-medium leading-relaxed text-slate-800">
             Education is fragmented. AcademIQ brings it all together in one place.
           </p>
         </motion.div>
 
         {/* 3 Horizontal Cards Stack */}
-        <div className="flex flex-col lg:flex-row lg:items-stretch lg:justify-between items-center gap-4">
-          
-          {/* Card 1: The Problem We Solve */}
+        <div className="flex flex-col lg:flex-row lg:items-stretch gap-4">
+
+          {/* Card 1: The Problem We Solve — larger width */}
           <motion.article
             initial={{ opacity: 0, x: -50, filter: "blur(8px)" }}
             whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex-1 rounded-3xl border border-border bg-white p-6 shadow-sm flex flex-col justify-between w-full h-[280px]"
+            className="lg:flex-[2] rounded-3xl border border-border bg-white p-6 shadow-sm flex flex-col justify-between w-full"
           >
             <div className="text-center">
               <h3 className="text-xl font-bold text-navy">The Problem We Solve</h3>
-              <p className="mt-2 text-xs font-semibold leading-relaxed text-slate-500">
+              <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-700">
                 Students currently juggle many disconnected tools to learn.
               </p>
             </div>
-            
+
             <div className="mt-auto">
-              <p className="text-xs font-bold text-navy text-center mb-3">Today: Students juggle many tools</p>
-              
-              <div className="border border-slate-100 bg-white shadow-xs rounded-2xl p-3 flex justify-between items-center gap-2 overflow-x-auto">
-                {problemIcons.map((item) => (
-                  <div key={item.label} className="flex flex-col items-center gap-1.5 shrink-0 flex-1">
-                    <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-slate-50 p-2 shadow-xs border border-slate-100">
-                      {item.svg}
+              <p className="text-sm font-bold text-navy text-center mb-3">Today: Students juggle many tools</p>
+
+              <div className="border border-slate-100 bg-white shadow-xs rounded-2xl p-4">
+                <div className="flex flex-wrap justify-center gap-x-4 gap-y-4">
+                  {problemIcons.map((item) => (
+                    <div key={item.label} className="flex flex-col items-center gap-1.5 w-14 shrink-0">
+                      <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl bg-slate-50 p-2 shadow-xs border border-slate-100">
+                        {item.svg}
+                      </div>
+                      <span className="text-[11px] font-bold text-slate-800 leading-tight text-center w-full">
+                        {item.label}
+                      </span>
                     </div>
-                    <span className="text-[9px] font-bold text-slate-600 leading-none">
-                      {item.label}
-                    </span>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </motion.article>
@@ -196,13 +198,13 @@ export function ProblemSolveSection() {
           {/* Curved Arrow 1 */}
           <CurvedArrow />
 
-          {/* Card 2: AcademIQ Center Hub */}
+          {/* Card 2: AcademIQ Center Hub — compact */}
           <motion.article
             initial={{ opacity: 0, scale: 0.8, filter: "blur(8px)" }}
             whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
             viewport={{ once: true }}
             transition={{ duration: 0.55, ease: "easeOut", delay: 0.1 }}
-            className="rounded-3xl border border-border bg-white p-6 shadow-sm hover:shadow-[0_12px_40px_rgba(15,23,42,0.08)] transition-all duration-300 flex flex-col items-center justify-center w-full lg:max-w-xs xl:max-w-sm shrink-0 h-[280px]"
+            className="rounded-3xl border border-border bg-white p-5 shadow-sm hover:shadow-[0_12px_40px_rgba(15,23,42,0.08)] transition-all duration-300 flex flex-col items-center justify-center w-full lg:w-52 xl:w-56 shrink-0"
           >
             <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0066fe] shadow-lg shadow-blue-100 text-white shrink-0">
               <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -213,7 +215,7 @@ export function ProblemSolveSection() {
             <h3 className="mt-3 text-lg font-black text-navy leading-none">AcademIQ</h3>
             <p className="mt-2 text-xs font-black text-navy leading-none">One Platform.</p>
             <p className="text-xs font-black text-navy mt-1 leading-none">Everything Connected.</p>
-            
+
             <div className="mt-4 flex justify-center -space-x-1.5 shrink-0">
               {platformAvatars.map((a, i) => (
                 <span key={i} className="h-7 w-7 overflow-hidden rounded-full border-2 border-white shadow-xs">
@@ -221,8 +223,8 @@ export function ProblemSolveSection() {
                 </span>
               ))}
             </div>
-            
-            <p className="mt-4 text-[10px] font-bold text-slate-500">
+
+            <p className="mt-4 text-[11px] font-bold text-slate-700 text-center">
               Everything you need in one place.
             </p>
           </motion.article>
@@ -230,47 +232,29 @@ export function ProblemSolveSection() {
           {/* Curved Arrow 2 */}
           <CurvedArrow />
 
-          {/* Card 3: Tomorrow: Learn Smarter. Together. */}
+          {/* Card 3: Tomorrow: Learn Smarter. Together. — larger width */}
           <motion.article
             initial={{ opacity: 0, x: 50, filter: "blur(8px)" }}
             whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
-            className="flex-1 rounded-3xl border border-border bg-white p-6 shadow-sm flex flex-col justify-between w-full h-[280px]"
+            className="lg:flex-[2] rounded-3xl border border-border bg-white p-6 shadow-sm flex flex-col justify-between w-full"
           >
             <div className="text-center">
-              <h3 className="text-xl font-bold text-navy">
-                Tomorrow: Learn Smarter.
-              </h3>
-              <p className="text-xl font-bold text-navy">Together.</p>
+              <h3 className="text-xl font-bold text-navy">Tomorrow: Learn Smarter. Together.</h3>
             </div>
-            
-            <div className="mt-auto">
-              <div className="grid grid-cols-2 gap-x-4 gap-y-3 p-1">
-                {/* Col 1 */}
-                <div className="space-y-3.5">
-                  {tomorrowCol1.map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-xs font-bold text-slate-700">
-                      <svg className="h-4.5 w-4.5 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                        <circle cx="12" cy="12" r="10" stroke="currentColor" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
-                      </svg>
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-                {/* Col 2 */}
-                <div className="space-y-3.5">
-                  {tomorrowCol2.map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-xs font-bold text-slate-700">
-                      <svg className="h-4.5 w-4.5 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
-                        <circle cx="12" cy="12" r="10" stroke="currentColor" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
-                      </svg>
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
+
+            <div className="mt-6 flex justify-center">
+              <div className="flex flex-col gap-y-3.5 p-1">
+                {[...tomorrowCol1, ...tomorrowCol2].map((item) => (
+                  <div key={item} className="flex items-center gap-2.5 text-base font-bold text-slate-700">
+                    <svg className="h-5 w-5 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                      <circle cx="12" cy="12" r="10" stroke="currentColor" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
+                    </svg>
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </motion.article>

@@ -32,7 +32,7 @@ function PointList({ points, colorClass = "text-purple-500" }: { points: string[
   return (
     <ul className="mt-4 space-y-2.5">
       {points.map((point) => (
-        <li key={point} className="flex items-start gap-2.5 text-[14px] font-semibold text-slate-700">
+        <li key={point} className="flex items-start gap-2.5 text-base font-semibold text-slate-700">
           <svg className={`h-5 w-5 shrink-0 ${colorClass}`} fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
           </svg>
@@ -142,31 +142,31 @@ function StudentDashboardMockup() {
                 <SidebarIcon type="cap" className="w-2.5 h-2.5 text-[#7c3aed]" />
                 <span>Student Center</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="book" className="w-2.5 h-2.5" />
                 <span>Courses</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="calendar" className="w-2.5 h-2.5" />
                 <span>Calendar</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="users" className="w-2.5 h-2.5" />
                 <span>Study Circles</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="tutoring" className="w-2.5 h-2.5" />
                 <span>Tutoring</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="tasks" className="w-2.5 h-2.5" />
                 <span>Tasks</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="messages" className="w-2.5 h-2.5" />
                 <span>Messages</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="resources" className="w-2.5 h-2.5" />
                 <span>Resources</span>
               </div>
@@ -180,7 +180,7 @@ function StudentDashboardMockup() {
             <div className="flex justify-between items-start">
               <div>
                 <h4 className="text-[9px] font-black text-navy leading-none">Welcome back, Keddy! 👋</h4>
-                <p className="text-[6px] text-slate-400 mt-0.5">Here&apos;s what&apos;s happening today.</p>
+                <p className="text-[6px] text-slate-500 mt-0.5">Here&apos;s what&apos;s happening today.</p>
               </div>
             </div>
 
@@ -188,15 +188,15 @@ function StudentDashboardMockup() {
             <div className="grid grid-cols-3 gap-1 mt-1.5">
               <div className="bg-white border border-[#f3e8ff] rounded p-1 flex flex-col items-center justify-center">
                 <span className="text-[10px] font-black text-[#7c3aed] leading-none">2</span>
-                <span className="text-[5px] text-slate-500 mt-0.5 text-center leading-none">Classes Today</span>
+                <span className="text-[5px] text-slate-700 mt-0.5 text-center leading-none">Classes Today</span>
               </div>
               <div className="bg-white border border-[#f3e8ff] rounded p-1 flex flex-col items-center justify-center">
                 <span className="text-[10px] font-black text-[#7c3aed] leading-none">1</span>
-                <span className="text-[5px] text-slate-500 mt-0.5 text-center leading-none">Sessions Today</span>
+                <span className="text-[5px] text-slate-700 mt-0.5 text-center leading-none">Sessions Today</span>
               </div>
               <div className="bg-white border border-[#f3e8ff] rounded p-1 flex flex-col items-center justify-center">
                 <span className="text-[10px] font-black text-[#7c3aed] leading-none">3</span>
-                <span className="text-[5px] text-slate-500 mt-0.5 text-center leading-none">Tasks Due</span>
+                <span className="text-[5px] text-slate-700 mt-0.5 text-center leading-none">Tasks Due</span>
               </div>
             </div>
 
@@ -211,21 +211,21 @@ function StudentDashboardMockup() {
                 <div className="space-y-1">
                   <div className="bg-blue-50/50 border-l border-blue-500 rounded p-1 text-[5px]">
                     <div className="font-bold text-slate-700">Calculus I</div>
-                    <div className="text-slate-400 mt-0.5 flex justify-between">
+                    <div className="text-slate-500 mt-0.5 flex justify-between">
                       <span>10:00 AM - 11:00 AM</span>
                       <span>Room 204</span>
                     </div>
                   </div>
                   <div className="bg-green-50/50 border-l border-green-500 rounded p-1 text-[5px]">
                     <div className="font-bold text-slate-700">Study Circle - Biology 101</div>
-                    <div className="text-slate-400 mt-0.5 flex justify-between">
+                    <div className="text-slate-500 mt-0.5 flex justify-between">
                       <span>12:00 PM - 1:00 PM</span>
                       <span>Online</span>
                     </div>
                   </div>
                   <div className="bg-orange-50/50 border-l border-orange-500 rounded p-1 text-[5px]">
                     <div className="font-bold text-slate-700">Writing Center Session</div>
-                    <div className="text-slate-400 mt-0.5 flex justify-between">
+                    <div className="text-slate-500 mt-0.5 flex justify-between">
                       <span>2:00 PM - 4:00 PM</span>
                       <span>Zoom</span>
                     </div>
@@ -245,7 +245,7 @@ function StudentDashboardMockup() {
                     </div>
                     <div className="leading-tight flex-1">
                       <div className="font-bold text-slate-700">Problem Set 3</div>
-                      <div className="text-slate-400">Calculus I</div>
+                      <div className="text-slate-500">Calculus I</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-1 bg-slate-50/50 border border-slate-100 p-1 rounded text-[5px]">
@@ -256,7 +256,7 @@ function StudentDashboardMockup() {
                     </div>
                     <div className="leading-tight flex-1">
                       <div className="font-bold text-slate-700">Lab Report</div>
-                      <div className="text-slate-400">Biology 101</div>
+                      <div className="text-slate-500">Biology 101</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-1 bg-slate-50/50 border border-slate-100 p-1 rounded text-[5px]">
@@ -267,7 +267,7 @@ function StudentDashboardMockup() {
                     </div>
                     <div className="leading-tight flex-1">
                       <div className="font-bold text-slate-700">Essay Draft</div>
-                      <div className="text-slate-400">English 201</div>
+                      <div className="text-slate-500">English 201</div>
                     </div>
                   </div>
                 </div>
@@ -297,31 +297,31 @@ function InstructorDashboardMockup() {
                 <SidebarIcon type="tutoring" className="w-2.5 h-2.5 text-[#0369a1]" />
                 <span>Instructor Center</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="book" className="w-2.5 h-2.5" />
                 <span>Courses</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="users" className="w-2.5 h-2.5" />
                 <span>Students</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="calendar" className="w-2.5 h-2.5" />
                 <span>Sessions</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="tasks" className="w-2.5 h-2.5" />
                 <span>Assessments</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="messages" className="w-2.5 h-2.5" />
                 <span>Messages</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="analytics" className="w-2.5 h-2.5" />
                 <span>Analytics</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="resources" className="w-2.5 h-2.5" />
                 <span>Resources</span>
               </div>
@@ -335,7 +335,7 @@ function InstructorDashboardMockup() {
             <div className="flex justify-between items-start">
               <div>
                 <h4 className="text-[9px] font-black text-navy leading-none">Instructor Center</h4>
-                <p className="text-[6px] text-slate-400 mt-0.5">Your teaching activity at a glance.</p>
+                <p className="text-[6px] text-slate-500 mt-0.5">Your teaching activity at a glance.</p>
               </div>
             </div>
 
@@ -343,15 +343,15 @@ function InstructorDashboardMockup() {
             <div className="grid grid-cols-3 gap-1 mt-1.5">
               <div className="bg-white border border-[#e0f2fe] rounded p-1 flex flex-col items-center justify-center">
                 <span className="text-[10px] font-black text-blue-600 leading-none">3</span>
-                <span className="text-[5px] text-slate-500 mt-0.5 text-center leading-none">Active Courses</span>
+                <span className="text-[5px] text-slate-700 mt-0.5 text-center leading-none">Active Courses</span>
               </div>
               <div className="bg-white border border-[#e0f2fe] rounded p-1 flex flex-col items-center justify-center">
                 <span className="text-[10px] font-black text-blue-600 leading-none">48</span>
-                <span className="text-[5px] text-slate-500 mt-0.5 text-center leading-none">Enrolled Students</span>
+                <span className="text-[5px] text-slate-700 mt-0.5 text-center leading-none">Enrolled Students</span>
               </div>
               <div className="bg-white border border-[#e0f2fe] rounded p-1 flex flex-col items-center justify-center">
                 <span className="text-[10px] font-black text-blue-600 leading-none">12</span>
-                <span className="text-[5px] text-slate-500 mt-0.5 text-center leading-none">Sessions This Week</span>
+                <span className="text-[5px] text-slate-700 mt-0.5 text-center leading-none">Sessions This Week</span>
               </div>
             </div>
 
@@ -366,21 +366,21 @@ function InstructorDashboardMockup() {
                 <div className="space-y-1">
                   <div className="bg-blue-50/50 border-l border-blue-500 rounded p-1 text-[5px]">
                     <div className="font-bold text-slate-700">Biology 101 - Lecture</div>
-                    <div className="text-slate-400 mt-0.5 flex justify-between">
+                    <div className="text-slate-500 mt-0.5 flex justify-between">
                       <span>Mon, May 20 - 10:00 AM</span>
                       <span>Room 300</span>
                     </div>
                   </div>
                   <div className="bg-orange-50/50 border-l border-orange-500 rounded p-1 text-[5px]">
                     <div className="font-bold text-slate-700">Office Hours</div>
-                    <div className="text-slate-400 mt-0.5 flex justify-between">
+                    <div className="text-slate-500 mt-0.5 flex justify-between">
                       <span>Tue, May 21 - 2:00 PM</span>
                       <span>Zoom</span>
                     </div>
                   </div>
                   <div className="bg-blue-50/50 border-l border-blue-500 rounded p-1 text-[5px]">
                     <div className="font-bold text-slate-700">Study Session</div>
-                    <div className="text-slate-400 mt-0.5 flex justify-between">
+                    <div className="text-slate-500 mt-0.5 flex justify-between">
                       <span>Wed, May 22 - 6:00 PM</span>
                       <span>Online</span>
                     </div>
@@ -443,31 +443,31 @@ function InstitutionDashboardMockup() {
                 <SidebarIcon type="overview" className="w-2.5 h-2.5 text-[#15803d]" />
                 <span>Institution Center</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="overview" className="w-2.5 h-2.5" />
                 <span>Overview</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="users" className="w-2.5 h-2.5" />
                 <span>Users</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="analytics" className="w-2.5 h-2.5" />
                 <span>Engagement</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="users" className="w-2.5 h-2.5" />
                 <span>Study Circles</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="resources" className="w-2.5 h-2.5" />
                 <span>Resources</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="tasks" className="w-2.5 h-2.5" />
                 <span>Reports</span>
               </div>
-              <div className="flex items-center gap-1 text-slate-500 px-1.5 py-0.5">
+              <div className="flex items-center gap-1 text-slate-700 px-1.5 py-0.5">
                 <SidebarIcon type="settings" className="w-2.5 h-2.5" />
                 <span>Settings</span>
               </div>
@@ -491,15 +491,15 @@ function InstitutionDashboardMockup() {
             <div className="grid grid-cols-3 gap-1 mt-2">
               <div className="bg-white border border-green-100 rounded p-1 flex flex-col items-center justify-center">
                 <span className="text-[10px] font-black text-emerald-600 leading-none">24,562</span>
-                <span className="text-[5px] text-slate-500 mt-0.5 text-center leading-none">Active Students</span>
+                <span className="text-[5px] text-slate-700 mt-0.5 text-center leading-none">Active Students</span>
               </div>
               <div className="bg-white border border-green-100 rounded p-1 flex flex-col items-center justify-center">
                 <span className="text-[10px] font-black text-emerald-600 leading-none">1,248</span>
-                <span className="text-[5px] text-slate-500 mt-0.5 text-center leading-none">Study Sessions</span>
+                <span className="text-[5px] text-slate-700 mt-0.5 text-center leading-none">Study Sessions</span>
               </div>
               <div className="bg-white border border-green-100 rounded p-1 flex flex-col items-center justify-center">
                 <span className="text-[10px] font-black text-emerald-600 leading-none">92%</span>
-                <span className="text-[5px] text-slate-500 mt-0.5 text-center leading-none">Student Engagement</span>
+                <span className="text-[5px] text-slate-700 mt-0.5 text-center leading-none">Student Engagement</span>
               </div>
             </div>
 
@@ -521,7 +521,7 @@ function InstitutionDashboardMockup() {
                     <circle cx="81" cy="10" r="1.5" fill="#10b981" />
                     <circle cx="95" cy="5" r="1.5" fill="#10b981" />
                   </svg>
-                  <div className="flex justify-between text-[4.5px] text-slate-400 font-medium px-0.5 mt-0.5">
+                  <div className="flex justify-between text-[4.5px] text-slate-500 font-medium px-0.5 mt-0.5">
                     <span>Apr 14</span>
                     <span>Apr 21</span>
                     <span>Apr 28</span>
@@ -536,23 +536,23 @@ function InstitutionDashboardMockup() {
                 <span className="text-[7px] font-black text-navy block mb-1">Top Departments</span>
                 <div className="space-y-0.5 bg-slate-50/50 p-1.5 rounded border border-slate-100">
                   <div className="flex items-center justify-between text-[6px] py-0.5 border-b border-slate-200/50">
-                    <span className="font-semibold text-slate-600">Biology</span>
+                    <span className="font-semibold text-slate-800">Biology</span>
                     <span className="font-bold text-emerald-600">95%</span>
                   </div>
                   <div className="flex items-center justify-between text-[6px] py-0.5 border-b border-slate-200/50">
-                    <span className="font-semibold text-slate-600">Engineering</span>
+                    <span className="font-semibold text-slate-800">Engineering</span>
                     <span className="font-bold text-emerald-600">93%</span>
                   </div>
                   <div className="flex items-center justify-between text-[6px] py-0.5 border-b border-slate-200/50">
-                    <span className="font-semibold text-slate-600">Business</span>
+                    <span className="font-semibold text-slate-800">Business</span>
                     <span className="font-bold text-emerald-600">90%</span>
                   </div>
                   <div className="flex items-center justify-between text-[6px] py-0.5 border-b border-slate-200/50">
-                    <span className="font-semibold text-slate-600">Psychology</span>
+                    <span className="font-semibold text-slate-800">Psychology</span>
                     <span className="font-bold text-emerald-600">88%</span>
                   </div>
                   <div className="flex items-center justify-between text-[6px] py-0.5">
-                    <span className="font-semibold text-slate-600">Nursing</span>
+                    <span className="font-semibold text-slate-800">Nursing</span>
                     <span className="font-bold text-emerald-600">87%</span>
                   </div>
                 </div>
@@ -584,7 +584,7 @@ export function WhyAcademiqSection() {
           <h2 id="why-academiq-heading" className="text-4xl font-black text-navy sm:text-5xl">
             Why Academ<span className="text-[#e11d48]">IQ</span>?
           </h2>
-          <p className="mt-3.5 mx-auto max-w-lg text-lg font-medium leading-relaxed text-slate-600">
+          <p className="mt-3.5 mx-auto max-w-lg text-xl font-medium leading-relaxed text-slate-800">
             Designed for every participant in the learning journey.
           </p>
         </motion.div>
@@ -607,7 +607,7 @@ export function WhyAcademiqSection() {
                   <SidebarIcon type="cap" className="w-7 h-7 text-white" />
                 </div>
                 <p className="mt-3.5 text-xs font-black uppercase tracking-widest text-[#7c3aed]">FOR STUDENTS</p>
-                <h3 className="mt-2 text-xl font-black text-navy leading-snug">Everything you need to learn and succeed.</h3>
+                <h3 className="mt-2 text-2xl font-black text-navy leading-snug">Everything you need to learn and succeed.</h3>
               </div>
 
               {/* Dashboard mockup */}
@@ -620,7 +620,7 @@ export function WhyAcademiqSection() {
             <div className="mt-auto pt-2">
               <PointList points={studentPoints} colorClass="text-[#7c3aed]" />
               <div className="mt-6 border-t border-slate-100 pt-4">
-                <Link href="/learn" className="inline-flex items-center gap-1.5 text-sm font-bold text-[#7c3aed] hover:underline group">
+                <Link href="/learn" className="inline-flex items-center gap-1.5 text-base font-bold text-[#7c3aed] hover:underline group">
                   Explore Student Experience 
                   <ArrowRight weight="bold" size={14} className="transition-transform group-hover:translate-x-1" />
                 </Link>
@@ -644,7 +644,7 @@ export function WhyAcademiqSection() {
                   <SidebarIcon type="tutoring" className="w-7 h-7 text-white" />
                 </div>
                 <p className="mt-3.5 text-xs font-black uppercase tracking-widest text-blue-600">FOR INSTRUCTORS</p>
-                <h3 className="mt-2 text-xl font-black text-navy leading-snug">Teach, engage & empower your students.</h3>
+                <h3 className="mt-2 text-2xl font-black text-navy leading-snug">Teach, engage & empower your students.</h3>
               </div>
 
               {/* Dashboard mockup */}
@@ -657,7 +657,7 @@ export function WhyAcademiqSection() {
             <div className="mt-auto pt-2">
               <PointList points={instructorPoints} colorClass="text-blue-600" />
               <div className="mt-6 border-t border-slate-100 pt-4">
-                <Link href="/teach" className="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 hover:underline group">
+                <Link href="/teach" className="inline-flex items-center gap-1.5 text-base font-bold text-blue-600 hover:underline group">
                   Explore Instructor Experience
                   <ArrowRight weight="bold" size={14} className="transition-transform group-hover:translate-x-1" />
                 </Link>
@@ -683,7 +683,7 @@ export function WhyAcademiqSection() {
                   </svg>
                 </div>
                 <p className="mt-3.5 text-xs font-black uppercase tracking-widest text-emerald-600">FOR INSTITUTIONS</p>
-                <h3 className="mt-2 text-xl font-black text-navy leading-snug">Strengthen learning. Drive student success.</h3>
+                <h3 className="mt-2 text-2xl font-black text-navy leading-snug">Strengthen learning. Drive student success.</h3>
               </div>
 
               {/* Dashboard mockup */}
@@ -696,7 +696,7 @@ export function WhyAcademiqSection() {
             <div className="mt-auto pt-2">
               <PointList points={institutionPoints} colorClass="text-emerald-600" />
               <div className="mt-6 border-t border-slate-100 pt-4">
-                <Link href="/solutions" className="inline-flex items-center gap-1.5 text-sm font-bold text-emerald-600 hover:underline group">
+                <Link href="/solutions" className="inline-flex items-center gap-1.5 text-base font-bold text-emerald-600 hover:underline group">
                   Explore Institution Solutions
                   <ArrowRight weight="bold" size={14} className="transition-transform group-hover:translate-x-1" />
                 </Link>
@@ -708,7 +708,7 @@ export function WhyAcademiqSection() {
         {/* Quick Access Section */}
         <div className="mt-16">
           <div className="text-center mb-6">
-            <h3 className="text-xs font-black uppercase tracking-widest text-slate-500">
+            <h3 className="text-xs font-black uppercase tracking-widest text-slate-700">
               QUICK ACCESS
             </h3>
           </div>
@@ -724,10 +724,10 @@ export function WhyAcademiqSection() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-navy leading-snug group-hover:text-purple-600 transition-colors">Student Center</h4>
-                  <p className="mt-0.5 text-xs font-semibold text-slate-500 leading-snug">Access your courses, tasks & support</p>
+                  <p className="mt-0.5 text-xs font-semibold text-slate-700 leading-snug">Access your courses, tasks & support</p>
                 </div>
               </div>
-              <svg className="w-5 h-5 text-slate-400 group-hover:text-purple-600 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <svg className="w-5 h-5 text-slate-500 group-hover:text-purple-600 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </Link>
@@ -743,10 +743,10 @@ export function WhyAcademiqSection() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-navy leading-snug group-hover:text-blue-600 transition-colors">Instructor Center</h4>
-                  <p className="mt-0.5 text-xs font-semibold text-slate-500 leading-snug">Manage your teaching, students & sessions</p>
+                  <p className="mt-0.5 text-xs font-semibold text-slate-700 leading-snug">Manage your teaching, students & sessions</p>
                 </div>
               </div>
-              <svg className="w-5 h-5 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <svg className="w-5 h-5 text-slate-500 group-hover:text-blue-600 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </Link>
@@ -764,10 +764,10 @@ export function WhyAcademiqSection() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-navy leading-snug group-hover:text-emerald-600 transition-colors">Institution Center</h4>
-                  <p className="mt-0.5 text-xs font-semibold text-slate-500 leading-snug">View analytics, users & engagement</p>
+                  <p className="mt-0.5 text-xs font-semibold text-slate-700 leading-snug">View analytics, users & engagement</p>
                 </div>
               </div>
-              <svg className="w-5 h-5 text-slate-400 group-hover:text-emerald-600 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <svg className="w-5 h-5 text-slate-500 group-hover:text-emerald-600 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </Link>
@@ -785,10 +785,10 @@ export function WhyAcademiqSection() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-navy leading-snug group-hover:text-orange-500 transition-colors">Opportunity Hub</h4>
-                  <p className="mt-0.5 text-xs font-semibold text-slate-500 leading-snug">Find resources, programs & partnerships</p>
+                  <p className="mt-0.5 text-xs font-semibold text-slate-700 leading-snug">Find resources, programs & partnerships</p>
                 </div>
               </div>
-              <svg className="w-5 h-5 text-slate-400 group-hover:text-orange-500 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+              <svg className="w-5 h-5 text-slate-500 group-hover:text-orange-500 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
               </svg>
             </Link>

@@ -194,7 +194,7 @@ export default async function FeatureDetailPage({ params }: { params: Promise<{ 
 
           <div className="relative mx-auto max-w-[1280px] px-5 lg:px-10">
             {/* Breadcrumb */}
-            <nav className="mb-8 flex items-center gap-2 text-sm font-semibold text-slate-500" aria-label="Breadcrumb">
+            <nav className="mb-8 flex items-center gap-2 text-sm font-semibold text-slate-700" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-primary transition-colors">Home</Link>
               <span aria-hidden="true">›</span>
               <span style={{ color: p.hex }}>{feature.title}</span>
@@ -206,7 +206,7 @@ export default async function FeatureDetailPage({ params }: { params: Promise<{ 
                 {/* Tag badge */}
                 {feature.tag && (
                   <span
-                    className="inline-flex items-center rounded-full px-3 py-1 text-[11px] font-black uppercase tracking-widest mb-5"
+                    className="inline-flex items-center rounded-full px-3 py-1 text-[13px] font-black uppercase tracking-widest mb-5"
                     style={{ background: p.tagBg, color: p.tagText }}
                   >
                     {feature.tag}
@@ -216,7 +216,7 @@ export default async function FeatureDetailPage({ params }: { params: Promise<{ 
                 <h1 className="text-4xl font-black text-navy sm:text-5xl lg:text-6xl leading-none">
                   {content?.headline ?? feature.title}
                 </h1>
-                <p className="mt-6 text-lg font-medium leading-relaxed text-slate-600 max-w-xl">
+                <p className="mt-6 text-lg font-medium leading-relaxed text-slate-700 max-w-xl">
                   {content?.subheadline ?? feature.description}
                 </p>
 
@@ -224,7 +224,7 @@ export default async function FeatureDetailPage({ params }: { params: Promise<{ 
                 {feature.bullets && (
                   <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {feature.bullets.map((b) => (
-                      <li key={b} className="flex items-center gap-2.5 text-[14px] font-semibold text-slate-700">
+                      <li key={b} className="flex items-center gap-2.5 text-[16px] font-semibold text-slate-700">
                         <svg className="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5" style={{ color: p.hex }}>
                           <circle cx="12" cy="12" r="10" />
                           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />
@@ -238,9 +238,9 @@ export default async function FeatureDetailPage({ params }: { params: Promise<{ 
                 {/* Who it's for */}
                 {content?.whoItsFor && (
                   <div className="mt-8 flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">For:</span>
+                    <span className="text-xs font-bold text-slate-700 uppercase tracking-wider">For:</span>
                     {content.whoItsFor.map((role) => (
-                      <span key={role} className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-600 shadow-xs">
+                      <span key={role} className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-semibold text-slate-700 shadow-xs">
                         {role}
                       </span>
                     ))}
@@ -289,7 +289,7 @@ export default async function FeatureDetailPage({ params }: { params: Promise<{ 
                     </svg>
                   </div>
                   <h2 className="text-lg font-black text-navy">{feature.title}</h2>
-                  <p className="mt-2 text-sm font-medium text-slate-500 leading-relaxed">{feature.description}</p>
+                  <p className="mt-2 text-sm font-medium text-slate-700 leading-relaxed">{feature.description}</p>
 
                   <div className="mt-5 space-y-2">
                     {(feature.bullets ?? []).map((b) => (
@@ -311,7 +311,7 @@ export default async function FeatureDetailPage({ params }: { params: Promise<{ 
             <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
               <div className="text-center mb-12">
                 <span
-                  className="inline-block rounded-full px-3 py-1 text-[11px] font-black uppercase tracking-widest mb-3"
+                  className="inline-block rounded-full px-3 py-1 text-[13px] font-black uppercase tracking-widest mb-3"
                   style={{ background: p.tagBg, color: p.tagText }}
                 >
                   How it works
@@ -335,8 +335,8 @@ export default async function FeatureDetailPage({ params }: { params: Promise<{ 
                     >
                       {String(i + 1).padStart(2, "0")}
                     </div>
-                    <h3 className="text-[15px] font-black text-navy leading-snug mb-2">{item.step}</h3>
-                    <p className="text-[13px] font-medium text-slate-500 leading-relaxed">{item.detail}</p>
+                    <h3 className="text-[17px] font-black text-navy leading-snug mb-2">{item.step}</h3>
+                    <p className="text-[15px] font-medium text-slate-700 leading-relaxed">{item.detail}</p>
 
                     {/* Connector line (desktop) */}
                     {i < content.howItWorks.length - 1 && (
@@ -378,15 +378,15 @@ export default async function FeatureDetailPage({ params }: { params: Promise<{ 
                         </svg>
                       </div>
                       {f.tag && (
-                        <span className="text-[9px] font-black uppercase tracking-wider rounded-full px-2 py-0.5" style={{ background: fp.tagBg, color: fp.tagText }}>
+                        <span className="text-[11px] font-black uppercase tracking-wider rounded-full px-2 py-0.5" style={{ background: fp.tagBg, color: fp.tagText }}>
                           {f.tag}
                         </span>
                       )}
                     </div>
-                    <h3 className="text-[14px] font-black text-navy leading-snug mb-1 group-hover:underline" style={{ textDecorationColor: fp.hex }}>
+                    <h3 className="text-[16px] font-black text-navy leading-snug mb-1 group-hover:underline" style={{ textDecorationColor: fp.hex }}>
                       {f.title}
                     </h3>
-                    <p className="text-[12px] text-slate-500 font-medium leading-snug line-clamp-2">{f.description}</p>
+                    <p className="text-[14px] text-slate-700 font-medium leading-snug line-clamp-2">{f.description}</p>
                   </Link>
                 );
               })}
