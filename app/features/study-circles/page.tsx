@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { HorizontalRoleScroll } from "@/components/shared/HorizontalRoleScroll";
 import {
   ChatCircle,
   UsersThree,
@@ -312,16 +313,10 @@ export default function StudyCirclesDetailPage() {
         </section>
 
         {/* ── Built For Every Role Section ── */}
-        <section className="py-16 bg-[#ffffff]">
-          <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="typo-h2 font-black text-navy text-center mb-12 tracking-tight">
-              Built For Every Role
-            </h2>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 3xl:grid-cols-4 gap-5">
+        <HorizontalRoleScroll title="Built For Every Role">
 
               {/* Role 1: Students */}
-              <div className="bg-white border border-[#e2e8f0] rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-shadow duration-300 flex flex-row">
+              <div className="w-full h-full bg-white border border-[#e2e8f0] rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-shadow duration-300 flex flex-row">
                 {/* Image: Left side */}
                 <div className="relative w-[40%] shrink-0 min-h-[160px]">
                   <Image
@@ -362,7 +357,7 @@ export default function StudyCirclesDetailPage() {
               </div>
 
               {/* Role 2: Instructors */}
-              <div className="bg-white border border-[#e2e8f0] rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-shadow duration-300 flex flex-row">
+              <div className="w-full h-full bg-white border border-[#e2e8f0] rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-shadow duration-300 flex flex-row">
                 {/* Image: Left side */}
                 <div className="relative w-[40%] shrink-0 min-h-[160px]">
                   <Image
@@ -403,7 +398,7 @@ export default function StudyCirclesDetailPage() {
               </div>
 
               {/* Role 3: Tutors */}
-              <div className="bg-white border border-[#e2e8f0] rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-shadow duration-300 flex flex-row">
+              <div className="w-full h-full bg-white border border-[#e2e8f0] rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-shadow duration-300 flex flex-row">
                 {/* Image: Left side */}
                 <div className="relative w-[40%] shrink-0 min-h-[160px]">
                   <Image
@@ -444,7 +439,7 @@ export default function StudyCirclesDetailPage() {
               </div>
 
               {/* Role 4: Advisors */}
-              <div className="bg-white border border-[#e2e8f0] rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-shadow duration-300 flex flex-row">
+              <div className="w-full h-full bg-white border border-[#e2e8f0] rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-shadow duration-300 flex flex-row">
                 {/* Image: Left side */}
                 <div className="relative w-[40%] shrink-0 min-h-[160px]">
                   <Image
@@ -484,9 +479,7 @@ export default function StudyCirclesDetailPage() {
                 </div>
               </div>
 
-            </div>
-          </div>
-        </section>
+        </HorizontalRoleScroll>
 
         {/* ── Works Seamlessly With Section ── */}
         <section className="py-12 bg-[#faf8ff] border-t border-slate-100">
