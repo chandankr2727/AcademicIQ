@@ -95,7 +95,7 @@ function FloatingCard({
       >
         <div
           className={cn(
-            "w-[11rem] rounded-xl border border-slate-100/80 bg-white/96 p-2.5",
+            "w-[14rem] rounded-xl border border-slate-100/80 bg-white/96 p-1.5",
             "shadow-[0_8px_28px_rgba(15,23,42,0.13)] backdrop-blur-sm"
           )}
         >
@@ -109,8 +109,8 @@ function FloatingCard({
               <Icon weight="duotone" size={16} color="#fff" />
             </div>
             <div className="min-w-0">
-              <p className="text-lg font-bold leading-tight text-navy">{title}</p>
-              <p className="mt-1 text-base font-medium leading-snug text-slate-700">
+              <p className="text-base font-bold leading-tight text-navy">{title}</p>
+              <p className="mt-1 text-sm font-medium leading-snug text-slate-700">
                 {description}
               </p>
               {children}
@@ -176,7 +176,7 @@ export function HeroSection() {
           <motion.h1
             id="hero-heading"
             variants={heroItem}
-            className="mt-4 text-4xl font-black leading-[1.06] tracking-tight text-navy sm:text-5xl"
+            className="mt-4 font-black leading-[1.1] tracking-tight text-navy typo-h1"
           >
             Learn Smarter.
             <br />
@@ -189,7 +189,7 @@ export function HeroSection() {
           {/* Sub-copy */}
           <motion.p
             variants={heroItem}
-            className="mt-4 max-w-[480px] text-xl font-medium leading-relaxed text-slate-700"
+            className="mt-5 max-w-[560px] text-[1.125rem] font-normal leading-[1.8] text-slate-600"
           >
             AcademIQ is the{" "}
             <strong className="font-semibold text-navy">
@@ -206,14 +206,14 @@ export function HeroSection() {
           >
             <Link
               href="/signup"
-              className="inline-flex h-11 items-center gap-2 rounded-lg bg-primary px-6 text-base font-bold text-white transition-colors hover:bg-primary-dark"
+              className="inline-flex h-11 items-center gap-2 rounded-lg bg-primary px-6 text-base font-bold text-white transition-all duration-200 hover:bg-primary-dark hover:-translate-y-0.5 hover:shadow-md"
             >
               <GraduationCap weight="duotone" size={18} color="#fff" aria-hidden="true" />
               Join AcademIQ
             </Link>
             <Link
               href="/about"
-              className="inline-flex h-11 items-center gap-2 rounded-lg border border-border bg-white px-6 text-base font-bold text-primary transition-colors hover:bg-muted"
+              className="inline-flex h-11 items-center gap-2 rounded-lg border border-border bg-white px-6 text-base font-bold text-primary transition-all duration-200 hover:bg-muted hover:-translate-y-0.5 hover:shadow-sm"
             >
               <ArrowCircleRight weight="duotone" size={18} aria-hidden="true" />
               Discover Your Network
@@ -259,16 +259,16 @@ export function HeroSection() {
           {/* Globe stat */}
           <motion.div
             variants={heroItem}
-            className="mt-6 flex items-center gap-2 text-lg font-semibold text-primary"
+            className="mt-6 flex items-center gap-2 text-base font-semibold text-primary"
           >
-            <Globe weight="duotone" size={22} aria-hidden="true" />
+            <Globe weight="duotone" size={20} aria-hidden="true" />
             Connect with learners and educators from 72+ countries
           </motion.div>
 
           {/* Avatar row */}
-          <motion.div variants={heroItem} className="mt-4 flex items-center gap-3">
+          <motion.div variants={heroItem} className="mt-3 flex items-center gap-3">
             <AvatarStack />
-            <p className="text-lg font-medium text-slate-700">
+            <p className="text-base font-medium text-slate-600">
               Built for students, educators &amp; institutions worldwide
             </p>
           </motion.div>
@@ -305,7 +305,7 @@ export function HeroSection() {
           delay={0.4}
           floatDelay={0}
         >
-          <div className="mt-1 space-y-0.5 text-sm font-semibold text-primary">
+          <div className="mt-1 space-y-0.5 text-xs font-semibold text-primary">
             <p>Study Tools</p>
             <p>Support &amp; Tutoring</p>
           </div>
@@ -320,7 +320,7 @@ export function HeroSection() {
           delay={0.5}
           floatDelay={0.6}
         >
-          <div className="mt-1 space-y-0.5 text-sm font-semibold text-primary">
+          <div className="mt-1 space-y-0.5 text-xs font-semibold text-primary">
             <p>Instructor Tools</p>
             <p>Resources &amp; Training</p>
           </div>
@@ -337,7 +337,7 @@ export function HeroSection() {
         >
           <div className="mt-1 flex items-center gap-1.5">
             <AvatarStack small />
-            <span className="text-sm font-semibold text-slate-700">+24</span>
+            <span className="text-xs font-semibold text-slate-700">+24</span>
           </div>
         </FloatingCard>
 
@@ -350,7 +350,7 @@ export function HeroSection() {
           delay={0.6}
           floatDelay={1.7}
         >
-          <div className="mt-1.5 flex items-center gap-1 text-sm font-semibold text-emerald-700">
+          <div className="mt-1.5 flex items-center gap-1 text-xs font-semibold text-emerald-700">
             <CheckCircle weight="duotone" size={14} aria-hidden="true" />
             Always available
           </div>
@@ -367,7 +367,7 @@ export function HeroSection() {
         >
           <div className="mt-1 flex items-center gap-1.5">
             <AvatarStack small />
-            <span className="text-sm font-semibold text-slate-700">+18</span>
+            <span className="text-xs font-semibold text-slate-700">+18</span>
           </div>
         </FloatingCard>
 

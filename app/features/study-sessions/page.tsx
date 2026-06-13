@@ -58,16 +58,16 @@ export default function StudySessionsDetailPage() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#e0e7ff] text-[#4f46e5] mb-6 shrink-0 border border-[#c7d2fe] shadow-xs">
                   <VideoCamera size={24} weight="duotone" />
                 </div>
-                <h1 className="text-5xl font-black text-navy leading-none tracking-tight sm:text-6xl">
+                <h1 className="text-[2.5rem] sm:text-[3rem] font-black text-navy leading-[1.08] tracking-tight">
                   Study Sessions
                 </h1>
-                <h2 className="mt-4 text-2xl sm:text-3xl font-extrabold text-[#4f46e5] leading-snug">
+                <h2 className="mt-4 text-[1.375rem] sm:text-[1.625rem] font-extrabold text-[#4f46e5] leading-snug tracking-tight">
                   Live virtual study sessions. Big impact.
                 </h2>
-                <p className="mt-5 text-[17px] sm:text-base font-medium leading-relaxed text-slate-600">
+                <p className="mt-5 text-[1rem] sm:text-[1.0625rem] font-normal leading-[1.8] text-slate-600">
                   Join live academic sessions led by students, instructors, institutions, and communities from around the world.
                 </p>
-                <p className="mt-3 text-[17px] sm:text-base font-medium leading-relaxed text-slate-600">
+                <p className="mt-3 text-[1rem] sm:text-[1.0625rem] font-normal leading-[1.8] text-slate-600">
                   Learn together, ask questions, access resources, and keep learning–live or on your schedule.
                 </p>
 
@@ -78,10 +78,10 @@ export default function StudySessionsDetailPage() {
                     <div className="text-[#4f46e5]">
                       <WifiHigh size={24} weight="duotone" />
                     </div>
-                    <p className="text-[14px] font-extrabold text-[#0a1628] leading-tight">
+                    <p className="text-[0.9375rem] font-bold text-[#0a1628] leading-tight">
                       Live & Interactive
                     </p>
-                    <p className="text-[12.5px] font-semibold text-slate-600 leading-snug">
+                    <p className="text-[0.875rem] font-medium text-slate-600 leading-snug">
                       Real-time learning with Q&A and chat.
                     </p>
                   </div>
@@ -90,10 +90,10 @@ export default function StudySessionsDetailPage() {
                     <div className="text-[#4f46e5]">
                       <UsersThree size={24} weight="duotone" />
                     </div>
-                    <p className="text-[14px] font-extrabold text-[#0a1628] leading-tight">
+                    <p className="text-[0.9375rem] font-bold text-[#0a1628] leading-tight">
                       Large Audience
                     </p>
-                    <p className="text-[12.5px] font-semibold text-slate-600 leading-snug">
+                    <p className="text-[0.875rem] font-medium text-slate-600 leading-snug">
                       Host or join sessions with hundreds of participants.
                     </p>
                   </div>
@@ -102,10 +102,10 @@ export default function StudySessionsDetailPage() {
                     <div className="text-[#4f46e5]">
                       <PlayCircle size={24} weight="duotone" />
                     </div>
-                    <p className="text-[14px] font-extrabold text-[#0a1628] leading-tight">
+                    <p className="text-[0.9375rem] font-bold text-[#0a1628] leading-tight">
                       Recorded
                     </p>
-                    <p className="text-[12.5px] font-semibold text-slate-600 leading-snug">
+                    <p className="text-[0.875rem] font-medium text-slate-600 leading-snug">
                       Missed it? Watch the recording and access resources.
                     </p>
                   </div>
@@ -114,10 +114,10 @@ export default function StudySessionsDetailPage() {
                     <div className="text-[#4f46e5]">
                       <Globe size={24} weight="duotone" />
                     </div>
-                    <p className="text-[14px] font-extrabold text-[#0a1628] leading-tight">
+                    <p className="text-[0.9375rem] font-bold text-[#0a1628] leading-tight">
                       Global Community
                     </p>
-                    <p className="text-[12.5px] font-semibold text-slate-600 leading-snug">
+                    <p className="text-[0.875rem] font-medium text-slate-600 leading-snug">
                       Connect with learners and educators from anywhere.
                     </p>
                   </div>
@@ -148,7 +148,7 @@ export default function StudySessionsDetailPage() {
         {/* ── What You Can Do in Study Sessions Section ── */}
         <section className="py-16 bg-[#ffffff]">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-3xl font-black text-navy text-center mb-12 sm:text-4xl">
+            <h2 className="typo-h2 font-black text-navy text-center mb-12 tracking-tight">
               What You Can Do in Study Sessions
             </h2>
 
@@ -159,10 +159,10 @@ export default function StudySessionsDetailPage() {
                   <div className="h-10 w-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 mb-4 shrink-0">
                     <VideoCamera size={22} weight="duotone" />
                   </div>
-                  <h3 className="text-[19px] font-bold text-[#0a1628] leading-tight mb-2">
+                  <h3 className="text-[1.125rem] font-bold text-[#0a1628] leading-tight mb-2 tracking-tight">
                     Attend Live Sessions
                   </h3>
-                  <p className="text-[15px] font-medium text-slate-600 leading-relaxed">
+                  <p className="text-[1rem] font-normal text-slate-600 leading-[1.75]">
                     Join academic events, workshops, review sessions, guest lectures, and community learning experiences.
                   </p>
                 </div>
@@ -185,10 +185,10 @@ export default function StudySessionsDetailPage() {
                   <div className="h-10 w-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 mb-4 shrink-0">
                     <UserPlus size={22} weight="duotone" />
                   </div>
-                  <h3 className="text-[19px] font-bold text-[#0a1628] leading-tight mb-2">
+                  <h3 className="text-[1.125rem] font-bold text-[#0a1628] leading-tight mb-2 tracking-tight">
                     Host Your Own Sessions
                   </h3>
-                  <p className="text-[15px] font-medium text-slate-600 leading-relaxed">
+                  <p className="text-[1rem] font-normal text-slate-600 leading-[1.75]">
                     Students, instructors, tutors, advisors, and institutions can create and host live study sessions on any topic, course, or subject.
                   </p>
                 </div>
@@ -243,10 +243,10 @@ export default function StudySessionsDetailPage() {
                   <div className="h-10 w-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 mb-4 shrink-0">
                     <UserCheck size={22} weight="duotone" />
                   </div>
-                  <h3 className="text-[19px] font-bold text-[#0a1628] leading-tight mb-2">
+                  <h3 className="text-[1.125rem] font-bold text-[#0a1628] leading-tight mb-2 tracking-tight">
                     Invite Your Network
                   </h3>
-                  <p className="text-[15px] font-medium text-slate-600 leading-relaxed">
+                  <p className="text-[1rem] font-normal text-slate-600 leading-[1.75]">
                     Invite classmates, instructors, tutors, advisors, network connections, and academic communities to join your session.
                   </p>
                 </div>
@@ -313,10 +313,10 @@ export default function StudySessionsDetailPage() {
                   <div className="h-10 w-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 mb-4 shrink-0">
                     <Globe size={22} weight="duotone" />
                   </div>
-                  <h3 className="text-[19px] font-bold text-[#0a1628] leading-tight mb-2">
+                  <h3 className="text-[1.125rem] font-bold text-[#0a1628] leading-tight mb-2 tracking-tight">
                     Learn Beyond Your Institution
                   </h3>
-                  <p className="text-[15px] font-medium text-slate-600 leading-relaxed">
+                  <p className="text-[1rem] font-normal text-slate-600 leading-[1.75]">
                     Join sessions hosted by learners and educators from different schools, regions, and countries.
                   </p>
                 </div>
@@ -339,7 +339,7 @@ export default function StudySessionsDetailPage() {
         {/* ── How It Works Section ── */}
         <section className="py-16 bg-[#f8fbff] border-t border-b border-slate-100">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-3xl font-black text-navy text-center mb-12 sm:text-4xl">
+            <h2 className="typo-h2 font-black text-navy text-center mb-12 tracking-tight">
               How It Works
             </h2>
 
@@ -358,8 +358,8 @@ export default function StudySessionsDetailPage() {
                     1
                   </span>
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">Discover a Session</h3>
-                <p className="text-xs font-medium text-slate-600 max-w-[180px] leading-relaxed">
+                <h3 className="step-title">Discover a Session</h3>
+                <p className="step-desc">
                   Browse upcoming sessions or search by topic, course, or instructor.
                 </p>
               </div>
@@ -372,8 +372,8 @@ export default function StudySessionsDetailPage() {
                     2
                   </span>
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">Register or Join</h3>
-                <p className="text-xs font-medium text-slate-600 max-w-[180px] leading-relaxed">
+                <h3 className="step-title">Register or Join</h3>
+                <p className="step-desc">
                   Register for a session or join instantly if it's live.
                 </p>
               </div>
@@ -386,8 +386,8 @@ export default function StudySessionsDetailPage() {
                     3
                   </span>
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">Participate Live</h3>
-                <p className="text-xs font-medium text-slate-600 max-w-[180px] leading-relaxed">
+                <h3 className="step-title">Participate Live</h3>
+                <p className="step-desc">
                   Learn, ask questions, interact, and collaborate in real time.
                 </p>
               </div>
@@ -400,8 +400,8 @@ export default function StudySessionsDetailPage() {
                     4
                   </span>
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">Access Resources</h3>
-                <p className="text-xs font-medium text-slate-600 max-w-[180px] leading-relaxed">
+                <h3 className="step-title">Access Resources</h3>
+                <p className="step-desc">
                   Get slides, notes, worksheets, and other session materials.
                 </p>
               </div>
@@ -414,8 +414,8 @@ export default function StudySessionsDetailPage() {
                     5
                   </span>
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">Review Recordings</h3>
-                <p className="text-xs font-medium text-slate-600 max-w-[180px] leading-relaxed">
+                <h3 className="step-title">Review Recordings</h3>
+                <p className="step-desc">
                   Rewatch the recording and continue learning on your own schedule.
                 </p>
               </div>
@@ -426,11 +426,11 @@ export default function StudySessionsDetailPage() {
         {/* ── Built for Every Role Section ── */}
         <section className="py-16 bg-[#ffffff]">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-3xl font-black text-navy text-center mb-12 sm:text-4xl">
+            <h2 className="typo-h2 font-black text-navy text-center mb-12 tracking-tight">
               Built for Every Role
             </h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 3xl:grid-cols-4 gap-5">
               {/* Role 1: Students */}
               <div className="bg-white border border-[#e2e8f0] rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-shadow duration-300 flex flex-row">
                 {/* Image: Left side */}
@@ -444,31 +444,31 @@ export default function StudySessionsDetailPage() {
                   />
                 </div>
                 {/* Content: Right side */}
-                <div className="flex flex-col justify-center p-4 text-left flex-1">
+                <div className="flex flex-col justify-center p-5 sm:p-6 text-left flex-1">
                   <div className="flex items-center gap-2 mb-3">
                     <div className="h-7 w-7 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600 shrink-0">
                       <UsersThree size={16} weight="duotone" />
                     </div>
-                    <h3 className="text-[17px] font-bold text-[#0a1628]">For Students</h3>
+                    <h3 className="role-card-title">For Students</h3>
                   </div>
                   <ul className="space-y-1">
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Create study sessions
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Invite classmates
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Host review sessions
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Lead and share knowledge
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Build your academic presence
                     </li>
@@ -489,31 +489,31 @@ export default function StudySessionsDetailPage() {
                   />
                 </div>
                 {/* Content: Right side */}
-                <div className="flex flex-col justify-center p-4 text-left flex-1">
+                <div className="flex flex-col justify-center p-5 sm:p-6 text-left flex-1">
                   <div className="flex items-center gap-2 mb-3">
                     <div className="h-7 w-7 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600 shrink-0">
                       <UserCheck size={16} weight="duotone" />
                     </div>
-                    <h3 className="text-[17px] font-bold text-[#0a1628]">For Instructors</h3>
+                    <h3 className="role-card-title">For Instructors</h3>
                   </div>
                   <ul className="space-y-1">
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Lead live sessions
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Teach and explain topics
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Host office hours
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Engage large audiences
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Expand your impact
                     </li>
@@ -534,31 +534,31 @@ export default function StudySessionsDetailPage() {
                   />
                 </div>
                 {/* Content: Right side */}
-                <div className="flex flex-col justify-center p-4 text-left flex-1">
+                <div className="flex flex-col justify-center p-5 sm:p-6 text-left flex-1">
                   <div className="flex items-center gap-2 mb-3">
                     <div className="h-7 w-7 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600 shrink-0">
                       <Buildings size={16} weight="duotone" />
                     </div>
-                    <h3 className="text-[17px] font-bold text-[#0a1628]">For Institutions</h3>
+                    <h3 className="role-card-title">For Institutions</h3>
                   </div>
                   <ul className="space-y-1">
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Host academic events
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Support student success
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Increase engagement
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Promote programs
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Extend learning
                     </li>
@@ -579,31 +579,31 @@ export default function StudySessionsDetailPage() {
                   />
                 </div>
                 {/* Content: Right side */}
-                <div className="flex flex-col justify-center p-4 text-left flex-1">
+                <div className="flex flex-col justify-center p-5 sm:p-6 text-left flex-1">
                   <div className="flex items-center gap-2 mb-3">
                     <div className="h-7 w-7 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600 shrink-0">
                       <Globe size={16} weight="duotone" />
                     </div>
-                    <h3 className="text-[17px] font-bold text-[#0a1628]">For Communities</h3>
+                    <h3 className="role-card-title">For Communities</h3>
                   </div>
                   <ul className="space-y-1">
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Organize public sessions
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Share expertise
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Connect global learners
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Build community
                     </li>
-                    <li className="flex items-center gap-2 text-[14px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-[#4f46e5] font-extrabold text-[15px] shrink-0">✓</span>
                       Make learning accessible
                     </li>

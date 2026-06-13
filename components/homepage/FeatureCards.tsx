@@ -111,20 +111,20 @@ export function FeatureCards() {
           transition={{ duration: 0.45 }}
           className="shrink-0 pt-8 pb-4 text-center px-4"
         >
-          <h2 id="explore-features-heading" className="text-3xl font-black text-navy sm:text-4xl">
+          <h2 id="explore-features-heading" className="typo-h2 font-black text-navy tracking-tight">
             Explore What AcademIQ Offers
           </h2>
-          <p className="mt-2 text-lg sm:text-xl text-slate-700 font-medium">
+          <p className="mt-3 text-[1.0625rem] sm:text-[1.125rem] text-slate-600 font-normal leading-[1.8] max-w-[600px] mx-auto">
             Every tool you need to study, teach, collaborate, and grow.
           </p>
         </motion.div>
 
         {/* Scrolling card track */}
-        <div className="flex-1 flex items-center overflow-hidden">
+        <div className="flex-1 flex items-start overflow-hidden py-4">
           <motion.div
             ref={trackRef}
             style={{ x }}
-            className="flex gap-5 pl-5 sm:pl-8 lg:pl-12 pr-12 will-change-transform items-center"
+            className="flex gap-5 pl-5 sm:pl-8 lg:pl-12 pr-12 will-change-transform items-start"
           >
             {exploreFeatures.map((feature, index) => {
               const IconComp = iconComponents[feature.icon];
@@ -147,7 +147,7 @@ export function FeatureCards() {
                     w-[80vw] min-w-[80vw]
                     sm:w-[42vw] sm:min-w-[42vw]
                     lg:w-[30vw] lg:min-w-[30vw]
-                    rounded-3xl overflow-hidden cursor-pointer select-none"
+                    rounded-3xl cursor-pointer select-none"
                   style={{
                     background: `linear-gradient(150deg, #ffffff 0%, ${p.soft} 100%)`,
                     border: `1px solid ${p.hex}22`,
@@ -155,7 +155,7 @@ export function FeatureCards() {
                   }}
                 >
                   {/* Card body */}
-                  <div className="flex flex-col p-4 gap-2">
+                  <div className="flex flex-col p-5 sm:p-6 gap-4 flex-1">
 
                     {/* Header Row: Icon + Title + Tag */}
                     <div className="flex items-center justify-center gap-3">
@@ -186,7 +186,7 @@ export function FeatureCards() {
                       </motion.div>
 
                       <div className="flex items-center gap-2">
-                        <h3 className="text-lg sm:text-xl font-black text-navy leading-snug text-center">
+                        <h3 className="text-[1.125rem] sm:text-[1.25rem] font-black text-navy leading-snug text-center tracking-tight">
                           {feature.title}
                         </h3>
                         {feature.tag && (
@@ -200,17 +200,17 @@ export function FeatureCards() {
                       </div>
                     </div>
 
-                    <p className="mt-0.5 text-sm sm:text-base leading-relaxed text-slate-700 font-medium">
+                    <p className="text-[0.9375rem] sm:text-base leading-[1.75] text-slate-600 font-normal">
                       {feature.description}
                     </p>
 
                     {/* Row 3: bullet feature list */}
                     {feature.bullets && feature.bullets.length > 0 && (
-                      <ul className="flex flex-col gap-1">
+                      <ul className="flex flex-col gap-2">
                         {feature.bullets.map((bullet) => (
                           <li
                             key={bullet}
-                            className="flex items-start gap-2 text-sm sm:text-base font-semibold text-slate-800 leading-snug"
+                            className="flex items-start gap-2.5 text-[0.9375rem] sm:text-base font-medium text-slate-700 leading-[1.7]"
                           >
                             <CheckCircle
                               weight="duotone"
@@ -226,10 +226,10 @@ export function FeatureCards() {
                     )}
 
                     {/* Row 4: CTA link */}
-                    <div className="mt-2 pt-1.5 border-t" style={{ borderColor: `${p.hex}18` }}>
+                    <div className="pt-5 border-t mt-auto" style={{ borderColor: `${p.hex}18` }}>
                       <Link
                         href={feature.href ?? "#"}
-                        className="inline-flex items-center gap-1.5 text-sm sm:text-base font-bold transition-all duration-200 group-hover:gap-3"
+                        className="inline-flex items-center gap-1.5 text-[0.9375rem] sm:text-base font-bold transition-all duration-200 group-hover:gap-3"
                         style={{ color: p.hex }}
                         onClick={(e) => e.stopPropagation()}
                         aria-label={`Learn more about ${feature.title}`}

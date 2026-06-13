@@ -44,17 +44,17 @@ export default function EmmaAssistAIPage() {
             </span>
 
             {/* Title */}
-            <h1 className="text-4xl sm:text-5xl lg:text-[56px] font-black text-navy tracking-tight leading-none">
+            <h1 className="text-[2.25rem] sm:text-[2.75rem] lg:text-[3.25rem] font-black text-navy tracking-tight leading-[1.08]">
               Emma <span className="text-[#6366f1] font-light">+</span> <span className="text-[#6366f1]">Assist AI</span>
             </h1>
 
             {/* Sub-headline */}
-            <p className="mt-5 text-[17px] sm:text-[18px] font-medium text-slate-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-5 text-[1rem] sm:text-[1.125rem] font-normal text-slate-600 max-w-[700px] mx-auto leading-[1.8]">
               AI-powered academic guidance designed to help learners understand concepts, study more effectively, and succeed.
             </p>
 
             {/* Three colored terms */}
-            <div className="mt-6 flex items-center justify-center gap-8 text-[15.5px] font-extrabold uppercase tracking-wider">
+            <div className="mt-6 flex items-center justify-center gap-8 text-[0.9375rem] font-extrabold uppercase tracking-wider">
               <span className="text-[#3b82f6]">Guidance.</span>
               <span className="text-[#8b5cf6]">Understanding.</span>
               <span className="text-[#10b981]">Success.</span>
@@ -80,12 +80,12 @@ export default function EmmaAssistAIPage() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-[20px] font-black text-navy leading-none">Emma</h3>
-                    <p className="text-[14.5px] font-extrabold text-navy mt-1">Your Guide to AcademIQ</p>
+                    <h3 className="text-[1.25rem] font-black text-navy leading-none">Emma</h3>
+                    <p className="text-[0.9375rem] font-bold text-navy mt-1">Your Guide to AcademIQ</p>
                   </div>
                 </div>
 
-                <p className="text-[15px] font-semibold text-slate-700 leading-relaxed text-left mb-5">
+                <p className="text-[1rem] font-normal text-slate-600 leading-[1.75] text-left mb-5">
                   Emma helps you navigate the platform, discover opportunities, and connect with the right resources.
                 </p>
 
@@ -96,49 +96,49 @@ export default function EmmaAssistAIPage() {
                     <div className="text-[#3b82f6] bg-[#eff6ff] p-2 rounded-xl border border-blue-50/50 shrink-0">
                       <UserCheck size={16} weight="bold" />
                     </div>
-                    <span className="text-[14.5px] font-extrabold text-[#0a1628]">Find a Tutor</span>
+                    <span className="text-[0.9375rem] font-bold text-[#0a1628]">Find a Tutor</span>
                   </div>
                   {/* Item 2 */}
                   <div className="flex items-center gap-3 px-4 py-3 border-b border-slate-50">
                     <div className="text-[#3b82f6] bg-[#eff6ff] p-2 rounded-xl border border-blue-50/50 shrink-0">
                       <VideoCamera size={16} weight="bold" />
                     </div>
-                    <span className="text-[14.5px] font-extrabold text-[#0a1628]">Join a Study Session</span>
+                    <span className="text-[0.9375rem] font-bold text-[#0a1628]">Join a Study Session</span>
                   </div>
                   {/* Item 3 */}
                   <div className="flex items-center gap-3 px-4 py-3 border-b border-slate-50">
                     <div className="text-[#3b82f6] bg-[#eff6ff] p-2 rounded-xl border border-blue-50/50 shrink-0">
                       <Star size={16} weight="bold" />
                     </div>
-                    <span className="text-[14.5px] font-extrabold text-[#0a1628]">Discover Opportunities</span>
+                    <span className="text-[0.9375rem] font-bold text-[#0a1628]">Discover Opportunities</span>
                   </div>
                   {/* Item 4 */}
                   <div className="flex items-center gap-3 px-4 py-3 border-b border-slate-50">
                     <div className="text-[#3b82f6] bg-[#eff6ff] p-2 rounded-xl border border-blue-50/50 shrink-0">
                       <UsersThree size={16} weight="bold" />
                     </div>
-                    <span className="text-[14.5px] font-extrabold text-[#0a1628]">Explore Study Circles</span>
+                    <span className="text-[0.9375rem] font-bold text-[#0a1628]">Explore Study Circles</span>
                   </div>
                   {/* Item 5 */}
                   <div className="flex items-center gap-3 px-4 py-3 border-b border-slate-50">
                     <div className="text-[#3b82f6] bg-[#eff6ff] p-2 rounded-xl border border-blue-50/50 shrink-0">
                       <Globe size={16} weight="bold" />
                     </div>
-                    <span className="text-[14.5px] font-extrabold text-[#0a1628]">Connect With Your Network</span>
+                    <span className="text-[0.9375rem] font-bold text-[#0a1628]">Connect With Your Network</span>
                   </div>
                   {/* Item 6 */}
                   <div className="flex items-center gap-3 px-4 py-3">
                     <div className="text-[#3b82f6] bg-[#eff6ff] p-2 rounded-xl border border-blue-50/50 shrink-0">
                       <FolderOpen size={16} weight="bold" />
                     </div>
-                    <span className="text-[14.5px] font-extrabold text-[#0a1628]">Access Resources</span>
+                    <span className="text-[0.9375rem] font-bold text-[#0a1628]">Access Resources</span>
                   </div>
                 </div>
               </div>
 
               {/* Middle Column: How It Works Together */}
               <div className="lg:col-span-4 bg-[#f8fbff] border border-[#e2e8f0] rounded-3xl p-6 shadow-xs flex flex-col justify-center items-center text-center relative hover:shadow-md transition-shadow duration-300">
-                <h3 className="text-[17px] font-black text-navy mb-8">How It Works Together</h3>
+                <h3 className="text-[1.125rem] font-black text-navy mb-8 tracking-tight">How It Works Together</h3>
 
                 <div className="space-y-6 relative flex flex-col items-center w-full max-w-[280px]">
                   
@@ -147,8 +147,8 @@ export default function EmmaAssistAIPage() {
                     <div className="flex justify-center text-blue-500 mb-2">
                       <ChatCircle size={22} weight="duotone" />
                     </div>
-                    <h4 className="text-[14.5px] font-black text-[#0a1628] leading-tight mb-1">You ask Emma for help</h4>
-                    <p className="text-[12px] font-bold text-slate-700 leading-snug">Find resources, opportunities, and guidance.</p>
+                    <h4 className="text-[0.9375rem] font-black text-[#0a1628] leading-tight mb-1">You ask Emma for help</h4>
+                    <p className="text-[0.8125rem] font-medium text-slate-600 leading-[1.6]">Find resources, opportunities, and guidance.</p>
                   </div>
 
                   {/* Vertical dashed line */}
@@ -159,8 +159,8 @@ export default function EmmaAssistAIPage() {
                     <div className="flex justify-center text-emerald-500 mb-2">
                       <UsersThree size={22} weight="duotone" />
                     </div>
-                    <h4 className="text-[14.5px] font-black text-[#0a1628] leading-tight mb-1">You engage in AcademIQ</h4>
-                    <p className="text-[12px] font-bold text-slate-700 leading-snug">Participate in sessions, discussions, and activities.</p>
+                    <h4 className="text-[0.9375rem] font-black text-[#0a1628] leading-tight mb-1">You engage in AcademIQ</h4>
+                    <p className="text-[0.8125rem] font-medium text-slate-600 leading-[1.6]">Participate in sessions, discussions, and activities.</p>
                   </div>
 
                   {/* Step 3 Box */}
@@ -168,8 +168,8 @@ export default function EmmaAssistAIPage() {
                     <div className="flex justify-center text-[#8b5cf6] mb-2">
                       <Brain size={22} weight="duotone" />
                     </div>
-                    <h4 className="text-[14.5px] font-black text-[#0a1628] leading-tight mb-1">Assist AI analyzes and delivers insights</h4>
-                    <p className="text-[12px] font-bold text-slate-700 leading-snug">Summaries, recommendations, and learning guidance.</p>
+                    <h4 className="text-[0.9375rem] font-black text-[#0a1628] leading-tight mb-1">Assist AI analyzes and delivers insights</h4>
+                    <p className="text-[0.8125rem] font-medium text-slate-600 leading-[1.6]">Summaries, recommendations, and learning guidance.</p>
                   </div>
 
                 </div>
@@ -182,12 +182,12 @@ export default function EmmaAssistAIPage() {
                     <Brain size={32} weight="duotone" />
                   </div>
                   <div>
-                    <h3 className="text-[20px] font-black text-navy leading-none">Assist AI</h3>
-                    <p className="text-[14.5px] font-extrabold text-[#8b5cf6] mt-1">Your Academic Support Companion</p>
+                    <h3 className="text-[1.25rem] font-black text-navy leading-none">Assist AI</h3>
+                    <p className="text-[0.9375rem] font-bold text-[#8b5cf6] mt-1">Your Academic Support Companion</p>
                   </div>
                 </div>
 
-                <p className="text-[15px] font-semibold text-slate-700 leading-relaxed text-left mb-5">
+                <p className="text-[1rem] font-normal text-slate-600 leading-[1.75] text-left mb-5">
                   Assist AI transforms your academic activity into meaningful insights and actionable guidance.
                 </p>
 
@@ -200,13 +200,13 @@ export default function EmmaAssistAIPage() {
                         <FolderOpen size={16} weight="bold" />
                       </div>
                       <div className="flex flex-col">
-                        <span className="text-[14.5px] font-black text-[#0a1628] leading-none mb-1">Thread Summary Ready</span>
-                        <span className="text-[12px] font-semibold text-slate-700">Key takeaways generated</span>
+                        <span className="text-[0.9375rem] font-black text-[#0a1628] leading-none mb-1">Thread Summary Ready</span>
+                        <span className="text-[0.8125rem] font-medium text-slate-600">Key takeaways generated</span>
                       </div>
                     </div>
                     <CheckCircle size={18} weight="fill" className="text-emerald-500 shrink-0" />
                   </div>
-                  
+
                   {/* Row 2 */}
                   <div className="flex items-center justify-between bg-white border border-[#e2e8f0] rounded-[16px] p-3.5 shadow-[0_2px_8px_rgba(0,0,0,0.01)]">
                     <div className="flex items-center gap-3">
@@ -214,8 +214,8 @@ export default function EmmaAssistAIPage() {
                         <VideoCamera size={16} weight="bold" />
                       </div>
                       <div className="flex flex-col">
-                        <span className="text-[14.5px] font-black text-[#0a1628] leading-none mb-1">Study Session Summary</span>
-                        <span className="text-[12px] font-semibold text-slate-700">Highlights & insights available</span>
+                        <span className="text-[0.9375rem] font-black text-[#0a1628] leading-none mb-1">Study Session Summary</span>
+                        <span className="text-[0.8125rem] font-medium text-slate-600">Highlights &amp; insights available</span>
                       </div>
                     </div>
                     <CheckCircle size={18} weight="fill" className="text-emerald-500 shrink-0" />
@@ -228,8 +228,8 @@ export default function EmmaAssistAIPage() {
                         <UsersThree size={16} weight="bold" />
                       </div>
                       <div className="flex flex-col">
-                        <span className="text-[14.5px] font-black text-[#0a1628] leading-none mb-1">Study Circle Action Items</span>
-                        <span className="text-[12px] font-semibold text-slate-700">Next steps generated</span>
+                        <span className="text-[0.9375rem] font-black text-[#0a1628] leading-none mb-1">Study Circle Action Items</span>
+                        <span className="text-[0.8125rem] font-medium text-slate-600">Next steps generated</span>
                       </div>
                     </div>
                     <CheckCircle size={18} weight="fill" className="text-emerald-500 shrink-0" />
@@ -242,8 +242,8 @@ export default function EmmaAssistAIPage() {
                         <GraduationCap size={16} weight="bold" />
                       </div>
                       <div className="flex flex-col">
-                        <span className="text-[14.5px] font-black text-[#0a1628] leading-none mb-1">Tutoring Session Insights</span>
-                        <span className="text-[12px] font-semibold text-slate-700">Concepts & progress captured</span>
+                        <span className="text-[0.9375rem] font-black text-[#0a1628] leading-none mb-1">Tutoring Session Insights</span>
+                        <span className="text-[0.8125rem] font-medium text-slate-600">Concepts &amp; progress captured</span>
                       </div>
                     </div>
                     <CheckCircle size={18} weight="fill" className="text-emerald-500 shrink-0" />
@@ -256,8 +256,8 @@ export default function EmmaAssistAIPage() {
                         <ChartBar size={16} weight="bold" />
                       </div>
                       <div className="flex flex-col">
-                        <span className="text-[14.5px] font-black text-[#0a1628] leading-none mb-1">Study Recommendations</span>
-                        <span className="text-[12px] font-semibold text-slate-700">Personalized for you</span>
+                        <span className="text-[0.9375rem] font-black text-[#0a1628] leading-none mb-1">Study Recommendations</span>
+                        <span className="text-[0.8125rem] font-medium text-slate-600">Personalized for you</span>
                       </div>
                     </div>
                     <CheckCircle size={18} weight="fill" className="text-emerald-500 shrink-0" />
@@ -277,9 +277,9 @@ export default function EmmaAssistAIPage() {
               {/* Meet Emma Column */}
               <div className="flex flex-col">
                 <div className="text-left mb-8">
-                  <h2 className="text-3xl font-black text-navy sm:text-4xl">Meet Emma</h2>
-                  <p className="text-[16px] font-extrabold text-[#6366f1] mt-1">Your guide to everything on AcademIQ.</p>
-                  <p className="mt-4 text-[15.5px] font-medium leading-relaxed text-slate-700">
+                  <h2 className="typo-h2 font-black text-navy tracking-tight">Meet Emma</h2>
+                  <p className="text-[1rem] font-bold text-[#6366f1] mt-1">Your guide to everything on AcademIQ.</p>
+                  <p className="mt-4 text-[1rem] font-normal leading-[1.8] text-slate-600">
                     Emma is here to help you find what you need, when you need it. From discovering features to connecting with people and resources—Emma makes navigation simple.
                   </p>
                 </div>
@@ -300,23 +300,23 @@ export default function EmmaAssistAIPage() {
                     {/* Speech Bubble Arrow */}
                     <div className="absolute left-[-6px] bottom-6 w-3 h-3 bg-white border-l border-b border-[#e2e8f0] rotate-45" />
                     
-                    <h4 className="text-[14.5px] font-black text-navy mb-0.5">Hi! I'm Emma.</h4>
-                    <p className="text-[12.5px] font-semibold text-slate-700 mb-3">I can help you...</p>
+                    <h4 className="text-[0.9375rem] font-black text-navy mb-0.5">Hi! I&apos;m Emma.</h4>
+                    <p className="text-[0.8125rem] font-medium text-slate-600 mb-3">I can help you...</p>
                     <ul className="space-y-2">
-                      <li className="flex items-center gap-2 text-[13px] font-bold text-slate-600">
-                        <span className="text-[#3b82f6] font-black">✓</span> Find academic support
+                      <li className="flex items-center gap-2 text-[0.875rem] font-medium text-slate-600">
+                        <span className="text-[#3b82f6] font-bold">✓</span> Find academic support
                       </li>
-                      <li className="flex items-center gap-2 text-[13px] font-bold text-slate-600">
-                        <span className="text-[#3b82f6] font-black">✓</span> Discover opportunities
+                      <li className="flex items-center gap-2 text-[0.875rem] font-medium text-slate-600">
+                        <span className="text-[#3b82f6] font-bold">✓</span> Discover opportunities
                       </li>
-                      <li className="flex items-center gap-2 text-[13px] font-bold text-slate-600">
-                        <span className="text-[#3b82f6] font-black">✓</span> Navigate platform features
+                      <li className="flex items-center gap-2 text-[0.875rem] font-medium text-slate-600">
+                        <span className="text-[#3b82f6] font-bold">✓</span> Navigate platform features
                       </li>
-                      <li className="flex items-center gap-2 text-[13px] font-bold text-slate-600">
-                        <span className="text-[#3b82f6] font-black">✓</span> Connect with your community
+                      <li className="flex items-center gap-2 text-[0.875rem] font-medium text-slate-600">
+                        <span className="text-[#3b82f6] font-bold">✓</span> Connect with your community
                       </li>
-                      <li className="flex items-center gap-2 text-[13px] font-bold text-slate-600">
-                        <span className="text-[#3b82f6] font-black">✓</span> Access the right resources
+                      <li className="flex items-center gap-2 text-[0.875rem] font-medium text-slate-600">
+                        <span className="text-[#3b82f6] font-bold">✓</span> Access the right resources
                       </li>
                     </ul>
                   </div>
@@ -326,9 +326,9 @@ export default function EmmaAssistAIPage() {
               {/* How Assist AI Helps Column */}
               <div className="flex flex-col justify-between">
                 <div className="text-left mb-8">
-                  <h2 className="text-3xl font-black text-navy sm:text-4xl">How Assist AI Helps</h2>
-                  <p className="text-[16px] font-extrabold text-[#8b5cf6] mt-1">Turning activity into understanding.</p>
-                  <p className="mt-4 text-[15.5px] font-medium leading-relaxed text-slate-700">
+                  <h2 className="typo-h2 font-black text-navy tracking-tight">How Assist AI Helps</h2>
+                  <p className="text-[1rem] font-bold text-[#8b5cf6] mt-1">Turning activity into understanding.</p>
+                  <p className="mt-4 text-[1rem] font-normal leading-[1.8] text-slate-600">
                     Assist AI works in the background to analyze your academic activity and deliver insights that help you learn better and achieve your goals.
                   </p>
                 </div>
@@ -341,8 +341,8 @@ export default function EmmaAssistAIPage() {
                       <FolderOpen size={16} weight="bold" />
                     </div>
                     <div className="flex-1 flex flex-col justify-center">
-                      <h5 className="text-[12px] font-black text-[#0a1628] leading-tight mb-1">Thread Summaries</h5>
-                      <p className="text-[10.5px] font-semibold text-slate-700 leading-snug">Understand key discussions quickly</p>
+                      <h5 className="text-[0.8125rem] font-black text-[#0a1628] leading-tight mb-1">Thread Summaries</h5>
+                      <p className="text-[0.75rem] font-medium text-slate-600 leading-snug">Understand key discussions quickly</p>
                     </div>
                   </div>
                   {/* Box 2 */}
@@ -351,8 +351,8 @@ export default function EmmaAssistAIPage() {
                       <VideoCamera size={16} weight="bold" />
                     </div>
                     <div className="flex-1 flex flex-col justify-center">
-                      <h5 className="text-[12px] font-black text-[#0a1628] leading-tight mb-1">Study Session Summaries</h5>
-                      <p className="text-[10.5px] font-semibold text-slate-700 leading-snug">Recap what was covered and key insights</p>
+                      <h5 className="text-[0.8125rem] font-black text-[#0a1628] leading-tight mb-1">Study Session Summaries</h5>
+                      <p className="text-[0.75rem] font-medium text-slate-600 leading-snug">Recap what was covered and key insights</p>
                     </div>
                   </div>
                   {/* Box 3 */}
@@ -361,8 +361,8 @@ export default function EmmaAssistAIPage() {
                       <UsersThree size={16} weight="bold" />
                     </div>
                     <div className="flex-1 flex flex-col justify-center">
-                      <h5 className="text-[12px] font-black text-[#0a1628] leading-tight mb-1">Study Circle Action Items</h5>
-                      <p className="text-[10.5px] font-semibold text-slate-700 leading-snug">Get clear next steps and group goals</p>
+                      <h5 className="text-[0.8125rem] font-black text-[#0a1628] leading-tight mb-1">Study Circle Action Items</h5>
+                      <p className="text-[0.75rem] font-medium text-slate-600 leading-snug">Get clear next steps and group goals</p>
                     </div>
                   </div>
                   {/* Box 4 */}
@@ -371,8 +371,8 @@ export default function EmmaAssistAIPage() {
                       <GraduationCap size={16} weight="bold" />
                     </div>
                     <div className="flex-1 flex flex-col justify-center">
-                      <h5 className="text-[12px] font-black text-[#0a1628] leading-tight mb-1">Tutoring Session Insights</h5>
-                      <p className="text-[10.5px] font-semibold text-slate-700 leading-snug">Review concepts covered and progress made</p>
+                      <h5 className="text-[0.8125rem] font-black text-[#0a1628] leading-tight mb-1">Tutoring Session Insights</h5>
+                      <p className="text-[0.75rem] font-medium text-slate-600 leading-snug">Review concepts covered and progress made</p>
                     </div>
                   </div>
                   {/* Box 5 */}
@@ -381,8 +381,8 @@ export default function EmmaAssistAIPage() {
                       <ChartBar size={16} weight="bold" />
                     </div>
                     <div className="flex-1 flex flex-col justify-center">
-                      <h5 className="text-[12px] font-black text-[#0a1628] leading-tight mb-1">Study Recommendations</h5>
-                      <p className="text-[10.5px] font-semibold text-slate-700 leading-snug">Personalized study plans and suggestions</p>
+                      <h5 className="text-[0.8125rem] font-black text-[#0a1628] leading-tight mb-1">Study Recommendations</h5>
+                      <p className="text-[0.75rem] font-medium text-slate-600 leading-snug">Personalized study plans and suggestions</p>
                     </div>
                   </div>
                 </div>
@@ -395,19 +395,19 @@ export default function EmmaAssistAIPage() {
         {/* ── Your Guidance, Every Step of the Way Section ── */}
         <section className="py-16 bg-[#f8fbff] border-t border-b border-slate-100">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-3xl font-black text-navy text-center mb-12 sm:text-4xl">
+            <h2 className="typo-h2 font-black text-navy text-center mb-12 tracking-tight">
               Your Guidance, Every Step of the Way
             </h2>
 
             <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6 md:gap-4 max-w-5xl mx-auto text-center">
-              
+
               {/* Step 1 */}
               <div className="flex flex-col items-center max-w-[170px]">
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#eff6ff] text-blue-600 border border-blue-100 shadow-sm mb-4 shrink-0 relative">
                   <MagnifyingGlass size={24} weight="bold" />
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">1. Ask Emma</h3>
-                <p className="text-[13px] font-semibold text-slate-700 leading-relaxed">
+                <h3 className="step-title">1. Ask Emma</h3>
+                <p className="step-desc">
                   Get help finding the right resources, people, and opportunities.
                 </p>
               </div>
@@ -420,8 +420,8 @@ export default function EmmaAssistAIPage() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#e8fbf2] text-emerald-600 border border-emerald-100 shadow-sm mb-4 shrink-0 relative">
                   <Calendar size={24} weight="bold" />
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">2. Participate</h3>
-                <p className="text-[13px] font-semibold text-slate-700 leading-relaxed">
+                <h3 className="step-title">2. Participate</h3>
+                <p className="step-desc">
                   Engage in tutoring, study sessions, threads, and study circles.
                 </p>
               </div>
@@ -434,8 +434,8 @@ export default function EmmaAssistAIPage() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#f5f3ff] text-[#8b5cf6] border border-purple-100 shadow-sm mb-4 shrink-0 relative">
                   <Brain size={24} weight="bold" />
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">3. Assist AI Analyzes</h3>
-                <p className="text-[13px] font-semibold text-slate-700 leading-relaxed">
+                <h3 className="step-title">3. Assist AI Analyzes</h3>
+                <p className="step-desc">
                   Assist AI analyzes your activity and extracts key insights.
                 </p>
               </div>
@@ -448,8 +448,8 @@ export default function EmmaAssistAIPage() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#fffbeb] text-amber-600 border border-amber-100 shadow-sm mb-4 shrink-0 relative">
                   <Lightbulb size={24} weight="bold" />
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">4. Get Insights</h3>
-                <p className="text-[13px] font-semibold text-slate-700 leading-relaxed">
+                <h3 className="step-title">4. Get Insights</h3>
+                <p className="step-desc">
                   Receive summaries, action items, and personalized recommendations.
                 </p>
               </div>
@@ -462,8 +462,8 @@ export default function EmmaAssistAIPage() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#e8fbf2] text-emerald-600 border border-emerald-100 shadow-sm mb-4 shrink-0 relative">
                   <Target size={24} weight="bold" />
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">5. Achieve Your Goals</h3>
-                <p className="text-[13px] font-semibold text-slate-700 leading-relaxed">
+                <h3 className="step-title">5. Achieve Your Goals</h3>
+                <p className="step-desc">
                   Apply insights, improve understanding, and reach your full potential.
                 </p>
               </div>
@@ -475,7 +475,7 @@ export default function EmmaAssistAIPage() {
         {/* ── Emma and Assist AI – Different Roles, One Goal ── */}
         <section className="py-16 bg-[#ffffff]">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-2xl sm:text-3xl font-black text-navy text-center mb-12">
+            <h2 className="text-[1.5rem] sm:text-[1.875rem] font-black text-navy text-center mb-12 tracking-tight">
               Emma and Assist AI – Different Roles, One Goal: Your Success
             </h2>
 
@@ -494,23 +494,23 @@ export default function EmmaAssistAIPage() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-[19px] font-black text-navy">Emma</h3>
-                    <p className="text-[13.5px] font-bold text-[#6366f1] leading-none">Navigation & Discovery</p>
+                    <h3 className="text-[1.125rem] font-black text-navy">Emma</h3>
+                    <p className="text-[0.875rem] font-bold text-[#6366f1] leading-none">Navigation &amp; Discovery</p>
                   </div>
                 </div>
 
                 <ul className="space-y-3">
-                  <li className="flex items-center gap-2.5 text-[14.5px] font-semibold text-slate-600">
-                    <span className="text-[#3b82f6] font-black">✓</span> Helps you find what you need
+                  <li className="flex items-center gap-2.5 text-[1rem] font-medium text-slate-600">
+                    <span className="text-[#3b82f6] font-bold">✓</span> Helps you find what you need
                   </li>
-                  <li className="flex items-center gap-2.5 text-[14.5px] font-semibold text-slate-600">
-                    <span className="text-[#3b82f6] font-black">✓</span> Shows you what's possible
+                  <li className="flex items-center gap-2.5 text-[1rem] font-medium text-slate-600">
+                    <span className="text-[#3b82f6] font-bold">✓</span> Shows you what&apos;s possible
                   </li>
-                  <li className="flex items-center gap-2.5 text-[14.5px] font-semibold text-slate-600">
-                    <span className="text-[#3b82f6] font-black">✓</span> Connects you to opportunities
+                  <li className="flex items-center gap-2.5 text-[1rem] font-medium text-slate-600">
+                    <span className="text-[#3b82f6] font-bold">✓</span> Connects you to opportunities
                   </li>
-                  <li className="flex items-center gap-2.5 text-[14.5px] font-semibold text-slate-600">
-                    <span className="text-[#3b82f6] font-black">✓</span> Guides you through AcademIQ
+                  <li className="flex items-center gap-2.5 text-[1rem] font-medium text-slate-600">
+                    <span className="text-[#3b82f6] font-bold">✓</span> Guides you through AcademIQ
                   </li>
                 </ul>
               </div>
@@ -532,23 +532,23 @@ export default function EmmaAssistAIPage() {
                     <Brain size={24} weight="duotone" />
                   </div>
                   <div>
-                    <h3 className="text-[19px] font-black text-navy">Assist AI</h3>
-                    <p className="text-[13.5px] font-bold text-[#8b5cf6] leading-none">Learning & Understanding</p>
+                    <h3 className="text-[1.125rem] font-black text-navy">Assist AI</h3>
+                    <p className="text-[0.875rem] font-bold text-[#8b5cf6] leading-none">Learning &amp; Understanding</p>
                   </div>
                 </div>
 
                 <ul className="space-y-3">
-                  <li className="flex items-center gap-2.5 text-[14.5px] font-semibold text-slate-600">
-                    <span className="text-[#8b5cf6] font-black">✓</span> Analyzes your academic activity
+                  <li className="flex items-center gap-2.5 text-[1rem] font-medium text-slate-600">
+                    <span className="text-[#8b5cf6] font-bold">✓</span> Analyzes your academic activity
                   </li>
-                  <li className="flex items-center gap-2.5 text-[14.5px] font-semibold text-slate-600">
-                    <span className="text-[#8b5cf6] font-black">✓</span> Provides insights and summaries
+                  <li className="flex items-center gap-2.5 text-[1rem] font-medium text-slate-600">
+                    <span className="text-[#8b5cf6] font-bold">✓</span> Provides insights and summaries
                   </li>
-                  <li className="flex items-center gap-2.5 text-[14.5px] font-semibold text-slate-600">
-                    <span className="text-[#8b5cf6] font-black">✓</span> Recommends next steps
+                  <li className="flex items-center gap-2.5 text-[1rem] font-medium text-slate-600">
+                    <span className="text-[#8b5cf6] font-bold">✓</span> Recommends next steps
                   </li>
-                  <li className="flex items-center gap-2.5 text-[14.5px] font-semibold text-slate-600">
-                    <span className="text-[#8b5cf6] font-black">✓</span> Helps you learn and grow
+                  <li className="flex items-center gap-2.5 text-[1rem] font-medium text-slate-600">
+                    <span className="text-[#8b5cf6] font-bold">✓</span> Helps you learn and grow
                   </li>
                 </ul>
               </div>
@@ -560,7 +560,7 @@ export default function EmmaAssistAIPage() {
         {/* ── Works Seamlessly With Section ── */}
         <section className="py-12 bg-[#f8fbff] border-t border-slate-100">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-2xl font-black text-navy text-center mb-8">
+            <h2 className="text-[1.5rem] sm:text-[1.75rem] font-black text-navy text-center mb-8 tracking-tight">
               Works Seamlessly With
             </h2>
 

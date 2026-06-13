@@ -73,10 +73,10 @@ export function TrustBadgesSection() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <h2 className="text-xl font-black text-navy sm:text-2xl">
+          <h2 className="text-[1.5rem] sm:text-[1.75rem] font-black text-navy tracking-tight leading-snug">
             Trusted by learners, educators, and institutions worldwide.
           </h2>
-          <p className="mt-4 text-lg font-medium text-slate-700">
+          <p className="mt-3 text-[1rem] sm:text-[1.0625rem] font-normal leading-[1.8] text-slate-600">
             Built on trust, privacy, and a love for education.
           </p>
         </motion.div>
@@ -114,8 +114,8 @@ export function TrustBadgesSection() {
                 />
               </motion.div>
               <div>
-                <h3 className="text-lg font-bold text-navy">{badge.title}</h3>
-                <p className="mt-2 text-base font-medium leading-snug text-slate-700">
+                <h3 className="text-[1.0625rem] font-bold text-navy">{badge.title}</h3>
+                <p className="mt-2 text-[0.9375rem] font-normal leading-[1.7] text-slate-600">
                   {badge.desc}
                 </p>
               </div>

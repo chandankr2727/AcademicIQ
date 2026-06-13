@@ -130,9 +130,9 @@ export default function MyLibraryPage() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#eff6ff] text-[#3b82f6] shrink-0">
                     <BookBookmark size={22} weight="duotone" />
                   </div>
-                  <h1 className="text-[40px] font-black text-[#3b4cb8] leading-none tracking-tight">My Library</h1>
+                  <h1 className="text-[2.5rem] font-black text-[#3b4cb8] leading-[1.08] tracking-tight">My Library</h1>
                 </div>
-                <p className="text-[15px] font-medium text-slate-600 leading-relaxed max-w-[320px]">
+                <p className="text-[1rem] font-normal text-slate-600 leading-[1.8] max-w-[320px]">
                   Your personal academic repository. Save, organize, search, and revisit everything that matters—accessible 24/7 from anywhere.
                 </p>
               </div>
@@ -639,7 +639,7 @@ export default function MyLibraryPage() {
         {/* ── How Library Works ── */}
         <section className="py-14 bg-[#f8fbff] border-t border-slate-100">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-2xl font-black text-navy text-center mb-10">How Library Works</h2>
+            <h2 className="text-[1.5rem] sm:text-[1.75rem] font-black text-navy text-center mb-10 tracking-tight">How Library Works</h2>
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 max-w-5xl mx-auto">
 
               {/* Step 1 */}
@@ -647,8 +647,8 @@ export default function MyLibraryPage() {
                 <div className="h-14 w-14 rounded-full bg-white border border-[#e2e8f0] flex items-center justify-center text-[#3b82f6] shadow-xs mb-3 shrink-0">
                   <Bookmark size={24} weight="duotone" />
                 </div>
-                <h4 className="text-[14px] font-black text-[#0a1628] mb-1">1. Save Content</h4>
-                <p className="text-[12.5px] font-medium text-slate-700 leading-relaxed">Bookmark resources, threads, sessions, notes, and more.</p>
+                <h4 className="step-title">1. Save Content</h4>
+                <p className="step-desc">Bookmark resources, threads, sessions, notes, and more.</p>
               </div>
 
               <div className="hidden md:block text-slate-300 font-bold text-xl">→</div>
@@ -658,8 +658,8 @@ export default function MyLibraryPage() {
                 <div className="h-14 w-14 rounded-full bg-white border border-[#e2e8f0] flex items-center justify-center text-[#10b981] shadow-xs mb-3 shrink-0">
                   <FolderOpen size={24} weight="duotone" />
                 </div>
-                <h4 className="text-[14px] font-black text-[#0a1628] mb-1">2. Organize Automatically</h4>
-                <p className="text-[12.5px] font-medium text-slate-700 leading-relaxed">Content is categorized and organized so you can find it with ease.</p>
+                <h4 className="step-title">2. Organize Automatically</h4>
+                <p className="step-desc">Content is categorized and organized so you can find it with ease.</p>
               </div>
 
               <div className="hidden md:block text-slate-300 font-bold text-xl">→</div>
@@ -669,8 +669,8 @@ export default function MyLibraryPage() {
                 <div className="h-14 w-14 rounded-full bg-white border border-[#e2e8f0] flex items-center justify-center text-[#8b5cf6] shadow-xs mb-3 shrink-0">
                   <MagnifyingGlass size={24} weight="duotone" />
                 </div>
-                <h4 className="text-[14px] font-black text-[#0a1628] mb-1">3. Filter &amp; Search</h4>
-                <p className="text-[12.5px] font-medium text-slate-700 leading-relaxed">Find content by subject, course, semester, quarter, date, or content type.</p>
+                <h4 className="step-title">3. Filter &amp; Search</h4>
+                <p className="step-desc">Find content by subject, course, semester, quarter, date, or content type.</p>
               </div>
 
               <div className="hidden md:block text-slate-300 font-bold text-xl">→</div>
@@ -680,8 +680,8 @@ export default function MyLibraryPage() {
                 <div className="h-14 w-14 rounded-full bg-white border border-[#e2e8f0] flex items-center justify-center text-[#f59e0b] shadow-xs mb-3 shrink-0">
                   <CloudArrowUp size={24} weight="duotone" />
                 </div>
-                <h4 className="text-[14px] font-black text-[#0a1628] mb-1">4. Access Anytime</h4>
-                <p className="text-[12.5px] font-medium text-slate-700 leading-relaxed">Your library is available 24/7 from any device, wherever you are.</p>
+                <h4 className="step-title">4. Access Anytime</h4>
+                <p className="step-desc">Your library is available 24/7 from any device, wherever you are.</p>
               </div>
 
               <div className="hidden md:block text-slate-300 font-bold text-xl">→</div>
@@ -691,8 +691,8 @@ export default function MyLibraryPage() {
                 <div className="h-14 w-14 rounded-full bg-white border border-[#e2e8f0] flex items-center justify-center text-[#ec4899] shadow-xs mb-3 shrink-0">
                   <ArrowUUpLeft size={24} weight="duotone" />
                 </div>
-                <h4 className="text-[14px] font-black text-[#0a1628] mb-1">5. Reaccess Anytime</h4>
-                <p className="text-[12.5px] font-medium text-slate-700 leading-relaxed">Revisit saved content whenever you need it.</p>
+                <h4 className="step-title">5. Reaccess Anytime</h4>
+                <p className="step-desc">Revisit saved content whenever you need it.</p>
               </div>
 
             </div>
@@ -702,7 +702,7 @@ export default function MyLibraryPage() {
         {/* ── What You Can Save ── */}
         <section className="py-12 bg-white border-t border-slate-100">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-2xl font-black text-navy text-center mb-8">What You Can Save</h2>
+            <h2 className="text-[1.5rem] sm:text-[1.75rem] font-black text-navy text-center mb-8 tracking-tight">What You Can Save</h2>
             <div className="flex flex-wrap items-stretch justify-center gap-3">
               {[
                 { icon: <FileText size={18} weight="duotone" />, color: "text-[#3b82f6]", bg: "bg-[#eff6ff]", label: "Resources", desc: "Study guides, notes, references, and documents" },
@@ -717,8 +717,8 @@ export default function MyLibraryPage() {
                   <div className={`h-9 w-9 rounded-xl ${item.bg} ${item.color} flex items-center justify-center mb-3 shrink-0`}>
                     {item.icon}
                   </div>
-                  <h4 className="text-[14px] font-black text-[#0a1628] mb-1 leading-tight">{item.label}</h4>
-                  <p className="text-[12.5px] font-medium text-slate-700 leading-snug">{item.desc}</p>
+                  <h4 className="text-[1rem] font-black text-[#0a1628] mb-1 leading-tight">{item.label}</h4>
+                  <p className="text-[0.875rem] font-medium text-slate-700 leading-snug">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -732,7 +732,7 @@ export default function MyLibraryPage() {
               {/* Left: Expand Text */}
               <div className="lg:col-span-3 flex flex-col">
                 <h2 className="text-xl font-black text-[#0a1628] mb-3">Expand Your Library</h2>
-                <p className="text-[14.5px] font-medium text-slate-700 leading-relaxed mb-6">
+                <p className="text-[1rem] font-normal text-slate-700 leading-[1.75] mb-6">
                   Keep more recordings, notes, threads, resources, and study materials accessible for as long as you need.
                 </p>
                 <div className="flex items-center gap-2 mt-auto">
@@ -844,7 +844,7 @@ export default function MyLibraryPage() {
               {/* Left: Intro */}
               <div className="lg:col-span-3">
                 <h2 className="text-xl font-black text-[#0a1628] mb-3">Archive to Stay Organized</h2>
-                <p className="text-[14.5px] font-medium text-slate-700 leading-relaxed mb-4">
+                <p className="text-[1rem] font-normal text-slate-700 leading-[1.75] mb-4">
                   Archive older content out of your active library while keeping it safe and accessible.
                 </p>
                 <button className="flex items-center gap-2 text-[13.5px] font-black text-[#3b82f6] bg-[#eff6ff] border border-[#bfdbfe] rounded-xl px-4 py-2 hover:bg-[#dbeafe] transition-colors">

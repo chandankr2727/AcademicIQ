@@ -148,11 +148,11 @@ export function ProblemSolveSection() {
         >
           <h2
             id="problem-solve-heading"
-            className="text-4xl font-black text-navy sm:text-5xl"
+            className="typo-h1 font-black text-navy tracking-tight"
           >
             One Platform. Everything Connected.
           </h2>
-          <p className="mt-4 mx-auto max-w-3xl text-lg font-medium leading-relaxed text-slate-800">
+          <p className="mt-4 mx-auto max-w-[620px] text-[1.0625rem] sm:text-[1.125rem] font-normal leading-[1.8] text-slate-600">
             Education is fragmented. AcademIQ brings it all together in one place.
           </p>
         </motion.div>
@@ -169,14 +169,14 @@ export function ProblemSolveSection() {
             className="lg:flex-[2] rounded-3xl border border-border bg-white p-6 shadow-sm flex flex-col justify-between w-full"
           >
             <div className="text-center">
-              <h3 className="text-xl font-bold text-navy">The Problem We Solve</h3>
-              <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-700">
+              <h3 className="text-[1.25rem] font-bold text-navy tracking-tight">The Problem We Solve</h3>
+              <p className="mt-2 text-[0.9375rem] font-medium leading-[1.75] text-slate-600">
                 Students currently juggle many disconnected tools to learn.
               </p>
             </div>
 
             <div className="mt-auto">
-              <p className="text-sm font-bold text-navy text-center mb-3">Today: Students juggle many tools</p>
+              <p className="text-[0.9375rem] font-bold text-navy text-center mb-3">Today: Students juggle many tools</p>
 
               <div className="border border-slate-100 bg-white shadow-xs rounded-2xl p-4">
                 <div className="flex flex-wrap justify-center gap-x-4 gap-y-4">
@@ -241,13 +241,13 @@ export function ProblemSolveSection() {
             className="lg:flex-[2] rounded-3xl border border-border bg-white p-6 shadow-sm flex flex-col justify-between w-full"
           >
             <div className="text-center">
-              <h3 className="text-xl font-bold text-navy">Tomorrow: Learn Smarter. Together.</h3>
+              <h3 className="text-[1.25rem] font-bold text-navy tracking-tight">Tomorrow: Learn Smarter. Together.</h3>
             </div>
 
             <div className="mt-6 flex justify-center">
               <div className="flex flex-col gap-y-3.5 p-1">
                 {[...tomorrowCol1, ...tomorrowCol2].map((item) => (
-                  <div key={item} className="flex items-center gap-2.5 text-base font-bold text-slate-700">
+                  <div key={item} className="flex items-center gap-2.5 text-[1rem] font-medium text-slate-600 leading-[1.75]">
                     <svg className="h-5 w-5 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
                       <circle cx="12" cy="12" r="10" stroke="currentColor" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4" />

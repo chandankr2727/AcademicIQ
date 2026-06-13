@@ -93,10 +93,10 @@ export function FeatureStrip() {
                     {entry?.icon}
                   </motion.div>
                   <div>
-                    <h3 className="text-lg font-bold leading-tight text-navy">
+                    <h3 className="text-[1.0625rem] font-bold leading-snug text-navy">
                       {feature.title}
                     </h3>
-                    <p className="mt-1.5 text-base font-medium leading-snug text-slate-700">
+                    <p className="mt-1.5 text-[0.9375rem] font-normal leading-[1.7] text-slate-600">
                       {feature.description}
                     </p>
                   </div>

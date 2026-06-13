@@ -127,14 +127,14 @@ export default function NetworkPage() {
 
           {/* Text columns */}
           <div className="lg:col-span-6 flex flex-col justify-center text-left">
-            <h1 className="text-6xl font-black text-[#0a1628] leading-[1.05] tracking-tight">
+            <h1 className="text-[2.5rem] sm:text-[3rem] font-black text-[#0a1628] leading-[1.08] tracking-tight">
               {networkData.hero.title}
             </h1>
-            <h2 className="mt-4 text-[21px] font-extrabold text-[#4f46e5] leading-snug">
+            <h2 className="mt-4 text-[1.375rem] font-extrabold text-[#4f46e5] leading-snug tracking-tight">
               {networkData.hero.subtitle}
             </h2>
             {networkData.hero.paragraphs.map((paragraph, idx) => (
-              <p key={idx} className="mt-5 text-[17.5px] font-medium leading-relaxed text-slate-600">
+              <p key={idx} className="mt-5 text-[1rem] sm:text-[1.0625rem] font-normal leading-[1.8] text-slate-600">
                 {paragraph}
               </p>
             ))}
@@ -151,7 +151,7 @@ export default function NetworkPage() {
         {/* ── Relationship Feature Cards Row ── */}
         <section className=" p-3 space-y-6 border border-slate-200 rounded-xl shadow-xs ">
           <div className="text-center">
-            <h2 className="text-[20px] font-extrabold text-[#0a1628]">
+            <h2 className="text-[1.25rem] font-extrabold text-[#0a1628]">
               Build Relationships Across Your Academic Journey
             </h2>
           </div>
@@ -163,8 +163,8 @@ export default function NetworkPage() {
                   {getIcon(card.icon, `${card.iconClass} h-5 w-5`)}
                 </div>
                 <div>
-                  <h3 className="text-[15.5px] font-bold text-[#0a1628] mt-3">{card.title}</h3>
-                  <p className="text-[13px] text-slate-600 leading-snug mt-1 font-medium">{card.desc}</p>
+                  <h3 className="text-[1rem] font-bold text-[#0a1628] mt-3">{card.title}</h3>
+                  <p className="text-[0.875rem] text-slate-600 leading-snug mt-1 font-medium">{card.desc}</p>
                 </div>
               </div>
             ))}
@@ -196,7 +196,7 @@ export default function NetworkPage() {
 
               {/* Header with Search */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-5">
-                <h2 className="text-[20px] font-extrabold text-[#0a1628] text-left">
+                <h2 className="text-[1.25rem] font-extrabold text-[#0a1628] text-left">
                   My Connections
                 </h2>
 
@@ -314,7 +314,7 @@ export default function NetworkPage() {
 
               {/* Card A */}
               <div className="bg-white border border-slate-200 rounded-3xl p-5 md:p-6 shadow-xs text-left">
-                <h3 className="text-[19px] font-extrabold text-[#0a1628] border-b border-slate-100 pb-3">
+                <h3 className="text-[1.125rem] font-extrabold text-[#0a1628] border-b border-slate-100 pb-3">
                   Recent Network Activity
                 </h3>
 
@@ -326,7 +326,7 @@ export default function NetworkPage() {
                       </div>
 
                       <div className="flex-1 min-w-0">
-                        <p className="text-[14px] text-slate-600 leading-snug font-medium">
+                        <p className="text-[0.9375rem] text-slate-600 leading-snug font-normal">
                           <span className="font-extrabold text-[#0a1628]">{act.name} </span>
                           {act.act}
                           {act.link && (
@@ -351,11 +351,11 @@ export default function NetworkPage() {
 
               {/* Card B */}
               <div className="bg-white border border-slate-200 rounded-3xl p-5 md:p-6 shadow-xs text-left">
-                <h3 className="text-[19px] font-extrabold text-[#0a1628]">
+                <h3 className="text-[1.125rem] font-extrabold text-[#0a1628]">
                   Academic Success & Wellness
                 </h3>
 
-                <p className="text-[13.5px] text-slate-600 mt-1.5 font-medium leading-relaxed">
+                <p className="text-[0.875rem] text-slate-600 mt-1.5 font-medium leading-[1.7]">
                   Connect with professionals who support your academic success,
                   well-being, and personal growth.
                 </p>
@@ -370,7 +370,7 @@ export default function NetworkPage() {
                       </div>
 
                       <div className="min-w-0 text-left">
-                        <span className="text-[14.5px] font-bold text-[#0a1628] block">
+                        <span className="text-[1rem] font-bold text-[#0a1628] block">
                           {serv.name}
                         </span>
                         <span className="text-[12px] text-slate-600 font-semibold block mt-0.5">
@@ -382,17 +382,17 @@ export default function NetworkPage() {
                 </div>
 
                 <div className="space-y-2.5 mt-6 border-t border-slate-100 pt-5">
-                  <button className="w-full bg-[#6366f1] text-white text-[14.5px] font-black py-2.5 px-4 rounded-xl flex items-center justify-center gap-2">
+                  <button className="w-full bg-[#6366f1] text-white text-[1rem] font-black py-2.5 px-4 rounded-xl flex items-center justify-center gap-2">
                     <Search className="h-4 w-4" />
                     Find Support
                   </button>
 
-                  <button className="w-full bg-white border border-[#6366f1] text-[#6366f1] text-[14.5px] font-black py-2.5 px-4 rounded-xl flex items-center justify-center gap-2">
+                  <button className="w-full bg-white border border-[#6366f1] text-[#6366f1] text-[1rem] font-black py-2.5 px-4 rounded-xl flex items-center justify-center gap-2">
                     <Users className="h-4 w-4" />
                     Browse Professionals
                   </button>
 
-                  <button className="w-full bg-white border border-[#6366f1] text-[#6366f1] text-[14.5px] font-black py-2.5 px-4 rounded-xl flex items-center justify-center gap-2">
+                  <button className="w-full bg-white border border-[#6366f1] text-[#6366f1] text-[1rem] font-black py-2.5 px-4 rounded-xl flex items-center justify-center gap-2">
                     <Calendar className="h-4 w-4" />
                     Request Consultation
                   </button>
@@ -406,7 +406,7 @@ export default function NetworkPage() {
         {/* ── Section: Your Relationship Categories ── */}
         <section className="space-y-6">
           <div className="text-left">
-            <h2 className="text-[20px] font-extrabold text-[#0a1628]">
+            <h2 className="text-[1.25rem] font-extrabold text-[#0a1628]">
               Your Relationship Categories
             </h2>
           </div>
@@ -453,7 +453,7 @@ export default function NetworkPage() {
 
           {/* Left: Strengthen Your Academic Network (8 cols) */}
           <div className="lg:col-span-9 space-y-5">
-            <h3 className="text-[20px] font-extrabold text-[#0a1628]">
+            <h3 className="text-[1.25rem] font-extrabold text-[#0a1628]">
               Strengthen Your Academic Network
             </h3>
 
@@ -520,7 +520,7 @@ export default function NetworkPage() {
 
           {/* Right: Network Insights Sidebar (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h3 className="text-[20px] font-extrabold text-[#0a1628] leading-none">
+            <h3 className="text-[1.25rem] font-extrabold text-[#0a1628] leading-none">
               Network Insights
             </h3>
 
@@ -532,7 +532,7 @@ export default function NetworkPage() {
                   </div>
                   <div className="min-w-0 text-left">
                     <span className="text-[11.5px] text-slate-600 font-extrabold uppercase tracking-wider block leading-none">{insight.label}</span>
-                    <span className="text-[14.5px] font-bold text-[#0a1628] block mt-1.5 leading-snug">{insight.val}</span>
+                    <span className="text-[1rem] font-bold text-[#0a1628] block mt-1.5 leading-snug">{insight.val}</span>
                   </div>
                 </div>
               ))}

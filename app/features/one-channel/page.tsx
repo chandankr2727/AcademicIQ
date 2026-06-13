@@ -43,13 +43,13 @@ export default function OneChannelDetailPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:items-center">
               {/* Left Column: Text Content */}
               <div className="lg:col-span-5 flex flex-col">
-                <h1 className="text-5xl font-black text-navy leading-none tracking-tight sm:text-6xl">
+                <h1 className="text-[2.5rem] sm:text-[3rem] font-black text-navy leading-[1.08] tracking-tight">
                   ONE Channel
                 </h1>
-                <h2 className="mt-4 text-2xl sm:text-3xl font-extrabold text-navy leading-snug">
+                <h2 className="mt-4 text-[1.375rem] sm:text-[1.625rem] font-extrabold text-navy leading-snug tracking-tight">
                   All academic communication in one place.
                 </h2>
-                <p className="mt-5 text-[17px] sm:text-base font-medium leading-relaxed text-slate-600">
+                <p className="mt-5 text-[1rem] sm:text-[1.0625rem] font-normal leading-[1.8] text-slate-600">
                   Connect with instructors, tutors, advisors, study circles, and support services through organized threads — so nothing gets lost and every conversation moves learning forward.
                 </p>
 
@@ -60,7 +60,7 @@ export default function OneChannelDetailPage() {
                     <div className="text-primary">
                       <ChatCircle size={24} weight="duotone" />
                     </div>
-                    <p className="text-[14px] font-extrabold text-[#0a1628] leading-snug">
+                    <p className="text-[0.9375rem] font-bold text-[#0a1628] leading-snug">
                       All conversations.<br />One place.
                     </p>
                   </div>
@@ -69,7 +69,7 @@ export default function OneChannelDetailPage() {
                     <div className="text-primary">
                       <UsersThree size={24} weight="duotone" />
                     </div>
-                    <p className="text-[14px] font-extrabold text-[#0a1628] leading-snug">
+                    <p className="text-[0.9375rem] font-bold text-[#0a1628] leading-snug">
                       The right people.<br />Right when you need them.
                     </p>
                   </div>
@@ -78,8 +78,8 @@ export default function OneChannelDetailPage() {
                     <div className="text-primary">
                       <ShieldCheck size={24} weight="duotone" />
                     </div>
-                    <p className="text-[14px] font-extrabold text-[#0a1628] leading-snug">
-                      Organized, searchable<br />& always accessible.
+                    <p className="text-[0.9375rem] font-bold text-[#0a1628] leading-snug">
+                      Organized, searchable<br />&amp; always accessible.
                     </p>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ export default function OneChannelDetailPage() {
         {/* ── What You Can Do in ONE Channel Section ── */}
         <section className="py-16 bg-[#ffffff]">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-3xl font-black text-navy text-center mb-12 sm:text-4xl">
+            <h2 className="typo-h2 font-black text-navy text-center mb-12 tracking-tight">
               What You Can Do in ONE Channel
             </h2>
 
@@ -121,10 +121,10 @@ export default function OneChannelDetailPage() {
                   <div className="h-10 w-10 rounded-xl bg-purple-50 flex items-center justify-center text-purple-600 mb-4 shrink-0">
                     <ChatCircle size={22} weight="duotone" />
                   </div>
-                  <h3 className="text-[19px] font-bold text-[#0a1628] leading-tight mb-2">
-                    Start & Join<br />Academic Threads
+                  <h3 className="text-[1.125rem] font-bold text-[#0a1628] leading-tight mb-2 tracking-tight">
+                    Start &amp; Join<br />Academic Threads
                   </h3>
-                  <p className="text-[15px] font-medium text-slate-600 leading-relaxed">
+                  <p className="text-[1rem] font-normal text-slate-600 leading-[1.75]">
                     Have focused conversations around courses, topics, projects, and more.
                   </p>
                 </div>
@@ -172,10 +172,10 @@ export default function OneChannelDetailPage() {
                   <div className="h-10 w-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 mb-4 shrink-0">
                     <UsersThree size={22} weight="duotone" />
                   </div>
-                  <h3 className="text-[19px] font-bold text-[#0a1628] leading-tight mb-2">
+                  <h3 className="text-[1.125rem] font-bold text-[#0a1628] leading-tight mb-2 tracking-tight">
                     Collaborate in<br />Study Circles
                   </h3>
-                  <p className="text-[15px] font-medium text-slate-600 leading-relaxed">
+                  <p className="text-[1rem] font-normal text-slate-600 leading-[1.75]">
                     Work together in private or public groups to learn and achieve more.
                   </p>
                 </div>
@@ -206,10 +206,10 @@ export default function OneChannelDetailPage() {
                   <div className="h-10 w-10 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600 mb-4 shrink-0">
                     <FileText size={22} weight="duotone" />
                   </div>
-                  <h3 className="text-[19px] font-bold text-[#0a1628] leading-tight mb-2">
-                    Share & Access<br />Resources
+                  <h3 className="text-[1.125rem] font-bold text-[#0a1628] leading-tight mb-2 tracking-tight">
+                    Share &amp; Access<br />Resources
                   </h3>
-                  <p className="text-[15px] font-medium text-slate-600 leading-relaxed">
+                  <p className="text-[1rem] font-normal text-slate-600 leading-[1.75]">
                     Share files, links, notes, and tools that keep everyone on the same page.
                   </p>
                 </div>
@@ -257,10 +257,10 @@ export default function OneChannelDetailPage() {
                   <div className="h-10 w-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-4 shrink-0">
                     <VideoCamera size={22} weight="duotone" />
                   </div>
-                  <h3 className="text-[19px] font-bold text-[#0a1628] leading-tight mb-2">
+                  <h3 className="text-[1.125rem] font-bold text-[#0a1628] leading-tight mb-2 tracking-tight">
                     Launch a Huddle<br />or Study Session
                   </h3>
-                  <p className="text-[15px] font-medium text-slate-600 leading-relaxed">
+                  <p className="text-[1rem] font-normal text-slate-600 leading-[1.75]">
                     Move conversations into live sessions instantly.
                   </p>
                 </div>
@@ -295,7 +295,7 @@ export default function OneChannelDetailPage() {
         {/* ── How It Works Section ── */}
         <section className="py-16 bg-[#f8fbff] border-t border-b border-slate-100">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-3xl font-black text-navy text-center mb-12 sm:text-4xl">
+            <h2 className="typo-h2 font-black text-navy text-center mb-12 tracking-tight">
               How It Works
             </h2>
 
@@ -311,8 +311,8 @@ export default function OneChannelDetailPage() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white border border-[#e2e8f0] shadow-sm text-blue-500 mb-4 shrink-0 relative z-10">
                   <ChatCircle size={24} weight="duotone" />
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">1. Start a Thread</h3>
-                <p className="text-xs font-medium text-slate-600 max-w-[180px] leading-relaxed">
+                <h3 className="step-title">1. Start a Thread</h3>
+                <p className="step-desc">
                   Begin a conversation on any topic or course.
                 </p>
               </div>
@@ -322,8 +322,8 @@ export default function OneChannelDetailPage() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white border border-[#e2e8f0] shadow-sm text-emerald-500 mb-4 shrink-0 relative z-10">
                   <UsersThree size={24} weight="duotone" />
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">2. Invite the Right People</h3>
-                <p className="text-xs font-medium text-slate-600 max-w-[180px] leading-relaxed">
+                <h3 className="step-title">2. Invite the Right People</h3>
+                <p className="step-desc">
                   Add classmates, instructors, tutors, or advisors.
                 </p>
               </div>
@@ -333,8 +333,8 @@ export default function OneChannelDetailPage() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white border border-[#e2e8f0] shadow-sm text-purple-500 mb-4 shrink-0 relative z-10">
                   <FileText size={24} weight="duotone" />
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">3. Share & Collaborate</h3>
-                <p className="text-xs font-medium text-slate-600 max-w-[180px] leading-relaxed">
+                <h3 className="step-title">3. Share &amp; Collaborate</h3>
+                <p className="step-desc">
                   Exchange ideas, files, and resources in one place.
                 </p>
               </div>
@@ -344,8 +344,8 @@ export default function OneChannelDetailPage() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white border border-[#e2e8f0] shadow-sm text-orange-500 mb-4 shrink-0 relative z-10">
                   <VideoCamera size={24} weight="duotone" />
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">4. Take Action</h3>
-                <p className="text-xs font-medium text-slate-600 max-w-[180px] leading-relaxed">
+                <h3 className="step-title">4. Take Action</h3>
+                <p className="step-desc">
                   Join a huddle, start a study session, or continue the discussion anytime.
                 </p>
               </div>
@@ -355,8 +355,8 @@ export default function OneChannelDetailPage() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white border border-[#e2e8f0] shadow-sm text-blue-600 mb-4 shrink-0 relative z-10">
                   <ShieldCheck size={24} weight="duotone" />
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">5. Stay Organized</h3>
-                <p className="text-xs font-medium text-slate-600 max-w-[180px] leading-relaxed">
+                <h3 className="step-title">5. Stay Organized</h3>
+                <p className="step-desc">
                   Find everything easily with search, filters, and pinned threads.
                 </p>
               </div>
@@ -367,11 +367,11 @@ export default function OneChannelDetailPage() {
         {/* ── Built for Every Role Section ── */}
         <section className="py-16 bg-[#ffffff]">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-3xl font-black text-navy text-center mb-12 sm:text-4xl">
+            <h2 className="typo-h2 font-black text-navy text-center mb-12 tracking-tight">
               Built for Every Role
             </h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
               {/* Role 1: Students */}
               <div className="bg-white border border-[#e2e8f0] rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-shadow duration-300 flex flex-row">
@@ -389,23 +389,23 @@ export default function OneChannelDetailPage() {
                 <div className="flex flex-col justify-center p-5 text-left flex-1">
                   <div className="flex items-center gap-2 mb-3">
                     <GraduationCap size={22} weight="duotone" className="text-[#14b8a6] shrink-0" />
-                    <h3 className="text-[18px] font-bold text-[#0a1628]">For Students</h3>
+                    <h3 className="role-card-title">For Students</h3>
                   </div>
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
-                      <span className="text-[#14b8a6] font-extrabold text-[16px] shrink-0">✓</span>
+                  <ul className="space-y-2.5">
+                    <li className="flex items-center gap-2 role-card-bullet leading-snug">
+                      <span className="text-[#14b8a6] font-bold shrink-0">✓</span>
                       Get answers faster
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
-                      <span className="text-[#14b8a6] font-extrabold text-[16px] shrink-0">✓</span>
+                    <li className="flex items-center gap-2 role-card-bullet leading-snug">
+                      <span className="text-[#14b8a6] font-bold shrink-0">✓</span>
                       Collaborate with peers
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
-                      <span className="text-[#14b8a6] font-extrabold text-[16px] shrink-0">✓</span>
+                    <li className="flex items-center gap-2 role-card-bullet leading-snug">
+                      <span className="text-[#14b8a6] font-bold shrink-0">✓</span>
                       Access support instantly
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
-                      <span className="text-[#14b8a6] font-extrabold text-[16px] shrink-0">✓</span>
+                    <li className="flex items-center gap-2 role-card-bullet leading-snug">
+                      <span className="text-[#14b8a6] font-bold shrink-0">✓</span>
                       Stay organized
                     </li>
                   </ul>
@@ -428,23 +428,23 @@ export default function OneChannelDetailPage() {
                 <div className="flex flex-col justify-center p-5 text-left flex-1">
                   <div className="flex items-center gap-2 mb-3">
                     <UserCheck size={22} weight="duotone" className="text-[#14b8a6] shrink-0" />
-                    <h3 className="text-[18px] font-bold text-[#0a1628]">For Instructors</h3>
+                    <h3 className="role-card-title">For Instructors</h3>
                   </div>
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
-                      <span className="text-[#14b8a6] font-extrabold text-[16px] shrink-0">✓</span>
+                  <ul className="space-y-2.5">
+                    <li className="flex items-center gap-2 role-card-bullet leading-snug">
+                      <span className="text-[#14b8a6] font-bold shrink-0">✓</span>
                       Engage learners
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
-                      <span className="text-[#14b8a6] font-extrabold text-[16px] shrink-0">✓</span>
-                      Share updates & resources
+                    <li className="flex items-center gap-2 role-card-bullet leading-snug">
+                      <span className="text-[#14b8a6] font-bold shrink-0">✓</span>
+                      Share updates &amp; resources
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
-                      <span className="text-[#14b8a6] font-extrabold text-[16px] shrink-0">✓</span>
+                    <li className="flex items-center gap-2 role-card-bullet leading-snug">
+                      <span className="text-[#14b8a6] font-bold shrink-0">✓</span>
                       Support discussions
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
-                      <span className="text-[#14b8a6] font-extrabold text-[16px] shrink-0">✓</span>
+                    <li className="flex items-center gap-2 role-card-bullet leading-snug">
+                      <span className="text-[#14b8a6] font-bold shrink-0">✓</span>
                       Strengthen communities
                     </li>
                   </ul>
@@ -467,23 +467,23 @@ export default function OneChannelDetailPage() {
                 <div className="flex flex-col justify-center p-5 text-left flex-1">
                   <div className="flex items-center gap-2 mb-3">
                     <Buildings size={22} weight="duotone" className="text-[#14b8a6] shrink-0" />
-                    <h3 className="text-[18px] font-bold text-[#0a1628]">For Institutions</h3>
+                    <h3 className="role-card-title">For Institutions</h3>
                   </div>
-                  <ul className="space-y-2">
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
-                      <span className="text-[#14b8a6] font-extrabold text-[16px] shrink-0">✓</span>
+                  <ul className="space-y-2.5">
+                    <li className="flex items-center gap-2 role-card-bullet leading-snug">
+                      <span className="text-[#14b8a6] font-bold shrink-0">✓</span>
                       Improve communication
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
-                      <span className="text-[#14b8a6] font-extrabold text-[16px] shrink-0">✓</span>
+                    <li className="flex items-center gap-2 role-card-bullet leading-snug">
+                      <span className="text-[#14b8a6] font-bold shrink-0">✓</span>
                       Connect services
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
-                      <span className="text-[#14b8a6] font-extrabold text-[16px] shrink-0">✓</span>
+                    <li className="flex items-center gap-2 role-card-bullet leading-snug">
+                      <span className="text-[#14b8a6] font-bold shrink-0">✓</span>
                       Increase engagement
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
-                      <span className="text-[#14b8a6] font-extrabold text-[16px] shrink-0">✓</span>
+                    <li className="flex items-center gap-2 role-card-bullet leading-snug">
+                      <span className="text-[#14b8a6] font-bold shrink-0">✓</span>
                       Drive student success
                     </li>
                   </ul>
@@ -497,7 +497,7 @@ export default function OneChannelDetailPage() {
         {/* ── Works Seamlessly With Section ── */}
         <section className="py-12 bg-[#f8fbff] border-t border-slate-100">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-2xl font-black text-navy text-center mb-8">
+            <h2 className="text-[1.5rem] sm:text-[1.75rem] font-black text-navy text-center mb-8 tracking-tight">
               Works Seamlessly With
             </h2>
 

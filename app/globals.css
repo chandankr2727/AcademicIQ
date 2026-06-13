@@ -16,14 +16,61 @@
   --color-ring: #2563eb;
   --color-input: #e2e8f0;
   --font-sans: var(--font-roboto);
+
+  /* Custom breakpoint — 4-col role grids only at ≥ 1600px */
+  --breakpoint-3xl: 100rem;
+
+  /* Fluid text scale — single source of truth for all font sizes */
+  --text-display:    clamp(2.5rem,    5vw,    3.25rem);
+  --text-h1:         clamp(2rem,      4vw,    2.75rem);
+  --text-h2:         clamp(1.75rem,   3vw,    2.25rem);
+  --text-h3:         clamp(1.25rem,   2vw,    1.5rem);
+  --text-h4:         clamp(1.0625rem, 1.5vw,  1.25rem);
+  --text-subheading: clamp(1rem,      1.75vw, 1.25rem);
+  --text-paragraph:  1.125rem;
+  --text-small:      1rem;
+  --text-caption:    0.875rem;
+  /* Legacy aliases */
+  --text-body-lg: 1.125rem;
+  --text-body-sm: 0.9375rem;
+}
+
+/* ── Global Typography Design Tokens ── */
+:root {
+  /* Line-height & tracking */
+  --lh-heading:    1.2;
+  --lh-subheading: 1.5;
+  --lh-body:       1.85;
+  --ls-heading:   -0.02em;
+  --ls-tight:     -0.01em;
+
+  /* Prose / layout sizing */
+  --max-w-prose:    700px;
+  --max-w-prose-lg: 850px;
+  --section-py:     6rem;
+  --card-padding:   1.75rem 1.5rem;
+  --card-gap:       1.5rem;
+
+  /* Font weights */
+  --weight-regular:  500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-black:    900;
+
+  /* Semantic color tokens */
+  --color-heading:    #0F172A;
+  --color-body:       rgba(15, 23, 42, 0.82);
+  --color-body-muted: rgba(15, 23, 42, 0.65);
 }
 
 body {
   background: #ffffff;
-  color: #0a1628;
+  color: #111827;
   font-family: var(--font-roboto), system-ui, -apple-system, sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.75;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -35,4 +82,160 @@ html {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
   border-radius: 4px;
+}
+
+/* ── Global heading defaults (fluid scale) ── */
+h1 {
+  font-size: var(--text-h1);
+  font-weight: var(--weight-black);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-heading);
+}
+h2 {
+  font-size: var(--text-h2);
+  font-weight: var(--weight-bold);
+  line-height: 1.25;
+}
+h3 {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+  line-height: 1.35;
+}
+h4 {
+  font-size: var(--text-h4);
+  font-weight: var(--weight-semibold);
+  line-height: 1.4;
+}
+
+/* Paragraph base */
+p {
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--lh-body);
+}
+
+/* ── Semantic Typography Utilities ── */
+
+.typo-h1 {
+  font-size: var(--text-h1);
+  font-weight: var(--weight-black);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-heading);
+}
+
+.typo-h2 {
+  font-size: var(--text-h2);
+  font-weight: var(--weight-bold);
+  line-height: 1.25;
+  letter-spacing: var(--ls-tight);
+}
+
+.typo-h3 {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+  line-height: 1.35;
+}
+
+.typo-h4 {
+  font-size: var(--text-h4);
+  font-weight: var(--weight-semibold);
+  line-height: 1.4;
+}
+
+.typo-subheading {
+  font-size: var(--text-subheading);
+  font-weight: var(--weight-regular);
+  line-height: var(--lh-body);
+  color: var(--color-body);
+  max-width: var(--max-w-prose-lg);
+}
+
+/* Primary body text — 18px */
+.typo-body,
+.text-paragraph {
+  font-size: var(--text-paragraph);
+  font-weight: var(--weight-regular);
+  line-height: var(--lh-body);
+  color: var(--color-body);
+}
+
+.typo-body-lg {
+  font-size: var(--text-body-lg);
+  font-weight: var(--weight-regular);
+  line-height: var(--lh-body);
+  color: var(--color-body);
+}
+
+/* 16px secondary text */
+.typo-body-sm,
+.text-small {
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: 1.75;
+}
+
+.typo-caption,
+.text-caption {
+  font-size: var(--text-caption);
+  line-height: 1.5;
+}
+
+/* ── How It Works — step typography (single source of truth) ── */
+.step-title {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-bold);
+  line-height: 1.3;
+  color: var(--color-heading);
+  margin-bottom: 0.75rem;
+}
+
+.step-desc {
+  font-size: var(--text-paragraph);
+  font-weight: var(--weight-regular);
+  line-height: 1.9;
+  color: var(--color-body);
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Built For Every Role — card typography ── */
+.role-card-title {
+  font-size: var(--text-h3);
+  font-weight: var(--weight-bold);
+  line-height: 1.3;
+  color: var(--color-heading);
+}
+
+.role-card-bullet {
+  font-size: var(--text-paragraph);
+  font-weight: var(--weight-regular);
+  line-height: 1.85;
+  color: rgba(71, 85, 105, 0.9);
+}
+
+/* ── Card hover refinement (subtle, non-intrusive) ── */
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Bullet list refinement ── */
+.list-refined li {
+  font-size: var(--text-small);
+  font-weight: var(--weight-regular);
+  line-height: var(--lh-body);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+/* ── Section spacing ── */
+.section-py {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
 }

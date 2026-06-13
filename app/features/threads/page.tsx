@@ -50,13 +50,13 @@ export default function ThreadsDetailPage() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-50 text-purple-600 mb-6 shrink-0 border border-purple-100 shadow-xs">
                   <ChatCircle size={24} weight="duotone" />
                 </div>
-                <h1 className="text-5xl font-black text-navy leading-none tracking-tight sm:text-6xl">
+                <h1 className="text-[2.5rem] sm:text-[3rem] font-black text-navy leading-[1.08] tracking-tight">
                   Threads
                 </h1>
-                <h2 className="mt-4 text-2xl sm:text-3xl font-extrabold text-navy leading-snug">
+                <h2 className="mt-4 text-[1.375rem] sm:text-[1.625rem] font-extrabold text-navy leading-snug tracking-tight">
                   Organized academic discussions that keep conversations focused, searchable, and connected.
                 </h2>
-                <p className="mt-5 text-[17px] sm:text-base font-medium leading-relaxed text-slate-600">
+                <p className="mt-5 text-[1rem] sm:text-[1.0625rem] font-normal leading-[1.8] text-slate-600">
                   Threads bring structure to your academic conversations. Ask questions, share ideas, attach resources, watch videos, and continue learning together.
                 </p>
 
@@ -67,10 +67,10 @@ export default function ThreadsDetailPage() {
                     <div className="text-purple-600">
                       <ChatCircle size={24} weight="duotone" />
                     </div>
-                    <p className="text-[14px] font-extrabold text-[#0a1628] leading-snug">
+                    <p className="text-[0.9375rem] font-bold text-[#0a1628] leading-snug">
                       Focused
                     </p>
-                    <p className="text-[13px] font-medium text-slate-600 leading-snug">
+                    <p className="text-[0.875rem] font-medium text-slate-600 leading-snug">
                       Keep discussions on topic.
                     </p>
                   </div>
@@ -79,10 +79,10 @@ export default function ThreadsDetailPage() {
                     <div className="text-purple-600">
                       <UsersThree size={24} weight="duotone" />
                     </div>
-                    <p className="text-[14px] font-extrabold text-[#0a1628] leading-snug">
+                    <p className="text-[0.9375rem] font-bold text-[#0a1628] leading-snug">
                       Connected
                     </p>
-                    <p className="text-[13px] font-medium text-slate-600 leading-snug">
+                    <p className="text-[0.875rem] font-medium text-slate-600 leading-snug">
                       The right people in the right place.
                     </p>
                   </div>
@@ -91,10 +91,10 @@ export default function ThreadsDetailPage() {
                     <div className="text-purple-600">
                       <MagnifyingGlass size={24} weight="duotone" />
                     </div>
-                    <p className="text-[14px] font-extrabold text-[#0a1628] leading-snug">
+                    <p className="text-[0.9375rem] font-bold text-[#0a1628] leading-snug">
                       Searchable
                     </p>
-                    <p className="text-[13px] font-medium text-slate-600 leading-snug">
+                    <p className="text-[0.875rem] font-medium text-slate-600 leading-snug">
                       Find what you need, when you need it.
                     </p>
                   </div>
@@ -125,7 +125,7 @@ export default function ThreadsDetailPage() {
         {/* ── What You Can Do in Threads Section ── */}
         <section className="py-16 bg-[#ffffff]">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-3xl font-black text-navy text-center mb-12 sm:text-4xl">
+            <h2 className="typo-h2 font-black text-navy text-center mb-12 tracking-tight">
               What You Can Do in Threads
             </h2>
 
@@ -137,10 +137,10 @@ export default function ThreadsDetailPage() {
                   <div className="h-10 w-10 rounded-xl bg-purple-50 flex items-center justify-center text-purple-600 mb-4 shrink-0">
                     <ChatCircle size={22} weight="duotone" />
                   </div>
-                  <h3 className="text-[19px] font-bold text-[#0a1628] leading-tight mb-2">
+                  <h3 className="text-[1.125rem] font-bold text-[#0a1628] leading-tight mb-2 tracking-tight">
                     Start Academic<br />Discussions
                   </h3>
-                  <p className="text-[15px] font-medium text-slate-600 leading-relaxed">
+                  <p className="text-[1rem] font-normal text-slate-600 leading-[1.75]">
                     Create focused conversations around courses, assignments, concepts, and academic topics.
                   </p>
                 </div>
@@ -188,10 +188,10 @@ export default function ThreadsDetailPage() {
                   <div className="h-10 w-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 mb-4 shrink-0">
                     <UsersThree size={22} weight="duotone" />
                   </div>
-                  <h3 className="text-[19px] font-bold text-[#0a1628] leading-tight mb-2">
+                  <h3 className="text-[1.125rem] font-bold text-[#0a1628] leading-tight mb-2 tracking-tight">
                     Collaborate<br />With Others
                   </h3>
-                  <p className="text-[15px] font-medium text-slate-600 leading-relaxed">
+                  <p className="text-[1rem] font-normal text-slate-600 leading-[1.75]">
                     Bring together classmates, instructors, tutors, advisors, and support staff.
                   </p>
                 </div>
@@ -223,10 +223,10 @@ export default function ThreadsDetailPage() {
                   <div className="h-10 w-10 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600 mb-4 shrink-0">
                     <FolderOpen size={22} weight="duotone" />
                   </div>
-                  <h3 className="text-[19px] font-bold text-[#0a1628] leading-tight mb-2">
+                  <h3 className="text-[1.125rem] font-bold text-[#0a1628] leading-tight mb-2 tracking-tight">
                     Share Resources
                   </h3>
-                  <p className="text-[15px] font-medium text-slate-600 leading-relaxed">
+                  <p className="text-[1rem] font-normal text-slate-600 leading-[1.75]">
                     Upload notes, study guides, links, documents, recordings, and other academic materials.
                   </p>
                 </div>
@@ -274,10 +274,10 @@ export default function ThreadsDetailPage() {
                   <div className="h-10 w-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-4 shrink-0">
                     <Clock size={22} weight="duotone" />
                   </div>
-                  <h3 className="text-[19px] font-bold text-[#0a1628] leading-tight mb-2">
+                  <h3 className="text-[1.125rem] font-bold text-[#0a1628] leading-tight mb-2 tracking-tight">
                     Continue Learning<br />Over Time
                   </h3>
-                  <p className="text-[15px] font-medium text-slate-600 leading-relaxed">
+                  <p className="text-[1rem] font-normal text-slate-600 leading-[1.75]">
                     Threads remain searchable and accessible so conversations can continue beyond a single session.
                   </p>
                 </div>
@@ -320,7 +320,7 @@ export default function ThreadsDetailPage() {
         {/* ── How It Works Section ── */}
         <section className="py-16 bg-[#faf8ff] border-t border-b border-slate-100/80">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-3xl font-black text-navy text-center mb-16 sm:text-4xl">
+            <h2 className="typo-h2 font-black text-navy text-center mb-16 tracking-tight">
               How It Works
             </h2>
 
@@ -339,8 +339,8 @@ export default function ThreadsDetailPage() {
                     1
                   </span>
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">Create a Thread</h3>
-                <p className="text-xs font-medium text-slate-600 max-w-[180px] leading-relaxed">
+                <h3 className="step-title">Create a Thread</h3>
+                <p className="step-desc">
                   Start a new thread around any topic, course, or assignment.
                 </p>
               </div>
@@ -353,8 +353,8 @@ export default function ThreadsDetailPage() {
                     2
                   </span>
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">Invite Participants</h3>
-                <p className="text-xs font-medium text-slate-600 max-w-[180px] leading-relaxed">
+                <h3 className="step-title">Invite Participants</h3>
+                <p className="step-desc">
                   Add classmates, instructors, tutors, or advisors to the conversation.
                 </p>
               </div>
@@ -367,8 +367,8 @@ export default function ThreadsDetailPage() {
                     3
                   </span>
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">Share Resources & Updates</h3>
-                <p className="text-xs font-medium text-slate-600 max-w-[180px] leading-relaxed">
+                <h3 className="step-title">Share Resources & Updates</h3>
+                <p className="step-desc">
                   Post questions, files, links, videos, and updates to keep everyone informed.
                 </p>
               </div>
@@ -381,8 +381,8 @@ export default function ThreadsDetailPage() {
                     4
                   </span>
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">Continue Discussions</h3>
-                <p className="text-xs font-medium text-slate-600 max-w-[180px] leading-relaxed">
+                <h3 className="step-title">Continue Discussions</h3>
+                <p className="step-desc">
                   Reply, ask follow-ups, and collaborate to deepen understanding.
                 </p>
               </div>
@@ -395,8 +395,8 @@ export default function ThreadsDetailPage() {
                     5
                   </span>
                 </div>
-                <h3 className="text-sm font-black text-[#0a1628] mb-1.5">Access History Anytime</h3>
-                <p className="text-xs font-medium text-slate-600 max-w-[180px] leading-relaxed">
+                <h3 className="step-title">Access History Anytime</h3>
+                <p className="step-desc">
                   Search and revisit past conversations whenever you need them.
                 </p>
               </div>
@@ -407,11 +407,11 @@ export default function ThreadsDetailPage() {
         {/* ── Built for Every Role Section ── */}
         <section className="py-16 bg-[#ffffff]">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-3xl font-black text-navy text-center mb-12 sm:text-4xl">
+            <h2 className="typo-h2 font-black text-navy text-center mb-12 tracking-tight">
               Built for Every Role
             </h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
               {/* Role 1: Students */}
               <div className="bg-white border border-[#e2e8f0] rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-shadow duration-300 flex flex-row">
@@ -429,26 +429,26 @@ export default function ThreadsDetailPage() {
                 <div className="flex flex-col justify-center p-5 text-left flex-1">
                   <div className="flex items-center gap-2 mb-3">
                     <GraduationCap size={22} weight="duotone" className="text-purple-600 shrink-0" />
-                    <h3 className="text-[18px] font-bold text-[#0a1628]">For Students</h3>
+                    <h3 className="role-card-title">For Students</h3>
                   </div>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-purple-600 font-extrabold text-[16px] shrink-0">✓</span>
                       Ask questions
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-purple-600 font-extrabold text-[16px] shrink-0">✓</span>
                       Join discussions
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-purple-600 font-extrabold text-[16px] shrink-0">✓</span>
                       Share resources
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-purple-600 font-extrabold text-[16px] shrink-0">✓</span>
                       Receive support
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-purple-600 font-extrabold text-[16px] shrink-0">✓</span>
                       Stay organized
                     </li>
@@ -472,26 +472,26 @@ export default function ThreadsDetailPage() {
                 <div className="flex flex-col justify-center p-5 text-left flex-1">
                   <div className="flex items-center gap-2 mb-3">
                     <UserCheck size={22} weight="duotone" className="text-purple-600 shrink-0" />
-                    <h3 className="text-[18px] font-bold text-[#0a1628]">For Instructors</h3>
+                    <h3 className="role-card-title">For Instructors</h3>
                   </div>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-purple-600 font-extrabold text-[16px] shrink-0">✓</span>
                       Answer questions
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-purple-600 font-extrabold text-[16px] shrink-0">✓</span>
                       Guide discussions
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-purple-600 font-extrabold text-[16px] shrink-0">✓</span>
                       Share updates & material
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-purple-600 font-extrabold text-[16px] shrink-0">✓</span>
                       Engage learners
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-purple-600 font-extrabold text-[16px] shrink-0">✓</span>
                       Build community
                     </li>
@@ -515,26 +515,26 @@ export default function ThreadsDetailPage() {
                 <div className="flex flex-col justify-center p-5 text-left flex-1">
                   <div className="flex items-center gap-2 mb-3">
                     <Buildings size={22} weight="duotone" className="text-purple-600 shrink-0" />
-                    <h3 className="text-[18px] font-bold text-[#0a1628]">For Institutions</h3>
+                    <h3 className="role-card-title">For Institutions</h3>
                   </div>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-purple-600 font-extrabold text-[16px] shrink-0">✓</span>
                       Support communication
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-purple-600 font-extrabold text-[16px] shrink-0">✓</span>
                       Connect services
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-purple-600 font-extrabold text-[16px] shrink-0">✓</span>
                       Improve engagement
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-purple-600 font-extrabold text-[16px] shrink-0">✓</span>
                       Centralize conversations
                     </li>
-                    <li className="flex items-center gap-2 text-[14.5px] font-semibold text-slate-600">
+                    <li className="flex items-center gap-2 role-card-bullet">
                       <span className="text-purple-600 font-extrabold text-[16px] shrink-0">✓</span>
                       Drive student success
                     </li>
@@ -549,7 +549,7 @@ export default function ThreadsDetailPage() {
         {/* ── Works Seamlessly With Section ── */}
         <section className="py-12 bg-[#faf8ff] border-t border-slate-100">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-10">
-            <h2 className="text-2xl font-black text-navy text-center mb-8">
+            <h2 className="text-[1.5rem] sm:text-[1.75rem] font-black text-navy text-center mb-8 tracking-tight">
               Works Seamlessly With
             </h2>
 

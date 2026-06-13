@@ -30,9 +30,9 @@ const institutionPoints = [
 
 function PointList({ points, colorClass = "text-purple-500" }: { points: string[]; colorClass?: string }) {
   return (
-    <ul className="mt-4 space-y-2.5">
+    <ul className="mt-4 space-y-3">
       {points.map((point) => (
-        <li key={point} className="flex items-start gap-2.5 text-base font-semibold text-slate-700">
+        <li key={point} className="flex items-start gap-2.5 text-[1rem] font-medium text-slate-600 leading-[1.75]">
           <svg className={`h-5 w-5 shrink-0 ${colorClass}`} fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
           </svg>
@@ -581,10 +581,10 @@ export function WhyAcademiqSection() {
           transition={{ duration: 0.55 }}
           className="mb-12 text-center"
         >
-          <h2 id="why-academiq-heading" className="text-4xl font-black text-navy sm:text-5xl">
+          <h2 id="why-academiq-heading" className="typo-h1 font-black text-navy tracking-tight">
             Why Academ<span className="text-[#e11d48]">IQ</span>?
           </h2>
-          <p className="mt-3.5 mx-auto max-w-lg text-xl font-medium leading-relaxed text-slate-800">
+          <p className="mt-4 mx-auto max-w-[560px] text-[1.0625rem] sm:text-[1.125rem] font-normal leading-[1.8] text-slate-600">
             Designed for every participant in the learning journey.
           </p>
         </motion.div>
@@ -607,7 +607,7 @@ export function WhyAcademiqSection() {
                   <SidebarIcon type="cap" className="w-7 h-7 text-white" />
                 </div>
                 <p className="mt-3.5 text-xs font-black uppercase tracking-widest text-[#7c3aed]">FOR STUDENTS</p>
-                <h3 className="mt-2 text-2xl font-black text-navy leading-snug">Everything you need to learn and succeed.</h3>
+                <h3 className="mt-2 text-[1.375rem] font-black text-navy leading-snug tracking-tight">Everything you need to learn and succeed.</h3>
               </div>
 
               {/* Dashboard mockup */}
@@ -644,7 +644,7 @@ export function WhyAcademiqSection() {
                   <SidebarIcon type="tutoring" className="w-7 h-7 text-white" />
                 </div>
                 <p className="mt-3.5 text-xs font-black uppercase tracking-widest text-blue-600">FOR INSTRUCTORS</p>
-                <h3 className="mt-2 text-2xl font-black text-navy leading-snug">Teach, engage & empower your students.</h3>
+                <h3 className="mt-2 text-[1.375rem] font-black text-navy leading-snug tracking-tight">Teach, engage &amp; empower your students.</h3>
               </div>
 
               {/* Dashboard mockup */}
@@ -683,7 +683,7 @@ export function WhyAcademiqSection() {
                   </svg>
                 </div>
                 <p className="mt-3.5 text-xs font-black uppercase tracking-widest text-emerald-600">FOR INSTITUTIONS</p>
-                <h3 className="mt-2 text-2xl font-black text-navy leading-snug">Strengthen learning. Drive student success.</h3>
+                <h3 className="mt-2 text-[1.375rem] font-black text-navy leading-snug tracking-tight">Strengthen learning. Drive student success.</h3>
               </div>
 
               {/* Dashboard mockup */}
